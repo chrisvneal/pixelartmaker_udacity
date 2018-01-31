@@ -1,6 +1,8 @@
 /* Global Styles */
 body {
     text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
 }
 
 /* Grid & Table Styles */
@@ -17,12 +19,18 @@ table {
 
 tr {
     height: 20px;
+
 }
 
 td {
     width: 20px;
+    cursor: crosshair;
 }
 
 input[type=number] {
     width: 6em;
+}
+
+.container {
+  /* margin: 0 auto; */
 }
