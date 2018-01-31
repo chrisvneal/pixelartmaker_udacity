@@ -1,21 +1,8 @@
 body {
-    text-align: center;
+    /* text-align: center; */
 }
 
-h1 {
-    font-family: Monoton;
-    font-size: 70px;
-    margin: 0.2em;
-}
-
-h2 {
-    margin: 1em 0 0.25em;
-}
-
-h2:first-of-type {
-    margin-top: 0.5em;
-}
-
+/* Grid & Table Styles */
 table,
 tr,
 td {
