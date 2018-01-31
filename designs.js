@@ -3,16 +3,11 @@ $(function() {
   // Form inputs
   const $inputHeight = $("#inputHeight");
   const $inputWidth = $("#inputWidth");
-  const $colorInput = $("#colorPicker");
-  const $submitButton = $("#submitButton");
 
-  // Form input values  
-  let $colorValue = $colorInput.val();
+  const $submitButton = $("#submitButton");
 
   const $canvas = $("#pixelCanvas");
 
-
-  
 
 
   // makeGrid() creates a grid/table based on user provided values
@@ -21,8 +16,8 @@ $(function() {
     // Clear any grids from the page
     $canvas.html('');
 
-    let $row;    
-    
+    let $row;
+
     // Create amount of rows requested via 'height' variable
 
     for (var i = 0; i < height; i++) {
@@ -41,16 +36,66 @@ $(function() {
   } // end of makeGrid()
 
 
-
   // Call makeGrid() via submitButton;
   $submitButton.click(function(e) {
-    e.preventDefault();    
+    e.preventDefault();
 
     let $heightValue = $inputHeight.val();
     let $widthValue = $inputWidth.val();
 
     makeGrid($heightValue, $widthValue);
   });
+
+
+
+  // Color controls
+
+  const $colorInput = $("#colorPicker");
+  let $colorValue = $colorInput.val();
+  let mousedown = false;
+
+  $colorInput.on('change', function() {
+    $colorValue = $colorInput.val();
+  });
+
+  $canvas.on('mousedown', 'td', function() {
+    mousedown = true;
+    $(this).css("background", $colorValue);
+  });
+
+  $canvas.on('mouseup', function() {
+    mousedown = false;
+  });
+
+  $canvas.on('mouseover', 'td', function() {
+    if (mousedown) {
+      $(this).css("background", $colorValue);
+    }
+  });
+
+  $canvas.on('click', 'td', function() {
+    $(this).css("background", $colorValue);
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
