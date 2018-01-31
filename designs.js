@@ -1,7 +1,8 @@
-// ***** Table of Contents *************
+// ******** Table of Contents ************
 // 1. Functions
 // 2. #submitButton functionality
 // 3. Coloring functionality
+// ***************************************
 
 $(function() {
 
