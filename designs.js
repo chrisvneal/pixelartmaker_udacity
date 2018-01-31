@@ -12,8 +12,7 @@ $(function() {
 
   const $canvas = $("#pixelCanvas");
 
-  let $tr = $('<tr></tr>');
-  let $td = $('<td></td>');
+ 
 
 
   // When size is submitted by the user, call makeGrid()
@@ -21,24 +20,20 @@ $(function() {
   function makeGrid(height, width) {
     // alert("You accessed makeGrid! The height is " + height + " and the width is " + width);
 
-    let numberOfDataCells = height * width;
 
-    $canvas.append($tr);
+    // ...establish/create the number of columns needed (width); put into a columns variable (tds) as HTML...
 
+    // ...create a row (tr) variable and append those columns (tds)...
 
+    // ...multiply those rows by (height) and insert into a "build" variable...
 
-    // create # of rows
-    // TODO: Create first for loop that will create rows
-    for (var i = 0; i < height; i++) {
-      $canvas.append($tr);
+    // ...create a variable holding the html for the rows and columns...
 
-      /*for (var j = 0; j < width; i++) {
-        $tr.append($td);
-
-      }*/
+    // ...append that variable to #pixelCanvas (the table element)
+    $canvas.append();
+    
 
 
-    } 
 
 
 
