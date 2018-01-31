@@ -54,34 +54,36 @@ $(function() {
   let $colorValue = $colorInput.val();
   let mousedown = false;
 
+  function colorElement(element) {
+    $(element.target).css("background", $colorValue);  
+  } // end of colorElement()
+
   $colorInput.on('change', function() {
     $colorValue = $colorInput.val();
   });
 
-  $canvas.on('mousedown', 'td', function() {
+  $canvas.on('mousedown', 'td', function(e) {
     mousedown = true;
-    $(this).css("background", $colorValue);
+    colorElement(e);
   });
 
   $canvas.on('mouseup', function() {
     mousedown = false;
   });
 
-  $canvas.on('mouseover', 'td', function() {
+  $canvas.on('mouseover', 'td', function(e) {
     if (mousedown) {
-      $(this).css("background", $colorValue);
+      colorElement(e);
     }
   });
 
-  $canvas.on('click', 'td', function() {
-    $(this).css("background", $colorValue);
+  $canvas.on('click', 'td', function(e) {
+    colorElement(e);
   });
 
 
 
-function colorElement() {
-  $(this).css("background", $colorValue);  
-}
+
 
 
 
