@@ -79,7 +79,9 @@ $(function() {
 
 
 
-
+function colorElement() {
+  $(this).css("background", $colorValue);  
+}
 
 
 
