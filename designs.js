@@ -21,6 +21,25 @@ $(function() {
   function makeGrid(height, width) {
     // alert("You accessed makeGrid! The height is " + height + " and the width is " + width);
 
+    let numberOfDataCells = height * width;
+
+    $canvas.append($tr);
+
+
+
+    // create # of rows
+    // TODO: Create first for loop that will create rows
+    for (var i = 0; i < height; i++) {
+      $canvas.append($tr);
+
+      /*for (var j = 0; j < width; i++) {
+        $tr.append($td);
+
+      }*/
+
+
+    } 
+
 
 
 
