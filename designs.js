@@ -1,10 +1,21 @@
-// Select color input
-// Select size input
+$(function() {
 
-// When size is submitted by the user, call makeGrid()
+  // Form inputs
+  let $inputHeight = $("#inputHeight");
+  let $inputWidth = $("#inputWidth");
+  let $colorInput = $("#colorPicker");
 
-function makeGrid() {
+  // When size is submitted by the user, call makeGrid()
 
-// Your code goes here!
+  function makeGrid() {
 
-}
+    // Your code goes here!
+
+  }
+
+
+
+
+
+
+});
