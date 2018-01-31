@@ -1,15 +1,5 @@
 $(function() {
 
-  // Form inputs
-  const $inputHeight = $("#inputHeight");
-  const $inputWidth = $("#inputWidth");
-
-  const $submitButton = $("#submitButton");
-
-  const $canvas = $("#pixelCanvas");
-
-
-
   // makeGrid() creates a grid/table based on user provided values
   function makeGrid(height, width) {
 
@@ -35,6 +25,17 @@ $(function() {
     }
   } // end of makeGrid()
 
+  function colorElement(element) {
+    $(element.target).css("background", $colorValue);
+  } // end of colorElement()
+
+  // Form inputs
+  const $inputHeight = $("#inputHeight");
+  const $inputWidth = $("#inputWidth");
+
+  const $submitButton = $("#submitButton");
+
+  const $canvas = $("#pixelCanvas");
 
   // Call makeGrid() via submitButton;
   $submitButton.click(function(e) {
@@ -46,17 +47,12 @@ $(function() {
     makeGrid($heightValue, $widthValue);
   });
 
-
-
   // Color controls
 
   const $colorInput = $("#colorPicker");
   let $colorValue = $colorInput.val();
   let mousedown = false;
 
-  function colorElement(element) {
-    $(element.target).css("background", $colorValue);  
-  } // end of colorElement()
 
   $colorInput.on('change', function() {
     $colorValue = $colorInput.val();
@@ -80,33 +76,4 @@ $(function() {
   $canvas.on('click', 'td', function(e) {
     colorElement(e);
   });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }); //end of $ (jQuery)
