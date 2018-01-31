@@ -9,14 +9,19 @@ $(function() {
   // Form input values  
   let $colorValue = $colorInput.val();
 
+  const $canvas = $("#pixelCanvas");
+
 
   
 
 
   // makeGrid() creates a grid/table based on user provided values
   function makeGrid(height, width) {
-    let $row;
-    const $canvas = $("#pixelCanvas");
+
+    // Clear any grids from the page
+    $canvas.html('');
+
+    let $row;    
     
     // Create amount of rows requested via 'height' variable
 
@@ -39,7 +44,7 @@ $(function() {
 
   // Call makeGrid() via submitButton;
   $submitButton.click(function(e) {
-    e.preventDefault();
+    e.preventDefault();    
 
     let $heightValue = $inputHeight.val();
     let $widthValue = $inputWidth.val();
