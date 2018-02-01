@@ -51,15 +51,20 @@ input[type=number] {
 	overflow: hidden;
 }
 
+header {
+	background: sienna;
+}
+
 footer {
-  /* color: lightgray; */
+	/* color: lightgray; */
+	background: burlywood;
 }
 
 .settings-area {
-	border: 1px dashed lightblue;
+	background: cornflowerblue;
 }
 
 .canvas-area {
-	border: 1px dashed red;
+	background: palevioletred
 }
 
