@@ -27,6 +27,8 @@ $(function() {
   // makeGrid() creates a grid/table based on user provided values
   function makeGrid(height, width) {
 
+    // TODO: Put a condition in there that if height === 0, don't run the program!
+
     // Clear any grids from the page
     $canvas.html('');
 
