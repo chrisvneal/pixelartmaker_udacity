@@ -56,15 +56,10 @@ footer {
 }
 
 .settings-area {
-	width: 25%;
-	float: left;
-	/* margin-right:2%; */
 	border: 1px dashed lightblue;
 }
 
 .canvas-area {
-	width: 75%;
 	border: 1px dashed red;
-	float: left;
 }
 
