@@ -54,7 +54,6 @@ input[type=number] {
 
 header {
 	background: sienna;
-	grid-area:
 }
 
 .settings-area {
@@ -78,6 +77,6 @@ footer {
 /* layout styles */
 .container {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: [aside-start] 1fr [canvas-start] 1fr [midcanvas-start] 1fr [midcanvas-end] 1fr [canvas-end];
 	grid-template-rows: minmax(150px, auto);
 }
