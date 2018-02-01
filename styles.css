@@ -49,7 +49,8 @@ input[type=number] {
 .container {
   border: 1px solid red;
   width: 80%;
-	margin: 0 auto;
+    margin: 0 auto;
+    height: 100vh;
 }
 
 /* TODO: PLace the rest of the elements using grid properties */
@@ -91,5 +92,9 @@ footer {
 .container {
 	display: grid;
 	grid-template-columns: [aside-start] 1fr [canvas-start] 1fr [midcanvas-start] 1fr [midcanvas-end] 1fr [canvas-end];
-	grid-auto-rows: minmax(100px, auto);
+    grid-auto-rows: minmax(100px, auto);
+    max-height: 100vh;
+    overflow: auto;
 }
+
+/* TODO: Fix the auto scroll on the container and elements */
