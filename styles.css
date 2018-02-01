@@ -93,8 +93,7 @@ footer {
 	display: grid;
 	grid-template-columns: [aside-start] 1fr [canvas-start] 1fr [midcanvas-start] 1fr [midcanvas-end] 1fr [canvas-end];
     grid-auto-rows: minmax(100px, auto);
-    max-height: 100vh;
-    overflow: auto;
+    /* max-height: 100vh; */
 }
 
 /* TODO: Fix the auto scroll on the container and elements */
