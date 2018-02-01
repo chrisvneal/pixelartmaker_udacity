@@ -7,27 +7,29 @@
 </head>
 <body>
     <div class="container">
-      <h1>Pixel Art Maker</h1>
+      <header>
+        <h1>Pixel Art Maker</h1>
+      </header>
   
-      <h2>Choose Grid Size</h2>
-      <form id="sizePicker">
-          Grid Height:
-          <input type="number" id="inputHeight" name="height" min="1" value="1">
-          Grid Width:
-          <input type="number" id="inputWidth" name="width" min="1" value="1">
-          <input type="submit" id="submitButton">
-      </form>
+      <div class="settings-area">
+        <h2>Choose Grid Size</h2>
+        <form id="sizePicker">
+            Grid Height:
+            <input type="number" id="inputHeight" name="height" min="1" value="1">
+            Grid Width:
+            <input type="number" id="inputWidth" name="width" min="1" value="1">
+            <input type="submit" id="submitButton">
+        </form>
+    
+        <h2>Pick A Color</h2>
+        <input type="color" id="colorPicker">
+      </div>
   
-      <h2>Pick A Color</h2>
-      <input type="color" id="colorPicker">
-  
-      <h2>Design Canvas</h2>
-      <table id="pixelCanvas"></table>
+      <div class="canvas-area">
+        <h2>Design Canvas</h2>
+        <table id="pixelCanvas"></table>
+      </div>
     </div>
-
-
-
-
 
 
 
@@ -35,3 +37,4 @@
     <script src="designs.js"></script>
 </body>
 </html>
+
