@@ -13,6 +13,10 @@ h1, h2 {
 	margin: 0;
 }
 
+.canvas-area h2 {
+	text-align: center;
+}
+
 
 /* Grid & Table Styles */
 
@@ -44,6 +48,7 @@ input[type=number] {
   border: 1px solid red;
   width: 80%;
 	margin: 0 auto;
+	overflow: hidden;
 }
 
 footer {
@@ -51,7 +56,15 @@ footer {
 }
 
 .settings-area {
+	width: 25%;
+	float: left;
+	/* margin-right:2%; */
+	border: 1px dashed lightblue;
 }
 
 .canvas-area {
+	width: 75%;
+	border: 1px dashed red;
+	float: left;
 }
+
