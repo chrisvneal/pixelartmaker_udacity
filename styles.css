@@ -52,10 +52,13 @@ input[type=number] {
 	margin: 0 auto;
 }
 
+/* TODO: PLace the rest of the elements using grid properties */
 header {
 	background: sienna;
+	grid-column: aside-start / canvas-end;
 }
 
+/*  */
 .settings-area {
   background: cornflowerblue;
 }
@@ -78,5 +81,5 @@ footer {
 .container {
 	display: grid;
 	grid-template-columns: [aside-start] 1fr [canvas-start] 1fr [midcanvas-start] 1fr [midcanvas-end] 1fr [canvas-end];
-	grid-template-rows: minmax(150px, auto);
+	grid-template-rows: minmax(100px, auto);
 }
