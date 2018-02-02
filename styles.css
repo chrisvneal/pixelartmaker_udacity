@@ -50,7 +50,7 @@ input[type=number] {
   border: 1px solid red;
   width: 80%;
     margin: 0 auto;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 /* TODO: PLace the rest of the elements using grid properties */
