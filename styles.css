@@ -70,6 +70,7 @@ aside,
 aside {
   grid-column: aside-start / canvas-start;
   background: rgb(130, 232, 145);
+  padding: 10px;
 }
 
 aside h2 {
@@ -87,6 +88,16 @@ aside h2 {
 
 .input-area {
     margin-bottom: 1.5rem;
+}
+
+#submitButton {
+    display: block;
+    margin: 2em 0;
+}
+
+.grid-settings {
+    display: flex;
+    justify-content: space-around;
 }
 
 input[type=number] {
