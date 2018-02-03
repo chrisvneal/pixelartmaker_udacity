@@ -48,6 +48,7 @@ td {
   display: grid;
   grid-template-columns: [aside-start] 1fr [canvas-start] 1fr [midcanvas-start] 1fr [midcanvas-end] 1fr [canvas-end];
   grid-template-rows: 60px repeat(12, minmax(100px, auto));
+  grid-column-gap: 10px;
 }
 
 
@@ -106,6 +107,7 @@ input[type=number] {
 
 .canvas-area h2 {
   text-align: center;
+  margin-bottom: 2em;
 }
 
 
@@ -115,4 +117,11 @@ footer {
   /* color: lightgray; */
   background: burlywood;
   grid-column: aside-start / canvas-end;
+}
+
+
+
+/* turn all sections background to white */
+header, aside, .settings-area, .info-area, .canvas-area, footer {
+    /* background: #fff; */
 }
