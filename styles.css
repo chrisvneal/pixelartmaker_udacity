@@ -81,6 +81,7 @@ aside, .canvas-area {
 
 
 .info-area {
+    background: rgb(195, 126, 203);
 }
 
 footer {
@@ -98,5 +99,3 @@ footer {
     grid-template-rows: 60px repeat(12, minmax(100px, auto));
     /* max-height: 100vh; */
 }
-
-/* TODO: Fix the auto scroll on the container and elements */
