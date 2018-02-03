@@ -1,4 +1,4 @@
-/* Global Styles */
+/***************** Global styles *****************/
 
 * {
   box-sizing: border-box;
@@ -15,12 +15,8 @@ h2 {
   margin: 0;
 }
 
-.canvas-area h2 {
-  text-align: center;
-}
 
-
-/* Grid & Table Styles */
+/***************** Table styles ******************/
 
 table,
 tr,
@@ -42,60 +38,68 @@ td {
   cursor: crosshair;
 }
 
-input[type=number] {
-  width: 6em;
-}
+
+/************** .container & grid styles *********/
 
 .container {
   /* border: 1px solid red; */
   width: 80%;
-    margin: 0 auto;
-    /* height: 100vh; */
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: [aside-start] 1fr [canvas-start] 1fr [midcanvas-start] 1fr [midcanvas-end] 1fr [canvas-end];
+  grid-template-rows: 60px repeat(12, minmax(100px, auto));
 }
 
-/* TODO: PLace the rest of the elements using grid properties */
+
+/***************** header styles *****************/
+
 header {
-	background: rgb(208, 131, 95);
-	grid-column: aside-start / canvas-end;
+  background: rgb(208, 131, 95);
+  grid-column: aside-start / canvas-end;
+}
+
+
+/***************** aside styles ******************/
+
+aside,
+.canvas-area {
+  grid-row: 2 / 13;
 }
 
 aside {
-    grid-column: aside-start / canvas-start;
-    background: rgb(130, 232, 145);
+  grid-column: aside-start / canvas-start;
+  background: rgb(130, 232, 145);
 }
 
-.canvas-area {
-    background: rgb(220, 147, 172);
-    grid-column: canvas-start / canvas-end;
-  }
-
-/*  */
 .settings-area {
   background: rgb(133, 171, 242);
 }
 
-aside, .canvas-area {
-    grid-row: 2 / 13;
+input[type=number] {
+  width: 6em;
 }
-
-
 
 .info-area {
-    background: rgb(195, 126, 203);
+  background: rgb(195, 126, 203);
 }
+
+
+/***************** canvas area styles ********/
+
+.canvas-area {
+  background: rgb(220, 147, 172);
+  grid-column: canvas-start / canvas-end;
+}
+
+.canvas-area h2 {
+  text-align: center;
+}
+
+
+/***************** footer styles ***************/
 
 footer {
   /* color: lightgray; */
   background: burlywood;
   grid-column: aside-start / canvas-end;
-}
-
-
-
-/* layout styles */
-.container {
-	display: grid;
-    grid-template-columns: [aside-start] 1fr [canvas-start] 1fr [midcanvas-start] 1fr [midcanvas-end] 1fr [canvas-end];
-    grid-template-rows: 60px repeat(12, minmax(100px, auto));
-    /* max-height: 100vh; */
 }
