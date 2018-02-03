@@ -71,8 +71,17 @@ aside {
   background: rgb(130, 232, 145);
 }
 
+aside h2 {
+    margin-bottom: 1em;
+}
+
 .settings-area {
   background: rgb(133, 171, 242);
+}
+
+
+.settings-area, .info-area {
+    padding-bottom: 1.5rem;
 }
 
 input[type=number] {
