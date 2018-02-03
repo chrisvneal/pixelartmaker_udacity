@@ -84,6 +84,10 @@ aside h2 {
     padding-bottom: 1.5rem;
 }
 
+.input-area {
+    margin-bottom: 1.5rem;
+}
+
 input[type=number] {
   width: 6em;
 }
