@@ -61,19 +61,21 @@ header {
 
 aside {
     grid-column: aside-start / canvas-start;
-    grid-row: 2 / 13;
     background: rgb(130, 232, 145);
 }
 
 .canvas-area {
     background: rgb(220, 147, 172);
     grid-column: canvas-start / canvas-end;
-    grid-row: 2 / 13;
   }
 
 /*  */
 .settings-area {
   background: rgb(133, 171, 242);
+}
+
+aside, .canvas-area {
+    grid-row: 2 / 13;
 }
 
 
@@ -84,6 +86,7 @@ aside {
 footer {
   /* color: lightgray; */
   background: burlywood;
+  grid-column: aside-start / canvas-end;
 }
 
 
@@ -91,8 +94,8 @@ footer {
 /* layout styles */
 .container {
 	display: grid;
-	grid-template-columns: [aside-start] 1fr [canvas-start] 1fr [midcanvas-start] 1fr [midcanvas-end] 1fr [canvas-end];
-    grid-auto-rows: minmax(100px, auto);
+    grid-template-columns: [aside-start] 1fr [canvas-start] 1fr [midcanvas-start] 1fr [midcanvas-end] 1fr [canvas-end];
+    grid-template-rows: 60px repeat(12, minmax(100px, auto));
     /* max-height: 100vh; */
 }
 
