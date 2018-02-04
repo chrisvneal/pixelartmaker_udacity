@@ -38,6 +38,10 @@ td {
   cursor: crosshair;
 }
 
+p {
+    margin: 0;
+}
+
 
 /************** .container & grid styles *********/
 
@@ -46,7 +50,7 @@ td {
   width: 80%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: [aside-start] 1fr [canvas-start] 1fr [midcanvas-start] 1fr [midcanvas-end] 1fr [canvas-end];
+  grid-template-columns: [aside-start] 1fr [aside-end] 1fr [canvas-start] 1fr [midcanvas-start] 1fr [midcanvas-end] 1fr [canvas-end];
   grid-template-rows: 60px repeat(12, minmax(100px, auto));
   grid-column-gap: 10px;
 }
@@ -68,7 +72,7 @@ aside,
 }
 
 aside {
-  grid-column: aside-start / canvas-start;
+  grid-column: aside-start / aside-end;
   background: rgb(130, 232, 145);
   /* padding: 10px; */
 }
@@ -97,16 +101,19 @@ aside h2 {
 }
 
 .grid-settings {
-    display: flex;
+    /* display: flex; */
     /* justify-content: space-around; */
 }
 
-.grid-settings div {
-    width: 50%;
+.grid-settings label {
+    display: block;
+    margin-bottom: .80rem;
+    /* width: 100%; */
 }
 
 input[type=number] {
   width: 6em;
+  margin-bottom: 1rem;
 }
 
 .info-area {
@@ -118,7 +125,7 @@ input[type=number] {
 
 .canvas-area {
   background: rgb(220, 147, 172);
-  grid-column: canvas-start / canvas-end;
+  grid-column: aside-end / canvas-end;
 }
 
 .canvas-area h2 {
