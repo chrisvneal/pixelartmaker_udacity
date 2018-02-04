@@ -69,6 +69,7 @@ header {
 aside,
 .canvas-area {
   grid-row: 2 / 13;
+  padding-top: 1.8em;
 }
 
 aside {
@@ -79,6 +80,8 @@ aside {
 
 aside h2 {
     margin-bottom: 1em;
+    /* color: #211d28; */
+    color: rgb(90, 37, 113);
 }
 
 .settings-area {
@@ -98,9 +101,9 @@ aside h2 {
     display: block;
     margin: 1em 0;
     border: none;
-    padding: 1em;
+    padding: .60em;
     font-size: 1.2em;
-    background: #a793cb;
+    background: #8472a5;
     cursor: pointer;
     border-radius: 3px;
     color: #fff;
@@ -116,6 +119,10 @@ aside h2 {
     transform: translateY(1px);
 }
 
+#colorPicker {
+    cursor: pointer;
+}
+
 .grid-settings {
     /* display: flex; */
     /* justify-content: space-around; */
@@ -128,8 +135,18 @@ aside h2 {
 }
 
 input[type=number] {
-  width: 6em;
+  width: 7em;
+  max-width: 10em;
   margin-bottom: 1rem;
+  color: #211d28;
+  border: none;
+  border-bottom: 1px solid #a793cb;
+  padding-bottom: 0.60em;
+  font-size: 1em;
+}
+
+input[type=number]:focus {
+    outline: none;
 }
 
 .info-area {
@@ -166,5 +183,5 @@ header, aside, .settings-area, .info-area, .canvas-area, footer {
 }
 
 .settings-area {
-    background: #fff;
+    /* background: #fff; */
 }
