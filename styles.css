@@ -141,11 +141,6 @@ aside h2 {
     margin-top: -.50em;
 }
 
-.grid-settings {
-    /* display: flex; */
-    /* justify-content: space-around; */
-}
-
 .grid-settings label {
     display: block;
     margin-bottom: .80rem;
@@ -217,8 +212,4 @@ footer li {
 /* turn all sections background to white */
 header, aside, .settings-area, .info-area, .canvas-area {
     background: #fff;
-}
-
-.settings-area {
-    /* background: #fff; */
 }
