@@ -93,12 +93,12 @@ aside h2 {
 #submitButton {
     display: block;
     margin: 2em 0;
-    width: 100px;
+    /* width: 100%; */
 }
 
 .grid-settings {
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
 }
 
 .grid-settings div {
