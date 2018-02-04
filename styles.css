@@ -6,9 +6,11 @@
 
 body {
   /* text-align: center; */
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Montserrat, Arial, sans-serif;
   margin: 0;
 }
+
+
 
 h1,
 h2 {
@@ -64,6 +66,8 @@ header {
 }
 
 
+
+
 /***************** aside styles ******************/
 
 aside,
@@ -80,12 +84,11 @@ aside {
 
 aside h2 {
     margin-bottom: 1em;
-    /* color: #211d28; */
-    color: rgb(90, 37, 113);
 }
 
-.canvas-area h2, label, header h1, footer p {
+.canvas-area h2, label, header h1, footer p, aside h2 {
     color: rgb(90, 37, 113);
+    font-weight: lighter;
 }
 
 .settings-area {
@@ -172,6 +175,10 @@ input[type=number]:focus {
 .canvas-area h2 {
   text-align: center;
   margin-bottom: 2em;
+}
+
+header h1 {
+    font-weight: bolder;
 }
 
 
