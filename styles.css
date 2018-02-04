@@ -93,11 +93,11 @@ aside h2 {
 #submitButton {
     display: block;
     margin: 2em 0;
+    width: 100px;
 }
 
 .grid-settings {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
 }
 
