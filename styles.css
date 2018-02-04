@@ -8,6 +8,7 @@ body {
   /* text-align: center; */
   font-family: Montserrat, Arial, sans-serif;
   margin: 0;
+  padding-top: 1.2em;
 }
 
 
@@ -69,7 +70,6 @@ ul {
 header {
   background: rgb(208, 131, 95);
   grid-column: aside-start / canvas-end;
-  padding-top: .40em;
 }
 
 
@@ -186,6 +186,7 @@ input[type=number]:focus {
 
 header h1 {
     font-weight: bolder;
+
 }
 
 
