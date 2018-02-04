@@ -63,6 +63,7 @@ p {
 header {
   background: rgb(208, 131, 95);
   grid-column: aside-start / canvas-end;
+  padding-top: .40em;
 }
 
 
@@ -86,7 +87,7 @@ aside h2 {
     margin-bottom: 1em;
 }
 
-.canvas-area h2, label, header h1, footer p, aside h2 {
+.canvas-area h2, label, header h1, aside h2 {
     color: rgb(90, 37, 113);
     font-weight: lighter;
 }
@@ -187,14 +188,20 @@ header h1 {
 
 footer {
   /* color: lightgray; */
-  background: burlywood;
+  background: rgb(25, 7, 33);
   grid-column: aside-start / canvas-end;
+  padding: 10px;
+}
+
+
+footer p {
+    color: rgb(159, 137, 159);
 }
 
 
 
 /* turn all sections background to white */
-header, aside, .settings-area, .info-area, .canvas-area, footer {
+header, aside, .settings-area, .info-area, .canvas-area {
     background: #fff;
 }
 
