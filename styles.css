@@ -84,6 +84,10 @@ aside h2 {
     color: rgb(90, 37, 113);
 }
 
+.canvas-area h2, label, header h1 {
+    color: rgb(90, 37, 113);
+}
+
 .settings-area {
   background: rgb(133, 171, 242);
 }
@@ -167,6 +171,7 @@ input[type=number]:focus {
 }
 
 
+
 /***************** footer styles ***************/
 
 footer {
@@ -179,7 +184,7 @@ footer {
 
 /* turn all sections background to white */
 header, aside, .settings-area, .info-area, .canvas-area, footer {
-    /* background: #fff; */
+    background: #fff;
 }
 
 .settings-area {
