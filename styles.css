@@ -84,7 +84,7 @@ aside h2 {
     color: rgb(90, 37, 113);
 }
 
-.canvas-area h2, label, header h1 {
+.canvas-area h2, label, header h1, footer p {
     color: rgb(90, 37, 113);
 }
 
@@ -125,6 +125,10 @@ aside h2 {
 
 #colorPicker {
     cursor: pointer;
+    border: none;
+    height: 40px;
+    width: 100px;
+    margin-top: -.50em;
 }
 
 .grid-settings {
