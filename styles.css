@@ -96,8 +96,24 @@ aside h2 {
 
 #submitButton {
     display: block;
-    margin: 2em 0;
-    /* width: 100%; */
+    margin: 1em 0;
+    border: none;
+    padding: 1em;
+    font-size: 1.2em;
+    background: #a793cb;
+    cursor: pointer;
+    border-radius: 3px;
+    color: #fff;
+    box-shadow: 1px 3px 5px 1px #c9c8c8;
+    transition: all .03s ease-in;
+}
+
+#submitButton:focus {
+    outline: none;
+}
+
+#submitButton:active {
+    transform: translateY(1px);
 }
 
 .grid-settings {
@@ -147,4 +163,8 @@ footer {
 /* turn all sections background to white */
 header, aside, .settings-area, .info-area, .canvas-area, footer {
     /* background: #fff; */
+}
+
+.settings-area {
+    background: #fff;
 }
