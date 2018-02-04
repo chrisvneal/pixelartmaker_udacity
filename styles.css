@@ -70,7 +70,7 @@ aside,
 aside {
   grid-column: aside-start / canvas-start;
   background: rgb(130, 232, 145);
-  padding: 10px;
+  /* padding: 10px; */
 }
 
 aside h2 {
@@ -97,7 +97,12 @@ aside h2 {
 
 .grid-settings {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
+}
+
+.grid-settings div {
+    width: 50%;
 }
 
 input[type=number] {
