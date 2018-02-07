@@ -89,9 +89,17 @@ ul {
 
 
 /***************** header styles *****************/
+/* turn all sections background to white */
+header, aside, .settings-area, .info-area, .canvas-area {
+    background-color: #fff;
+}
+
+.info-area {
+    /* background: rgb(195, 126, 203); */
+  }
 
 header {
-  background: rgb(208, 131, 95);
+  /* background: rgb(208, 131, 95); */
   grid-column: aside-start / canvas-end;
 }
 
@@ -108,7 +116,7 @@ aside,
 
 aside {
   grid-column: aside-start / aside-end;
-  background: rgb(130, 232, 145);
+  /* background: rgb(130, 232, 145); */
   /* padding: 10px; */
 }
 
@@ -122,7 +130,7 @@ aside h2 {
 }
 
 .settings-area {
-  background: rgb(133, 171, 242);
+  /* background: rgb(133, 171, 242); */
 }
 
 
@@ -136,6 +144,7 @@ aside h2 {
 
 #submitButton {
     transition: transform .10s ease-in-out;
+    margin: 1em 0 1.5em;
 }
 
 #submitButton:active {
@@ -193,7 +202,7 @@ input[type=number]:focus {
 /***************** canvas area styles ********/
 
 .canvas-area {
-  background: rgb(220, 147, 172);
+  /* background: rgb(220, 147, 172); */
   grid-column: aside-end / canvas-end;
 }
 
@@ -233,11 +242,3 @@ footer li {
 
 
 
-/* turn all sections background to white */
-header, aside, .settings-area, .info-area, .canvas-area {
-    background: #fff;
-}
-
-.info-area {
-    background: rgb(195, 126, 203);
-  }
