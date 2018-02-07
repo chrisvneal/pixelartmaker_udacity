@@ -106,7 +106,7 @@ aside h2 {
 }
 
 .canvas-area h2, label, header h1, aside h2 {
-    color: rgb(90, 37, 113);
+    color: #7b1fa2;
     font-weight: lighter;
 }
 
@@ -123,13 +123,7 @@ aside h2 {
     margin-bottom: 1.5rem;
 }
 
-#submitButton {
-    
-    background: #8472a5;
-    color: #fff;    
-}
-
-.btn {
+/*.btn {
     display: block;
     margin: 1.5em 0 2em;
     border: none;
@@ -147,7 +141,7 @@ aside h2 {
 
 .btn:active {
     transform: translateY(1px);
-}
+} */
 
 #colorPicker {
     cursor: pointer;
@@ -212,7 +206,7 @@ header h1 {
 
 footer {
   /* color: lightgray; */
-  background: rgb(40, 12, 52);
+  background: #4a148c;
   grid-column: aside-start / canvas-end;
   padding-top: 8px;
   padding-left: 15px;
