@@ -134,6 +134,14 @@ aside h2 {
     margin-bottom: 1.5rem;
 }
 
+#submitButton {
+    transition: transform .10s ease-in-out;
+}
+
+#submitButton:active {
+    transform: translateY(2px);
+}
+
 .btn-large i {
     position: relative;
     top: 3px;
