@@ -127,26 +127,6 @@ aside h2 {
     margin-bottom: 1.5rem;
 }
 
-/*.btn {
-    display: block;
-    margin: 1.5em 0 2em;
-    border: none;
-    padding: .50em;
-    font-size: 1.2em;
-    box-shadow: 1px 3px 5px 1px #c9c8c8;
-    transition: all .03s ease-in;
-    cursor: pointer;
-    border-radius: 3px;
-}
-
-.btn:focus {
-    outline: none;
-}
-
-.btn:active {
-    transform: translateY(1px);
-} */
-
 #colorPicker {
     cursor: pointer;
     border: none;
