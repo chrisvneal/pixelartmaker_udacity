@@ -134,6 +134,14 @@ aside h2 {
     margin-bottom: 1.5rem;
 }
 
+.btn-large i {
+    position: relative;
+    top: 3px;
+    left: -2px;
+    font-size: 1.2em;
+    /* margin-right: 0.5em; */
+}
+
 #colorPicker {
     cursor: pointer;
     border: none;
