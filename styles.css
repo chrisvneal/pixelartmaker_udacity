@@ -37,11 +37,15 @@ table,
 tr,
 td {
   border: 1px solid black;
+  padding: 0;
+  vertical-align: inherit;
+  border-radius: 0;
 }
 
 table {
   border-collapse: collapse;
   margin: 0 auto;
+  width: 0;
 }
 
 tr {
@@ -169,11 +173,11 @@ input[type=number] {
   width: 7em;
   max-width: 10em;
   margin-bottom: 1rem;
-  color: #211d28;
+  /* color: #7b1fa2; */
   border: none;
   border-bottom: 1px solid #a793cb;
   padding-bottom: 0.60em;
-  font-size: 1em;
+  font-size: 30px;
 }
 
 input[type=number]:focus {
@@ -206,7 +210,7 @@ header h1 {
 
 footer {
   /* color: lightgray; */
-  background: #4a148c;
+  background: #6a1b9a;
   grid-column: aside-start / canvas-end;
   padding-top: 8px;
   padding-left: 15px;
@@ -216,7 +220,7 @@ footer {
 
 
 footer ul {
-    color: rgb(183, 166, 183); 
+    color: rgb(196, 188, 196); 
     text-decoration: none;
 }
 
