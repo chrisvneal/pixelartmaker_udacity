@@ -11,6 +11,10 @@ body {
   padding-top: 1.2em;
 }
 
+button, input, optgroup, select, textarea {
+    font-family: inherit;    
+}
+
 
 
 h1,
@@ -66,6 +70,8 @@ ul {
     margin: 0;
     list-style: none;
 }
+
+
 
 
 /************** .container & grid styles *********/
