@@ -73,6 +73,7 @@ ul {
 .container {
   /* border: 1px solid red; */
   width: 80%;
+  max-width: none;
   margin: 0 auto;
   display: grid;
   grid-template-columns: [aside-start] 1fr [aside-end] 1fr [canvas-start] 1fr [midcanvas-start] 1fr [midcanvas-end] 1fr [canvas-end];
