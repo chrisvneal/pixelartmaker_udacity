@@ -19,7 +19,8 @@ textarea {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   margin: 0;
 }
 
@@ -29,6 +30,10 @@ h1 {
 
 h2 {
   font-size: 1.8em;
+}
+
+h3 {
+  font-size: 1.4em;
 }
 
 
@@ -92,6 +97,7 @@ aside,
 }
 
 aside h2,
+aside h3,
 .canvas-area h2 {
   margin-bottom: 1em;
 }
@@ -105,7 +111,8 @@ aside,
 .canvas-area h2,
 label,
 header h1,
-aside h2 {
+aside h2,
+aside h3 {
   color: #7b1fa2;
   font-weight: lighter;
 }
@@ -136,12 +143,32 @@ aside {
   margin-bottom: 1.5rem;
 }
 
+
+/* Prebuilt Grid Area styles */
+
+.prebuilt-grid-area {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2em;
+}
+
+.prebuilt-button {
+  flex: 1fr;
+  margin-bottom: 1.5em;
+  transition: transform .10s ease-in-out;
+}
+
+.prebuilt-button:first-child {
+  margin-right: 1em;
+}
+
 #submitButton {
   transition: transform .10s ease-in-out;
   margin: 1em 0 1.5em;
 }
 
-#submitButton:active {
+#submitButton:active,
+.prebuilt-button:active {
   transform: translateY(2px);
 }
 
