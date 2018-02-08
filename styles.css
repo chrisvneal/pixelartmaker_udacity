@@ -117,8 +117,8 @@ aside {
   /* padding: 10px; */
 }
 
-aside h2 {
-    margin-bottom: 1.3em;
+aside h2, .canvas-area h2 {
+    margin-bottom: 1em;
 }
 
 .canvas-area h2, label, header h1, aside h2 {
@@ -202,7 +202,6 @@ input[type=number]:focus {
 
 .canvas-area h2 {
   text-align: center;
-  margin-bottom: 1em;
 }
 
 header h1 {
