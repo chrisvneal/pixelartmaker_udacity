@@ -110,4 +110,15 @@ $(function() {
 
     makeGrid($scaleByNumber, $scaleByNumber);
   });
+
+  $('#inputHeight, #inputWidth').keypress(function(e) {
+
+    if (e.keyCode === 13) {
+      let $heightValue = $inputHeight.val();
+      let $widthValue = $inputWidth.val();
+
+      makeGrid($heightValue, $widthValue);
+    }
+
+  });
 }); //end of $ (jQuery)
