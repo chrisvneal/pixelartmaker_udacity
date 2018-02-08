@@ -99,4 +99,6 @@ $(function() {
   $canvas.on('click', 'td', function(e) {
     colorElement(e);
   });
+
+  // TODO: Try to work on recent styles functionality in the 'recent_styles' branch
 }); //end of $ (jQuery)
