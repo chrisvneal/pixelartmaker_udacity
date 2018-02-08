@@ -112,12 +112,15 @@ $(function() {
   });
 
   $('#inputHeight, #inputWidth').keypress(function(e) {
-
     if (e.keyCode === 13) {
+      e.preventDefault();
       let $heightValue = $inputHeight.val();
       let $widthValue = $inputWidth.val();
 
       makeGrid($heightValue, $widthValue);
+
+      $inputHeight.val($heightValue);
+      $inputWidth.val($widthValue);
     }
 
   });
