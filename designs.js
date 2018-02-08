@@ -1,7 +1,8 @@
 // ******** Table of Contents ************
 // 1. Functions
 // 2. #createGridButton functionality
-// 3. Coloring functionality
+// 2. #resetCanvas functionality
+// 4. Coloring functionality
 // ***************************************
 
 $(function() {
@@ -68,7 +69,17 @@ $(function() {
     makeGrid($heightValue, $widthValue);
   });
 
-  // 3. ************ Coloring functionality ***************
+   // 3. ********** #resetCanvas functionality ************
+
+  // ******************************************************
+
+  function resetCanvas(e) {
+    e.preventDefault();
+
+    $('#pixelCanvas').children().remove();
+}
+
+  // 4. ************ Coloring functionality ***************
 
   // ******************************************************
 
@@ -124,9 +135,9 @@ $(function() {
     }
   });
 
-  $('.reset-button').click(function(e) {
-    e.preventDefault();
+  $('#resetButton').click(resetCanvas);
 
-    $('#pixelCanvas').children().remove();
-  });
+
 }); //end of $ (jQuery)
+
+
