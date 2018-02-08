@@ -1,6 +1,6 @@
 // ******** Table of Contents ************
 // 1. Functions
-// 2. #submitButton functionality
+// 2. #createGridButton functionality
 // 3. Coloring functionality
 // ***************************************
 
@@ -9,7 +9,7 @@ $(function() {
   // Form inputs
   const $inputHeight = $("#inputHeight");
   const $inputWidth = $("#inputWidth");
-  const $submitButton = $("#submitButton");
+  const $createGridButton = $("#createGridButton");
 
   // Main grid/canvas area
   const $canvas = $("#pixelCanvas");
@@ -55,11 +55,11 @@ $(function() {
     $(element.target).css("background", $colorValue);
   } // end of colorElement()
 
-  // 2. ********** #submitButton functionality ************
+  // 2. ********** #createGridButton functionality ************
 
   // ******************************************************
 
-  $submitButton.click(function(e) {
+  $createGridButton.click(function(e) {
     e.preventDefault();
 
     let $heightValue = $inputHeight.val();

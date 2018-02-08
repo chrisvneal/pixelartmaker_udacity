@@ -162,12 +162,12 @@ aside {
   margin-right: 1em;
 }
 
-#submitButton {
+#createGridButton {
   transition: transform .10s ease-in-out;
   margin: .50em 0 1.5em;
 }
 
-#submitButton:active,
+#createGridButton:active,
 .prebuilt-button:active {
   transform: translateY(2px);
 }
