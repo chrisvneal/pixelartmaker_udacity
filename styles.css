@@ -5,17 +5,18 @@
 }
 
 body {
-  /* text-align: center; */
   font-family: Montserrat, Arial, sans-serif;
   margin: 0;
   padding-top: 1.2em;
 }
 
-button, input, optgroup, select, textarea {
-    font-family: inherit;    
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
 }
-
-
 
 h1,
 h2 {
@@ -23,15 +24,11 @@ h2 {
 }
 
 h1 {
-    font-size: 2.2em;
+  font-size: 2.2em;
 }
 
 h2 {
-    font-size: 1.8em;
-}
-
-label {
-    font-size: 1.4em;
+  font-size: 1.8em;
 }
 
 
@@ -62,22 +59,19 @@ td {
 }
 
 p {
-    margin: 0;
+  margin: 0;
 }
 
 ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
-
-
 
 
 /************** .container & grid styles *********/
 
 .container {
-  /* border: 1px solid red; */
   width: 80%;
   max-width: none;
   margin: 0 auto;
@@ -88,98 +82,102 @@ ul {
 }
 
 
-/***************** header styles *****************/
-/* turn all sections background to white */
-header, aside, .settings-area, .canvas-area {
-    background-color: #fff;
+/* general section styles */
+
+header,
+aside,
+.settings-area,
+.canvas-area {
+  background-color: #fff;
 }
 
-
-header {
-  /* background: rgb(208, 131, 95); */
-  grid-column: aside-start / canvas-end;
+aside h2,
+.canvas-area h2 {
+  margin-bottom: 1em;
 }
-
-
-
-
-/***************** aside styles ******************/
 
 aside,
 .canvas-area {
   grid-row: 2 / 13;
-  padding-top: 1.8em;  
+  padding-top: 1.8em;
 }
+
+.canvas-area h2,
+label,
+header h1,
+aside h2 {
+  color: #7b1fa2;
+  font-weight: lighter;
+}
+
+
+/***************** header styles *****************/
+
+header {
+  grid-column: aside-start / canvas-end;
+}
+
+header h1 {
+  font-weight: bolder;
+}
+
+
+/***************** aside styles ******************/
 
 aside {
   grid-column: aside-start / aside-end;
-  /* background: rgb(130, 232, 145); */
-  /* padding: 10px; */
 }
-
-aside h2, .canvas-area h2 {
-    margin-bottom: 1em;
-}
-
-.canvas-area h2, label, header h1, aside h2 {
-    color: #7b1fa2;
-    font-weight: lighter;
-}
-
-
 
 .settings-area {
-    padding-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .input-area {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 #submitButton {
-    transition: transform .10s ease-in-out;
-    margin: 1em 0 1.5em;
+  transition: transform .10s ease-in-out;
+  margin: 1em 0 1.5em;
 }
 
 #submitButton:active {
-    transform: translateY(2px);
+  transform: translateY(2px);
 }
 
 .btn-large i {
-    position: relative;
-    top: 3px;
-    left: -2px;
-    font-size: 1.2em;
-    /* margin-right: 0.5em; */
+  position: relative;
+  top: 3px;
+  left: -2px;
+  font-size: 1.2em;
 }
 
 #colorPicker {
-    cursor: pointer;
-    border: none;
-    height: 40px;
-    width: 100px;
-    margin: -.50em 0 2em;
+  cursor: pointer;
+  border: none;
+  height: 40px;
+  width: 100px;
+  margin: -.50em 0 2em;
 }
 
 #colorPicker:focus {
-    outline: none;
+  outline: none;
 }
 
 .grid-settings label {
-    display: block;
-    margin-bottom: .80rem;
-    /* width: 100%; */
+  display: block;
+  margin-bottom: .80rem;
+  font-size: 1.4em;
 }
 
 .grid-settings div {
-    margin-bottom: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 input[type=number] {
   width: 7em;
   max-width: 10em;
   margin-bottom: 1rem;
-  /* color: #7b1fa2; */
   border: none;
   border-bottom: 1px solid #a793cb;
   padding-bottom: 0.60em;
@@ -187,10 +185,8 @@ input[type=number] {
 }
 
 input[type=number]:focus {
-    outline: none;
+  outline: none;
 }
-
-
 
 
 /***************** canvas area styles ********/
@@ -203,12 +199,6 @@ input[type=number]:focus {
 .canvas-area h2 {
   text-align: center;
 }
-
-header h1 {
-    font-weight: bolder;
-
-}
-
 
 
 /***************** footer styles ***************/
@@ -224,16 +214,11 @@ footer {
   border-top-right-radius: 3px;
 }
 
-
-
 footer ul {
-    color: rgb(196, 188, 196); 
-    text-decoration: none;
+  color: rgb(196, 188, 196);
+  text-decoration: none;
 }
 
 footer li {
-    margin-bottom: .55em;
+  margin-bottom: .55em;
 }
-
-
-

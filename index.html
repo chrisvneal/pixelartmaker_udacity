@@ -8,7 +8,7 @@
 
   <!-- Compiled and minified CSS -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.3/css/materialize.min.css">  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.3/css/materialize.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -18,71 +18,46 @@
       <h1>Pixel Art Maker</h1>
     </header>
 
-
-
     <aside>
+      <!-- Settings Area -->
       <div class="settings-area">
         <h2>Choose Grid Size</h2>
         <form id="sizePicker">
           <div class="input-area">
-              <div class="grid-settings">
-                  <div>
-                      <label for="height">Grid Height:</label>
-                      <input class="purple-text text-darken-3 browser-default" type="number" id="inputHeight" name="height" min="1" value="50"> 
-                  </div>
-                  <div>
-                      <label for="width">Grid Width:</label>
-                      <input class="purple-text text-darken-3 browser-default" type="number" id="inputWidth" name="width" min="1" value="50">
-                  </div>                  
+            <div class="grid-settings">
+              <div>
+                <label for="height">Grid Height:</label>
+                <input class="purple-text text-darken-3 browser-default" type="number" id="inputHeight" name="height" min="1" value="50">
               </div>
-              <button type="submit" id="submitButton" class="waves-effect btn btn-large purple darken-2 z-depth-2"><i class="small material-icons">grid_on</i> Create Grid</button>
-              
-              
+              <div>
+                <label for="width">Grid Width:</label>
+                <input class="purple-text text-darken-3 browser-default" type="number" id="inputWidth" name="width" min="1" value="50">
+              </div>
+            </div>
+            <button type="submit" id="submitButton" class="waves-effect btn btn-large purple darken-2 z-depth-2"><i class="small material-icons">grid_on</i> Create Grid</button>
           </div>
         </form>
 
         <h2><i class="material-icons">color_lens</i> Pick A Color</h2>
         <input type="color" id="colorPicker">
       </div>
-
-
-
-
-
-
-
-
     </aside>
 
-
-
-
-
-
-
+    <!-- Canvas Area -->
     <div class="canvas-area">
       <h2>Design Canvas</h2>
       <table id="pixelCanvas" class="z-depth-2"></table>
     </div>
 
     <footer>
-        <ul>
-            <li>Chris Neal</li>
-            <li>Lesson 22: Pixel Art Maker Project</li>
-            <li><em>Udacity | Google Scholarship Challenge 2018</em></li>
-            
-        </ul>      
+      <ul>
+        <li>Chris Neal</li>
+        <li>Lesson 22: Pixel Art Maker Project</li>
+        <li><em>Udacity | Google Scholarship Challenge 2018</em></li>
+      </ul>
     </footer>
-  </div> <!-- /.container -->
-
-
-
-
-
-
-
-  
-
+  </div>
+  <!-- /.container -->
 
   <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 

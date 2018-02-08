@@ -19,7 +19,7 @@ $(function() {
   let $colorValue = $colorInput.val();
   let mousedown = false;
 
-  
+
   // 1. *******************Functions **********************
 
   // ******************************************************
@@ -83,7 +83,7 @@ $(function() {
     colorElement(e);
   });
 
-  
+
   $canvas.on('mouseup', function() {
     mousedown = false;
   });
