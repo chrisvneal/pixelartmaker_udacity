@@ -131,15 +131,18 @@ header h1 {
 /***************** aside styles ******************/
 
 aside {
-	grid-column: aside-start / aside-end;
-  padding-bottom: 1.5rem;	
+  grid-column: aside-start / aside-end;
+  padding-bottom: 1.5rem;
 }
+
+#gridSettingsArea,
+#prebuiltGridArea,
+#colorPickArea {
+  margin-bottom: 2.5em;
+}
+
 
 /* Grid sizing area styles */
-
-#gridSettingsArea {
-  /* margin-bottom: 1.5rem; */
-}
 
 #gridSettingsArea label {
   display: block;
@@ -147,14 +150,10 @@ aside {
   font-size: 1.4em;
 }
 
-#gridSettingsArea div {
-  margin-bottom: 1.5em;
-}
-
 input[type=number] {
-  width: 7em;
+  width: 6.4em;
   max-width: 10em;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   border: none;
   border-bottom: 1px solid #a793cb;
   padding-bottom: 0.60em;
@@ -181,7 +180,6 @@ input[type=number]:focus {
 #prebuiltGridArea .buttons {
   display: flex;
   flex-wrap: wrap;
-  /* margin: 1.5em 0; */
 }
 
 .prebuilt-button {
@@ -194,14 +192,13 @@ input[type=number]:focus {
   margin-right: 1em;
 }
 
-
-
 .btn-large i {
   position: relative;
   top: 3px;
   left: -2px;
   font-size: 1.2em;
 }
+
 
 /* Color picking area styles */
 
@@ -218,12 +215,9 @@ input[type=number]:focus {
 }
 
 
-
-
 /***************** canvas area styles ********/
 
 .canvas-area {
-  /* background: rgb(220, 147, 172); */
   grid-column: aside-end / canvas-end;
 }
 
@@ -235,12 +229,9 @@ input[type=number]:focus {
 /***************** footer styles ***************/
 
 footer {
-  /* color: lightgray; */
   background: #6a1b9a;
   grid-column: aside-start / canvas-end;
-  padding-top: 8px;
-  padding-left: 15px;
-  /* border-radius: 3px; */
+  padding: 8px 0 0 15px;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }
