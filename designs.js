@@ -101,4 +101,13 @@ $(function() {
   });
 
   // TODO: Try to work on recent styles functionality in the 'recent_styles' branch
+
+  // Prebuilt button functionality
+  $('[data-gridscale]').click(function(e) {
+    e.preventDefault();
+    let $scaleByNumber = $(this).attr('data-gridscale');
+    $('#inputHeight, #inputWidth').val($scaleByNumber);
+
+    makeGrid($scaleByNumber, $scaleByNumber);
+  });
 }); //end of $ (jQuery)
