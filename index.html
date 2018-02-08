@@ -25,77 +25,57 @@
 
 
     <!-- Settings Area -->
+    <!-- TODO: Finish applying flex styles to aside area (3 elements inside: grid-sizing, preset-grid-sizing, colorPickArea) -->
     <aside>
 
-
-
-
       <!-- Grid sizing area -->
-      <div class="grid-settings-area">
-
+      <div id="gridSettingsArea">
         <h2>Choose Grid Size</h2>
-
         <form>
-
           <div>
             <label for="height">Grid Height:</label>
             <input class="purple-text text-darken-3 browser-default" type="number" id="inputHeight" name="height" min="1" value="10">
           </div>
-
-
-
           <div>
             <label for="width">Grid Width:</label>
             <input class="purple-text text-darken-3 browser-default" type="number" id="inputWidth" name="width" min="1" value="10">
           </div>
-
           <button type="submit" id="createGridButton" class="waves-effect btn btn-large purple darken-2 z-depth-2"><i class="small material-icons">grid_on</i> Create Grid</button>
         </form>
-
       </div>
-
-
-
-
-
-
 
 
       <!-- Preset Grid sizing area -->
-      <h3>Preset Grids</h3>
-      <div class="prebuilt-grid-area">
-        <button data-gridscale="20" class="btn btn-small prebuilt-button lighten-1 waves-effect teal">20 X 20</button>
-        <button data-gridscale="50" class="btn btn-small prebuilt-button lighten-1 waves-effect teal">50 X 50</button>
-        <button data-gridscale="75" class="btn btn-small prebuilt-button lighten-1 waves-effect teal">75 X 75</button>
-        <button class="btn btn-small prebuilt-button lighten-1 waves-effect red" id="resetButton">Reset</button>
+      <div id="prebuiltGridArea">
+        <h3>Preset Grids</h3>
+        <div class="buttons">
+          <button data-gridscale="20" class="btn btn-small prebuilt-button lighten-1 waves-effect teal">20 X 20</button>
+          <button data-gridscale="50" class="btn btn-small prebuilt-button lighten-1 waves-effect teal">50 X 50</button>
+          <button data-gridscale="75" class="btn btn-small prebuilt-button lighten-1 waves-effect teal">75 X 75</button>
+          <button class="btn btn-small prebuilt-button lighten-1 waves-effect red" id="resetButton">Reset</button>
+        </div>
       </div>
-
-
-
-
-
-
-
-
-
 
 
 
       <!-- Pick color area -->
-      <h2><i class="material-icons">color_lens</i> Pick A Color</h2>
-      <input type="color" id="colorPicker">
-
-
-
-
-
-
+      <div id="colorPickArea">
+        <h2><i class="material-icons">color_lens</i> Pick A Color</h2>
+        <input type="color" id="colorPicker">
+      </div>
 
 
 
 
     </aside>
     <!-- end of aside/settings area -->
+
+
+
+
+
+
+
 
     <!-- Canvas Area -->
     <div class="canvas-area">

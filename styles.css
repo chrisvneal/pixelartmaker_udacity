@@ -135,66 +135,19 @@ aside {
   padding-bottom: 1.5rem;	
 }
 
+/* Grid sizing area styles */
 
-.grid-settings-area {
-  margin-bottom: 1.5rem;
+#gridSettingsArea {
+  /* margin-bottom: 1.5rem; */
 }
 
-
-/* Prebuilt Grid Area styles */
-
-.prebuilt-grid-area {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 1.5em 0;
-}
-
-.prebuilt-button {
-  flex: 1fr;
-  margin-bottom: 2em;
-  transition: transform .10s ease-in-out;
-}
-
-.prebuilt-button:nth-child(odd) {
-  margin-right: 1em;
-}
-
-#createGridButton {
-  transition: transform .10s ease-in-out;
-  margin: .50em 0 1.5em;
-}
-
-#createGridButton:active,
-.prebuilt-button:active {
-  transform: translateY(2px);
-}
-
-.btn-large i {
-  position: relative;
-  top: 3px;
-  left: -2px;
-  font-size: 1.2em;
-}
-
-#colorPicker {
-  cursor: pointer;
-  border: none;
-  height: 40px;
-  width: 100px;
-  margin: -.50em 0 2em;
-}
-
-#colorPicker:focus {
-  outline: none;
-}
-
-.grid-settings-area label {
+#gridSettingsArea label {
   display: block;
   margin-bottom: .80rem;
   font-size: 1.4em;
 }
 
-.grid-settings-area div {
+#gridSettingsArea div {
   margin-bottom: 1.5em;
 }
 
@@ -211,6 +164,60 @@ input[type=number] {
 input[type=number]:focus {
   outline: none;
 }
+
+#createGridButton {
+  transition: transform .10s ease-in-out;
+  margin: .50em 0 1.5em;
+}
+
+#createGridButton:active,
+.prebuilt-button:active {
+  transform: translateY(2px);
+}
+
+
+/* Prebuilt Grid Area styles */
+
+#prebuiltGridArea .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  /* margin: 1.5em 0; */
+}
+
+.prebuilt-button {
+  flex: 1fr;
+  margin-bottom: 2em;
+  transition: transform .10s ease-in-out;
+}
+
+.prebuilt-button:nth-child(odd) {
+  margin-right: 1em;
+}
+
+
+
+.btn-large i {
+  position: relative;
+  top: 3px;
+  left: -2px;
+  font-size: 1.2em;
+}
+
+/* Color picking area styles */
+
+#colorPicker {
+  cursor: pointer;
+  border: none;
+  height: 40px;
+  width: 100px;
+  margin: -.50em 0 2em;
+}
+
+#colorPicker:focus {
+  outline: none;
+}
+
+
 
 
 /***************** canvas area styles ********/
