@@ -91,7 +91,6 @@ ul {
 
 header,
 aside,
-.settings-area,
 .canvas-area {
   background-color: #fff;
 }
@@ -132,14 +131,12 @@ header h1 {
 /***************** aside styles ******************/
 
 aside {
-  grid-column: aside-start / aside-end;
+	grid-column: aside-start / aside-end;
+  padding-bottom: 1.5rem;	
 }
 
-.settings-area {
-  padding-bottom: 1.5rem;
-}
 
-.input-area {
+.grid-settings-area {
   margin-bottom: 1.5rem;
 }
 
@@ -191,13 +188,13 @@ aside {
   outline: none;
 }
 
-.grid-settings label {
+.grid-settings-area label {
   display: block;
   margin-bottom: .80rem;
   font-size: 1.4em;
 }
 
-.grid-settings div {
+.grid-settings-area div {
   margin-bottom: 1.5em;
 }
 
