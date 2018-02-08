@@ -100,7 +100,7 @@ $(function() {
     colorElement(e);
   });
 
-  // TODO: Try to work on recent styles functionality in the 'recent_styles' branch
+  // TODO: Refactor this JS code
 
   // Prebuilt button functionality
   $('[data-gridscale]').click(function(e) {
@@ -122,6 +122,11 @@ $(function() {
       $inputHeight.val($heightValue);
       $inputWidth.val($widthValue);
     }
+  });
 
+  $('.reset-button').click(function(e) {
+    e.preventDefault();
+
+    $('#pixelCanvas').children().remove();
   });
 }); //end of $ (jQuery)

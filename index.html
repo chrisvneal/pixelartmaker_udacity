@@ -26,6 +26,11 @@
 
       <!-- Settings Area -->
       <div class="settings-area">
+
+
+
+
+        <!-- Grid sizing area -->
         <h2>Choose Grid Size</h2>
         <form id="sizePicker">
           <div class="input-area">
@@ -40,25 +45,21 @@
               </div>
             </div>
 
-            <button type="submit" id="createGridButton" class="waves-effect btn btn-large purple darken-2 z-depth-2"><i class="small material-icons">grid_on</i> Create Grid</button>
-
-
-
-
-
-
-            
-            <h3>Preset Grids</h3>
-            <div class="prebuilt-grid-area">
-              <button data-gridscale="20" class="btn btn-small prebuilt-button lighten-1 waves-effect teal">20 X 20</button>
-              <button data-gridscale="50" class="btn btn-small prebuilt-button lighten-1 waves-effect teal">50 X 50</button>
-              <button data-gridscale="75" class="btn btn-small prebuilt-button lighten-1 waves-effect teal">75 X 75</button>       
-            </div>
-
-            
+            <button type="submit" id="createGridButton" class="waves-effect btn btn-large purple darken-2 z-depth-2"><i class="small material-icons">grid_on</i> Create Grid</button>        
           </div>
         </form>
 
+        <!-- Preset Grid sizing area -->
+        <h3>Preset Grids</h3>
+            <div class="prebuilt-grid-area">
+              <button data-gridscale="20" class="btn btn-small prebuilt-button lighten-1 waves-effect teal">20 X 20</button>
+              <button data-gridscale="50" class="btn btn-small prebuilt-button lighten-1 waves-effect teal">50 X 50</button>
+              <button data-gridscale="75" class="btn btn-small prebuilt-button lighten-1 waves-effect teal">75 X 75</button>
+              <button class="btn btn-small prebuilt-button reset-button lighten-1 waves-effect red">Reset</button>        
+            </div>
+
+
+            <!-- Pick color area -->
         <h2><i class="material-icons">color_lens</i> Pick A Color</h2>
         <input type="color" id="colorPicker">
       </div>

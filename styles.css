@@ -158,7 +158,7 @@ aside {
   transition: transform .10s ease-in-out;
 }
 
-.prebuilt-button:first-child {
+.prebuilt-button:nth-child(odd) {
   margin-right: 1em;
 }
 
