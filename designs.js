@@ -33,6 +33,10 @@ $(function() {
 
   // makeGrid() creates a grid/table based on user provided values
   function makeGrid(height, width) {
+      if ((height + width) > 200) {
+          alert('Height + Width must not equal 200!');
+            return;
+      }
 
     placeGridNumbers(height, width);
 
