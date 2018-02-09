@@ -76,7 +76,12 @@ $(function() {
   function resetCanvas(e) {
     e.preventDefault();
 
+    // Erase all table content
     $('#pixelCanvas').children().remove();
+
+    // Reset initial grid values
+    let $initialGridValue = $('#inputWidth').attr('value');
+    $('#inputHeight, #inputWidth').val($initialGridValue);
 }
 
   // 4. ************ Coloring functionality ***************
