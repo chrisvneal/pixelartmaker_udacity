@@ -153,6 +153,16 @@ $(function() {
     }
   });
 
+  $('input[type=number]').keydown(function(e) {
+      if (e.keyCode === 48) {
+          if (this.value < 1) {
+            alert('Please enter a number greater than 0!');
+            $(this).val('1');
+          }
+        
+      }
+  });
+
   $('#resetButton').click(resetCanvas);
 
 
