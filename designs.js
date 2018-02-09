@@ -51,6 +51,7 @@ $(function() {
       $canvas.append($row);
     }
 
+
     $('#colorPicker').trigger('click');
   } // end of makeGrid()
 

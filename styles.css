@@ -124,7 +124,8 @@ header {
 }
 
 header h1 {
-  font-weight: bolder;
+	font-weight: bolder;
+	padding: 3px;
 }
 
 
