@@ -33,10 +33,11 @@ $(function() {
 
   // makeGrid() creates a grid/table based on user provided values
   function makeGrid(height, width) {
-      if ((height + width) > 200) {
-          alert('Height + Width must not equal 200!');
-            return;
-      }
+      
+    if ((Number(height) + Number(width)) > 200) {
+      alert('Height + Width must not equal 200!');
+      return;
+    }
 
     placeGridNumbers(height, width);
 
@@ -84,9 +85,14 @@ $(function() {
     makeGrid($heightValue, $widthValue);
   });
 
-   // 3. ********** #resetCanvas functionality ************
+  // 3. ********** #resetCanvas functionality ************
 
   // ******************************************************
+  // Reset initial grid values
+  function setInitialGridValue() {
+    let $initialGridValue = $('#inputWidth').attr('value');
+    $('#inputHeight, #inputWidth').val($initialGridValue);
+  }
 
   function resetCanvas(e) {
     e.preventDefault();
@@ -94,12 +100,11 @@ $(function() {
     // Erase all table content
     $('#pixelCanvas').children().remove();
 
-    // Reset initial grid values
-    let $initialGridValue = $('#inputWidth').attr('value');
-    $('#inputHeight, #inputWidth').val($initialGridValue);
+
+    setInitialGridValue();
 
     $('#canvasArea h2').children().remove();
-}
+  }
 
   // 4. ************ Coloring functionality ***************
 
@@ -140,6 +145,7 @@ $(function() {
     e.preventDefault();
     let $scaleByNumber = $(this).attr('data-gridscale');
     $('#inputHeight, #inputWidth').val($scaleByNumber);
+    // alert($scaleByNumber);
 
     makeGrid($scaleByNumber, $scaleByNumber);
   });
@@ -158,18 +164,16 @@ $(function() {
   });
 
   $('input[type=number]').keydown(function(e) {
-      if (e.keyCode === 48) {
-          if (this.value < 1) {
-            alert('Please enter a number greater than 0!');
-            $(this).val('1');
-          }
-        
+    if (e.keyCode === 48) {
+      if (this.value < 1) {
+        alert('Please enter a number greater than 0!');
+        $(this).val('1');
       }
+
+    }
   });
 
   $('#resetButton').click(resetCanvas);
 
 
 }); //end of $ (jQuery)
-
-
