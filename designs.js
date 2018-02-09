@@ -50,6 +50,8 @@ $(function() {
       // 3. Append those rows (including <td>s) to the canvas
       $canvas.append($row);
     }
+
+    $('#colorPicker').trigger('click');
   } // end of makeGrid()
 
   function colorElement(element) {
