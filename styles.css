@@ -91,29 +91,35 @@ ul {
 
 header,
 aside,
-.canvas-area {
+#canvasArea {
   background-color: #fff;
 }
 
 aside h2,
 aside h3,
-.canvas-area h2 {
+#canvasArea h2 {
   margin-bottom: 1em;
 }
 
 aside,
-.canvas-area {
+#canvasArea {
   grid-row: 2 / 13;
   padding-top: 1.8em;
 }
 
-.canvas-area h2,
+#canvasArea h2,
 label,
 header h1,
 aside h2,
 aside h3 {
   color: #7b1fa2;
   font-weight: lighter;
+}
+
+.gridSizeString {
+	display: inline-block;
+	margin-left: .50em;
+	font-weight: bold;
 }
 
 
@@ -218,11 +224,11 @@ input[type=number]:focus {
 
 /***************** canvas area styles ********/
 
-.canvas-area {
+#canvasArea {
   grid-column: aside-end / canvas-end;
 }
 
-.canvas-area h2 {
+#canvasArea h2 {
   text-align: center;
 }
 

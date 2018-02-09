@@ -25,8 +25,16 @@ $(function() {
 
   // ******************************************************
 
+  function placeGridNumbers(height, width) {
+    let gridSizeString = height + " x " + width;
+    $('#canvasArea h2').children().remove();
+    $('#canvasArea h2').append('<span class="gridSizeString">' + gridSizeString + '</span>');
+  }
+
   // makeGrid() creates a grid/table based on user provided values
   function makeGrid(height, width) {
+
+    placeGridNumbers(height, width);
 
     // TODO: Put a condition in there that if height === 0, don't run the program!
 
@@ -85,6 +93,8 @@ $(function() {
     // Reset initial grid values
     let $initialGridValue = $('#inputWidth').attr('value');
     $('#inputHeight, #inputWidth').val($initialGridValue);
+
+    $('#canvasArea h2').children().remove();
 }
 
   // 4. ************ Coloring functionality ***************
