@@ -82,7 +82,7 @@ ul {
   margin: 0 auto;
   display: grid;
   grid-template-columns: [aside-start] 1fr [aside-end] 1fr [canvas-start] 1fr [midcanvas-start] 1fr [midcanvas-end] 1fr [canvas-end];
-  grid-template-rows: 60px repeat(12, minmax(100px, auto));
+  grid-template-rows: 60px repeat(11, minmax(100px, auto));
   grid-column-gap: 10px;
 }
 
@@ -225,7 +225,8 @@ input[type=number]:focus {
 /***************** canvas area styles ********/
 
 #canvasArea {
-  grid-column: aside-end / canvas-end;
+	grid-column: aside-end / canvas-end;
+	margin-bottom: 2em;
 }
 
 #canvasArea h2 {
@@ -240,7 +241,8 @@ footer {
   grid-column: aside-end / canvas-end;
   /* padding: 8px 0 0 15px; */
   /* border-top-left-radius: 3px; */
-  /* border-top-right-radius: 3px; */
+	/* border-top-right-radius: 3px; */
+	margin-bottom: 3em;
 }
 
 footer ul {
