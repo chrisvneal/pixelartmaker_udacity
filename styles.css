@@ -233,6 +233,12 @@ input[type=number]:focus {
   text-align: center;
 }
 
+.splat {
+	position: absolute;
+	opacity: .40;
+	z-index: 1;
+}
+
 
 /***************** footer styles ***************/
 
