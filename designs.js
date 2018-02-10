@@ -65,7 +65,7 @@ $(function() {
     }
 
 
-    $('#colorPicker').trigger('click');
+    // $('#colorPicker').trigger('click');
   } // end of makeGrid()
 
   function colorElement(element) {
