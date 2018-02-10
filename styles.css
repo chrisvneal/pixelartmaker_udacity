@@ -117,9 +117,9 @@ aside h3 {
 }
 
 .gridSizeString {
-	display: inline-block;
-	margin-left: .50em;
-	font-weight: bold;
+  display: inline-block;
+  margin-left: .50em;
+  font-weight: bold;
 }
 
 
@@ -130,8 +130,8 @@ header {
 }
 
 header h1 {
-	font-weight: bolder;
-	padding: 3px;
+  font-weight: bolder;
+  padding: 3px;
 }
 
 
@@ -236,18 +236,29 @@ input[type=number]:focus {
 /***************** footer styles ***************/
 
 footer {
-  background: #6a1b9a;
-  grid-column: aside-start / canvas-end;
-  padding: 8px 0 0 15px;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+  /* background: #6a1b9a; */
+  grid-column: aside-end / canvas-end;
+  /* padding: 8px 0 0 15px; */
+  /* border-top-left-radius: 3px; */
+  /* border-top-right-radius: 3px; */
 }
 
 footer ul {
-  color: rgb(196, 188, 196);
+  display: flex;
+  justify-content: space-around;
+}
+
+footer a {
   text-decoration: none;
+	color: rgb(196, 188, 196);
+	transition: color 0.16s ease-in-out;
+}
+
+footer a:hover {
+	color: #7b1fa2;
 }
 
 footer li {
-  margin-bottom: .55em;
+  /* margin-bottom: .55em; */
+  display: inline-block;
 }
