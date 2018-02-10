@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: Montserrat, Arial, sans-serif;
+	font-family: "Love Ya Like A Sister", Arial, sans-serif;
   margin: 0;
   padding-top: 1.2em;
 }
@@ -113,7 +113,7 @@ header h1,
 aside h2,
 aside h3 {
   color: #7b1fa2;
-  font-weight: lighter;
+	font-weight: lighter;	
 }
 
 .gridSizeString {
@@ -131,7 +131,7 @@ header {
 
 header h1 {
   font-weight: bolder;
-  padding: 3px;
+	font-size: 2.8em;
 }
 
 
@@ -209,6 +209,10 @@ input[type=number]:focus {
 
 /* Color picking area styles */
 
+#colorPickArea {
+	position: relative;
+}
+
 #colorPicker {
   cursor: pointer;
   border: none;
@@ -235,8 +239,11 @@ input[type=number]:focus {
 
 .splat {
 	position: absolute;
-	opacity: .40;
+	opacity: .30;
 	z-index: 1;
+	width: 200px;
+	top: 70px;
+	left: 55px;
 }
 
 
@@ -249,6 +256,8 @@ footer {
   /* border-top-left-radius: 3px; */
 	/* border-top-right-radius: 3px; */
 	margin-bottom: 3em;
+	font-family: Montserrat, Arial, sans-serif;
+	font-weight: lighter;
 }
 
 footer ul {
@@ -259,7 +268,7 @@ footer ul {
 footer a {
   text-decoration: none;
 	color: rgb(196, 188, 196);
-	transition: color 0.16s ease-in-out;
+	transition: color 0.20s ease-in-out;
 }
 
 footer a:hover {
