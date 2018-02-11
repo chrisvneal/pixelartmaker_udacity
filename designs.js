@@ -77,7 +77,9 @@ $(function() {
 
 
   function addRecentColor(recentColor) {
-      alert('The recent color is ' + recentColor);
+
+    let $recentColorObject = $('<div class="recent-color-object"></div>').css('background', recentColor);
+      $('.recent-colors').append($recentColorObject)
   }
 
   // colorElement() function places the color in the element
