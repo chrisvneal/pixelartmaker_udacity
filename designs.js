@@ -115,6 +115,18 @@ $(function() {
   });
 
 
+
+
+
+
+
+
+
+
+
+
+
+
   // 4. ************ Coloring functionality ***************
 
   // ******************************************************
@@ -130,22 +142,33 @@ $(function() {
     colorElement(e);
   });
 
-
-  $canvas.on('mouseup', function() {
-    mousedown = false;
-  });
-
-  // If you mouse over a tile when the mouse is still down, color that tile
+  // If you mouse over a tile when the mouse is still down, continue coloring
   $canvas.on('mouseover', 'td', function(e) {
     if (mousedown) {
       colorElement(e);
     }
   });
 
-  // A single 'click' on a tile will color it
-  $canvas.on('click', 'td', function(e) {
-    colorElement(e);
+
+  $canvas.on('mouseup', function() {
+    mousedown = false;
   });
+
+  /////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   // TODO: Refactor this JS code
 
