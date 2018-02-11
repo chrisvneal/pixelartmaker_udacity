@@ -1,10 +1,10 @@
 $(function() {
-
   // ******** Table of Contents ************
   // 1. Functions
   // 2. #createGridButton functionality
-  // 2. #resetCanvas functionality
-  // 4. Coloring functionality
+  // 3. Coloring functionality
+  // 4. 'Prebuilt' button functionality
+  // 5. 'Enter key' button functionality
   // ***************************************
 
   // Form inputs
@@ -99,17 +99,9 @@ $(function() {
     setInitialGridValue();
   }
 
-
-
-
-
-
-
-
-
   // 2. ********** #createGridButton functionality ************
 
-  // ******************************************************
+  // **********************************************************
 
   $createGridButton.click(function(e) {
     e.preventDefault();
@@ -120,7 +112,7 @@ $(function() {
     makeGrid($heightValue, $widthValue);
   });
 
-  // 4. ************ Coloring functionality ***************
+  // 3. ************ Coloring functionality ***************
 
   // ******************************************************
 
@@ -146,25 +138,9 @@ $(function() {
     mousedown = false;
   });
 
-  /////////////////////
+  // 4. ************ 'Prebuilt' button functionality ***************
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // TODO: Refactor this JS code
-
-  // Prebuilt button functionality
+  // ***************************************************************
   $('[data-gridscale]').click(function(e) {
     e.preventDefault();
 
@@ -177,11 +153,9 @@ $(function() {
     makeGrid($scaleByNumber, $scaleByNumber);
   });
 
+   // 5. ******* 'Enter key' functionality in grid settings area****
 
-
-
-
-  // 'Enter key' functionality in grid settings area
+  // ***************************************************************
   $('#inputHeight, #inputWidth').keypress(function(e) {
     if (e.keyCode === 13) {
       e.preventDefault();
@@ -201,43 +175,16 @@ $(function() {
   $('input[type=number]').keydown(function(e) {
 
     if (e.keyCode === 48) {
-        
+
       if (this.value < 1) {
+
         alert('Select a higher number!');
+
         $(this).val('1');
       }
-
     }
   });
 
-
-
-
-
-
-
-
-
-
   $('#resetButton').click(resetCanvas);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }); //end of $ (jQuery)
