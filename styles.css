@@ -235,7 +235,8 @@ input[type=number]:focus {
 }
 
 .recent-color-object {
-	width: 400px;
+	/* width: 400px; */
+	width: 100px;
 	border-radius: 100%;
 	cursor: pointer;
 	transition: all 0.2s ease-in-out;
@@ -248,16 +249,14 @@ input[type=number]:focus {
 #recentColorArea table {
 	width: 20%;
 	margin: 0;
-	border-spacing: 20px;	
+	border-collapse: separate;
+	border-spacing: 10px;	
 }
 
 #recentColorArea tr {
 	height: 50px;
 }
 
-#recentColorArea td {
-	margin-bottom: 2em;
-}
 
 
 /***************** canvas area styles ********/
