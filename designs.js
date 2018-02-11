@@ -50,13 +50,13 @@ $(function() {
 
     // Create amount of rows requested via 'height' variable
 
-    for (var i = 0; i < height; i++) {
+    for (let i = 0; i < height; i++) {
 
       // 1. Create a row element (<tr>) until 'height' is met
       $row = $('<tr></tr>');
 
       // 2. make the necessary amount of columns (<tds>) & append them to each row      
-      for (var j = 0; j < width; j++) {
+      for (let j = 0; j < width; j++) {
         $row.append('<td></td>');
       }
 
