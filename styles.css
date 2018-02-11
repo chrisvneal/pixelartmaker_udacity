@@ -195,7 +195,6 @@ input[type=number]:focus {
 }
 
 .prebuilt-button {
-  flex: 1fr;
   margin-bottom: 2em;
   transition: transform .10s ease-in-out;
 }
