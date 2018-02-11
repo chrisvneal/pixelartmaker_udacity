@@ -281,3 +281,7 @@ footer li {
   /* margin-bottom: .55em; */
   display: inline-block;
 }
+
+@media screen and (max-height: 1470px) {
+
+}
