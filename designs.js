@@ -75,6 +75,11 @@ $(function() {
     }
   } // end of makeGrid()
 
+
+  function addRecentColor(recentColor) {
+      alert('The recent color is ' + recentColor);
+  }
+
   // colorElement() function places the color in the element
   function colorElement(element) {
 
@@ -124,6 +129,9 @@ $(function() {
   // When you mouse down on a tile, apply chosen color
   $canvas.on('mousedown', 'td', function(e) {
     mousedown = true;
+
+    addRecentColor($colorValue);
+
     colorElement(e);
   });
 
