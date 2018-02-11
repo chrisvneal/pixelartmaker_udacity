@@ -143,6 +143,8 @@ aside {
   padding-bottom: 1.5rem;
 }
 
+
+
 #gridSettingsArea,
 #prebuiltGridArea,
 #colorPickArea {
@@ -253,7 +255,7 @@ input[type=number]:focus {
 
 footer {
   /* background: #6a1b9a; */
-  grid-column: aside-end / canvas-end;
+	grid-column: aside-end / canvas-end;
   /* padding: 8px 0 0 15px; */
   /* border-top-left-radius: 3px; */
 	/* border-top-right-radius: 3px; */
@@ -282,6 +284,12 @@ footer li {
   display: inline-block;
 }
 
-@media screen and (max-height: 1470px) {
+@media screen and (max-height: 1450px) {
+	.container {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+
 
 }
