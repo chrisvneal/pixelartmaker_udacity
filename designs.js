@@ -78,9 +78,13 @@ $(function() {
 
   function addRecentColor(recentColor) {
 
-    let $recentColorObject = $('<tr class="recent-color"><td class="recent-color-object"></td><>/tr').css('background', recentColor);
-    
-    $('.recent-colors').prepend($recentColorObject);
+    let $recentColorRow = $('<tr class="recent-color"></td>');
+
+    let $recentColorObject = $('<td class="recent-color-object"></td>').css('background', recentColor);
+
+    $recentColorRow.prepend($recentColorObject);
+
+    $('#recentColors').prepend($recentColorRow);
   }
 
   // colorElement() function places the color in the element

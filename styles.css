@@ -63,18 +63,9 @@ td {
   cursor: crosshair;
 }
 
-#recentColorArea table, #recentColorArea tr, #recentColorArea td {
-	border: none;
-}
 
-#recentColorArea table {
-	width: 20%;
-	margin: 0;
-}
 
-#recentColorArea tr {
-	height: 50px;
-}
+
 
 
 p {
@@ -246,6 +237,26 @@ input[type=number]:focus {
 .recent-color-object {
 	width: 400px;
 	border-radius: 100%;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+
+#recentColorArea table, #recentColorArea tr, #recentColorArea td {
+	border: none;
+}
+
+#recentColorArea table {
+	width: 20%;
+	margin: 0;
+	border-spacing: 20px;	
+}
+
+#recentColorArea tr {
+	height: 50px;
+}
+
+#recentColorArea td {
+	margin-bottom: 2em;
 }
 
 
