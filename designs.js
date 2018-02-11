@@ -1,11 +1,11 @@
-// ******** Table of Contents ************
-// 1. Functions
-// 2. #createGridButton functionality
-// 2. #resetCanvas functionality
-// 4. Coloring functionality
-// ***************************************
-
 $(function() {
+
+  // ******** Table of Contents ************
+  // 1. Functions
+  // 2. #createGridButton functionality
+  // 2. #resetCanvas functionality
+  // 4. Coloring functionality
+  // ***************************************
 
   // Form inputs
   const $inputHeight = $("#inputHeight");
@@ -25,20 +25,25 @@ $(function() {
 
   // ******************************************************
 
+  // Create a string from the grid values and display it next to canvas header
   function placeGridNumbers(height, width) {
-    let gridSizeString = height + " x " + width;
-    $('#canvasArea h2').children().remove();
-    $('#canvasArea h2').append('<span class="gridSizeString">' + gridSizeString + '</span>');
-  }
 
-  // makeGrid() creates a grid/table based on user provided values
+    let gridSizeString = height + " x " + width;
+
+    $('#canvasArea h2').children().remove();
+
+    $('#canvasArea h2').append('<span class="gridSizeString">' + gridSizeString + '</span>');
+  } // end of placeGridNumbers()
+
+  // makeGrid() creates a grid/table/canvas based on user values
   function makeGrid(height, width) {
-      
+
     if ((Number(height) + Number(width)) > 200) {
-      alert('Height + Width must not equal 200!');
+      alert('height + width must not equal 200!');
       return;
     }
 
+    // Display selected grid values beside canvas heading
     placeGridNumbers(height, width);
 
     // TODO: Put a condition in there that if height === 0, don't run the program!
@@ -46,10 +51,9 @@ $(function() {
     // Clear any grids from the page
     $canvas.html('');
 
-    let $row;
+    let $row; // begin variable for crating a row
 
     // Create amount of rows requested via 'height' variable
-
     for (let i = 0; i < height; i++) {
 
       // 1. Create a row element (<tr>) until 'height' is met
@@ -63,14 +67,39 @@ $(function() {
       // 3. Append those rows (including <td>s) to the canvas
       $canvas.append($row);
     }
-
-
-    // $('#colorPicker').trigger('click');
   } // end of makeGrid()
 
+  // colorElement() function places the color in the element
   function colorElement(element) {
+
     $(element.target).css("background", $colorValue);
   } // end of colorElement()
+
+  // Reset initial grid values
+  function setInitialGridValue() {
+
+    let $initialGridValue = $('#inputWidth').attr('value');
+
+    $('#inputHeight, #inputWidth').val($initialGridValue);
+  }
+
+  // resetCanvas() function
+  function resetCanvas(e) {
+    e.preventDefault();
+
+    // Erase canvas content
+    $('#pixelCanvas, #canvasArea h2').children().remove();
+
+    setInitialGridValue();
+  }
+
+
+
+
+
+
+
+
 
   // 2. ********** #createGridButton functionality ************
 
@@ -85,26 +114,6 @@ $(function() {
     makeGrid($heightValue, $widthValue);
   });
 
-  // 3. ********** #resetCanvas functionality ************
-
-  // ******************************************************
-  // Reset initial grid values
-  function setInitialGridValue() {
-    let $initialGridValue = $('#inputWidth').attr('value');
-    $('#inputHeight, #inputWidth').val($initialGridValue);
-  }
-
-  function resetCanvas(e) {
-    e.preventDefault();
-
-    // Erase all table content
-    $('#pixelCanvas').children().remove();
-
-
-    setInitialGridValue();
-
-    $('#canvasArea h2').children().remove();
-  }
 
   // 4. ************ Coloring functionality ***************
 
@@ -173,7 +182,34 @@ $(function() {
     }
   });
 
+
+
+
+
+
+
+
+
+
   $('#resetButton').click(resetCanvas);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }); //end of $ (jQuery)
