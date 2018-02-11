@@ -17,40 +17,30 @@
 <body>
   <div class="container">
 
-
-    <!-- Hedaer area -->
+    <!-- Header area -->
     <header>
       <h1>Pixel Art Maker</h1>
     </header>
 
-
-
-
-
-
-
     <!-- Settings Area -->
-
-    <!-- TODO: Finish applying flex styles to aside area (3 elements inside: grid-sizing, preset-grid-sizing, colorPickArea) -->
     <aside>
       <!-- Grid sizing area -->
       <div id="gridSettingsArea">
         <h2>Choose Grid Size</h2>
         <form>
           <div class="form-inputs">
-              <div>
-                <label for="inputHeight">Grid Height</label>
-                <input class="purple-text text-darken-3 browser-default" type="number" id="inputHeight" name="height" min="1" value="10">
-              </div>
-              <div>
-                <label for="inputWidth">Grid Width</label>
-                <input class="purple-text text-darken-3 browser-default" type="number" id="inputWidth" name="width" min="1" value="10">
-              </div>
+            <div>
+              <label for="inputHeight">Grid Height</label>
+              <input class="purple-text text-darken-3 browser-default" type="number" id="inputHeight" name="height" min="1" value="10">
+            </div>
+            <div>
+              <label for="inputWidth">Grid Width</label>
+              <input class="purple-text text-darken-3 browser-default" type="number" id="inputWidth" name="width" min="1" value="10">
+            </div>
           </div>
           <button type="submit" id="createGridButton" class="waves-effect btn btn-large purple darken-2 z-depth-2"><i class="small material-icons">grid_on</i> Create Grid</button>
         </form>
       </div>
-
 
       <!-- Preset Grid sizing area -->
       <div id="prebuiltGridArea">
@@ -63,7 +53,7 @@
         </div>
       </div>
 
-      <!-- Pick color area -->
+      <!-- Color Picker area -->
       <div id="colorPickArea">
         <h2><i class="material-icons">color_lens</i> Pick A Color</h2>
         <input type="color" id="colorPicker">
@@ -72,20 +62,11 @@
     </aside>
     <!-- end of aside/settings area -->
 
-
-
-
-
-
-
-
     <!-- Canvas Area -->
-    <div id="canvasArea">        
+    <div id="canvasArea">
       <h2>Design Canvas</h2>
       <table id="pixelCanvas" class="z-depth-4"></table>
     </div>
-
-
 
     <!-- Footer area -->
     <footer>
