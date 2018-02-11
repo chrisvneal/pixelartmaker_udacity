@@ -114,19 +114,6 @@ $(function() {
     makeGrid($heightValue, $widthValue);
   });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
   // 4. ************ Coloring functionality ***************
 
   // ******************************************************
@@ -148,7 +135,6 @@ $(function() {
       colorElement(e);
     }
   });
-
 
   $canvas.on('mouseup', function() {
     mousedown = false;
@@ -175,23 +161,33 @@ $(function() {
   // Prebuilt button functionality
   $('[data-gridscale]').click(function(e) {
     e.preventDefault();
+
+    // scaleByNumber is the scale depicted on the button
     let $scaleByNumber = $(this).attr('data-gridscale');
+
+    // Set both width and height values to scaleBynumber...
     $('#inputHeight, #inputWidth').val($scaleByNumber);
-    // alert($scaleByNumber);
 
     makeGrid($scaleByNumber, $scaleByNumber);
   });
 
+
+
+
+
+  // Enter key functionality in grid settings area
   $('#inputHeight, #inputWidth').keypress(function(e) {
     if (e.keyCode === 13) {
       e.preventDefault();
+
       let $heightValue = $inputHeight.val();
       let $widthValue = $inputWidth.val();
 
-      makeGrid($heightValue, $widthValue);
-
+      // Make the input values same as on button
       $inputHeight.val($heightValue);
       $inputWidth.val($widthValue);
+
+      makeGrid($heightValue, $widthValue);      
     }
   });
 
