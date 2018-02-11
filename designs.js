@@ -38,22 +38,28 @@ $(function() {
   // makeGrid() creates a grid/table/canvas based on user values
   function makeGrid(height, width) {
 
-    if ((Number(height) + Number(width)) > 200) {
-      alert('height + width must not equal 200!');
+    // Don't allow 0 height; this means no rows!
+    if (height < 1) {
+      alert("Please select a value greater than 0!");
+      return;
+    }
+
+    // If either width or height size is higher than 100, alert user and end program
+    if ((Number(height)) > 100 || (Number(width)) > 100) {
+      alert('Please choose a number from 100 and lower!');
       return;
     }
 
     // Display selected grid values beside canvas heading
     placeGridNumbers(height, width);
 
-    // TODO: Put a condition in there that if height === 0, don't run the program!
-
     // Clear any grids from the page
     $canvas.html('');
 
-    let $row; // begin variable for crating a row
+    // Initiate variable for creating a 'row', create amount of rows requested via 'height' variable
+    let $row;
 
-    // Create amount of rows requested via 'height' variable
+    // forLoop to put columns into row
     for (let i = 0; i < height; i++) {
 
       // 1. Create a row element (<tr>) until 'height' is met
@@ -175,7 +181,7 @@ $(function() {
 
 
 
-  // Enter key functionality in grid settings area
+  // 'Enter key' functionality in grid settings area
   $('#inputHeight, #inputWidth').keypress(function(e) {
     if (e.keyCode === 13) {
       e.preventDefault();
@@ -187,14 +193,17 @@ $(function() {
       $inputHeight.val($heightValue);
       $inputWidth.val($widthValue);
 
-      makeGrid($heightValue, $widthValue);      
+      makeGrid($heightValue, $widthValue);
     }
   });
 
+  // If 0 is the first key pressed, alert user about selecting a higher number
   $('input[type=number]').keydown(function(e) {
+
     if (e.keyCode === 48) {
+        
       if (this.value < 1) {
-        alert('Please enter a number greater than 0!');
+        alert('Select a higher number!');
         $(this).val('1');
       }
 
