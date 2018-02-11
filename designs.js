@@ -78,8 +78,9 @@ $(function() {
 
   function addRecentColor(recentColor) {
 
-    let $recentColorObject = $('<div class="recent-color-object"></div>').css('background', recentColor);
-      $('.recent-colors').append($recentColorObject)
+    let $recentColorObject = $('<tr class="recent-color"><td class="recent-color-object"></td><>/tr').css('background', recentColor);
+    
+    $('.recent-colors').prepend($recentColorObject);
   }
 
   // colorElement() function places the color in the element
@@ -132,6 +133,7 @@ $(function() {
   $canvas.on('mousedown', 'td', function(e) {
     mousedown = true;
 
+    // When a tile is clicked, that color will become available as a recent color
     addRecentColor($colorValue);
 
     colorElement(e);
@@ -163,7 +165,7 @@ $(function() {
     makeGrid($scaleByNumber, $scaleByNumber);
   });
 
-   // 5. ******* 'Enter key' functionality in grid settings area****
+  // 5. ******* 'Enter key' functionality in grid settings area****
 
   // ***************************************************************
   $('#inputHeight, #inputWidth').keypress(function(e) {

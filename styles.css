@@ -63,6 +63,20 @@ td {
   cursor: crosshair;
 }
 
+#recentColorArea table, #recentColorArea tr, #recentColorArea td {
+	border: none;
+}
+
+#recentColorArea table {
+	width: 20%;
+	margin: 0;
+}
+
+#recentColorArea tr {
+	height: 50px;
+}
+
+
 p {
   margin: 0;
 }
@@ -230,7 +244,7 @@ input[type=number]:focus {
 }
 
 .recent-color-object {
-	width: 100px;
+	width: 400px;
 	border-radius: 100%;
 }
 
