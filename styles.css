@@ -291,5 +291,29 @@ footer li {
 		flex-wrap: wrap;
 	}
 
+	header {
+		text-align: center;
+		margin-bottom: 3em;
+	}
+
+	#gridSettingsArea form {
+		display: flex;
+		flex-flow: column wrap;
+		/* justify-content: space-between; */
+	}
+
+	#createGridButton {
+		padding: 30px 0;
+		line-height: 0;
+		width: 50%;
+		margin: 2.5em auto;
+	}
+
+	.form-inputs {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
 
 }
