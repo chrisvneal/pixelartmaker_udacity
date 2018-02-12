@@ -112,6 +112,15 @@ $(function() {
     setInitialGridValue();
   }
 
+  // convert rgb to hex
+  function rgb2hex(rgb) {
+    rgb = rgb.match(/^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i);
+    return (rgb && rgb.length === 4) ? "#" +
+      ("0" + parseInt(rgb[1], 10).toString(16)).slice(-2) +
+      ("0" + parseInt(rgb[2], 10).toString(16)).slice(-2) +
+      ("0" + parseInt(rgb[3], 10).toString(16)).slice(-2) : '';
+  }
+
   // 2. ********** #createGridButton functionality ************
 
   // **********************************************************
@@ -203,5 +212,13 @@ $(function() {
   });
 
   $('#resetButton').click(resetCanvas);
+
+  // Click on recent colors and change value of color picker
+  $('#recentColorArea').on('click', '.recent-color-object', function() {
+
+    let $selectedRecentColor = $(this).css('backgroundColor');
+    
+    $colorInput.val(rgb2hex($selectedRecentColor));
+  });
 
 }); //end of $ (jQuery)
