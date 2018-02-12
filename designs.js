@@ -76,6 +76,7 @@ $(function() {
   } // end of makeGrid()
 
 
+  // Place currently selected color in a 'Recent Colors" div
   function addRecentColor(recentColor) {
 
     let $recentColorRow = $('<tr class="recent-color"></td>');
