@@ -19,6 +19,7 @@ $(function() {
   const $colorInput = $("#colorPicker");
   let $colorValue = $colorInput.val();
   let mousedown = false;
+  let $lastRecentColor = $('#recentColors').children().first().css('backgroundColor');
 
 
   // 1. *******************Functions **********************
