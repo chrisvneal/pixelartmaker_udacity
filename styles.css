@@ -5,7 +5,7 @@
 }
 
 body {
-	font-family: Montserrat, Arial, sans-serif;
+  font-family: Montserrat, Arial, sans-serif;
   margin: 0;
   padding-top: 1.2em;
 }
@@ -63,11 +63,6 @@ td {
   cursor: crosshair;
 }
 
-
-
-
-
-
 p {
   margin: 0;
 }
@@ -83,14 +78,14 @@ ul {
 
 .container {
   width: 80%;
-	max-width: none;
-	min-width: 820px;
+  max-width: none;
+  min-width: 820px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: [aside-start] 1fr [aside-end] 1fr [canvas-start] 1fr [midcanvas-start] 1fr [midcanvas-end] 1fr [canvas-end];
   grid-template-rows: 60px repeat(11, minmax(100px, auto));
-	grid-column-gap: 10px;
-	margin: 0 auto;
+  grid-column-gap: 10px;
+  margin: 0 auto;
 }
 
 
@@ -120,7 +115,7 @@ header h1,
 aside h2,
 aside h3 {
   color: #7b1fa2;
-	font-weight: lighter;	
+  font-weight: lighter;
 }
 
 .gridSizeString {
@@ -138,8 +133,8 @@ header {
 
 header h1 {
   font-weight: bolder;
-	font-size: 2.8em;
-	font-family: "Love Ya like A Sister", Arial, sans-serif;
+  font-size: 2.8em;
+  font-family: "Love Ya like A Sister", Arial, sans-serif;
 }
 
 
@@ -149,8 +144,6 @@ aside {
   grid-column: aside-start / aside-end;
   padding-bottom: 1.5rem;
 }
-
-
 
 #gridSettingsArea,
 #prebuiltGridArea,
@@ -219,7 +212,7 @@ input[type=number]:focus {
 /* Color picking area styles */
 
 #colorPickArea {
-	position: relative;
+  position: relative;
 }
 
 #colorPicker {
@@ -235,42 +228,39 @@ input[type=number]:focus {
 }
 
 #recentColors {
-	display: flex;
-	flex-flow: row wrap;
+  display: flex;
+  flex-flow: row wrap;
 }
 
 .recent-color-object {
-	width: 45px;
-	height: 45px;
-	border-radius: 100%;
-	cursor: pointer;
-	transition: all 0.2s ease-in-out;
-	margin-bottom: 0.30rem;
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 0.30rem;
 }
-
-
-
 
 
 /***************** canvas area styles ********/
 
 #canvasArea {
-	grid-column: aside-end / canvas-end;
-	margin-bottom: 2em;
+  grid-column: aside-end / canvas-end;
+  margin-bottom: 2em;
 }
 
 #canvasArea h2 {
-	text-align: center;
-	font-family: "Love Ya Like A Sister", Arial, sans-serif;
+  text-align: center;
+  font-family: "Love Ya Like A Sister", Arial, sans-serif;
 }
 
 .splat {
-	position: absolute;
-	opacity: .30;
-	z-index: 1;
-	width: 200px;
-	top: 70px;
-	left: 55px;
+  position: absolute;
+  opacity: .30;
+  z-index: 1;
+  width: 200px;
+  top: 70px;
+  left: 55px;
 }
 
 
@@ -278,13 +268,13 @@ input[type=number]:focus {
 
 footer {
   /* background: #6a1b9a; */
-	grid-column: aside-end / canvas-end;
+  grid-column: aside-end / canvas-end;
   /* padding: 8px 0 0 15px; */
   /* border-top-left-radius: 3px; */
-	/* border-top-right-radius: 3px; */
-	margin-bottom: 3em;
-	font-family: Montserrat, Arial, sans-serif;
-	font-weight: lighter;
+  /* border-top-right-radius: 3px; */
+  margin-bottom: 3em;
+  font-family: Montserrat, Arial, sans-serif;
+  font-weight: lighter;
 }
 
 footer ul {
@@ -294,12 +284,12 @@ footer ul {
 
 footer a {
   text-decoration: none;
-	color: rgb(196, 188, 196);
-	transition: color 0.20s ease-in-out;
+  color: rgb(196, 188, 196);
+  transition: color 0.20s ease-in-out;
 }
 
 footer a:hover {
-	color: #7b1fa2;
+  color: #7b1fa2;
 }
 
 footer li {
@@ -308,54 +298,44 @@ footer li {
 }
 
 @media screen and (max-width: 1500px) {
-	.container {
-		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
-	}
-
-	header {
-		text-align: center;
-		margin-bottom: 3em;
-	}
-
-	#gridSettingsArea form {
-		display: flex;
-		flex-flow: column wrap;
-		/* justify-content: space-between; */
-	}
-
-	#createGridButton {
-		padding: 30px 0;
-		line-height: 0;
-		width: 50%;
-		margin: 2.5em auto;
-	}
-
-	.form-inputs {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-around;
-	}
-
-	.buttons {
-		/* flex-direction: row; */
-		justify-content: space-around;
-	}
-
-	.buttons button {
-		/* padding-top: 30px; */
-		/* padding-bottom: 30px; */
-		padding: 2rem;
-	}
-
-	.buttons .btn {
-		line-height: 0;
-	}
-
-	.btn {
-		font-size: 1.2rem;
-	}
-
-
+  .container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 3em;
+  }
+  #gridSettingsArea form {
+    display: flex;
+    flex-flow: column wrap;
+    /* justify-content: space-between; */
+  }
+  #createGridButton {
+    padding: 30px 0;
+    line-height: 0;
+    width: 50%;
+    margin: 2.5em auto;
+  }
+  .form-inputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .buttons {
+    /* flex-direction: row; */
+    justify-content: space-around;
+  }
+  .buttons button {
+    /* padding-top: 30px; */
+    /* padding-bottom: 30px; */
+    padding: 2rem;
+  }
+  .buttons .btn {
+    line-height: 0;
+  }
+  .btn {
+    font-size: 1.2rem;
+  }
 }
