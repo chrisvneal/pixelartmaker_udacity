@@ -234,8 +234,12 @@ input[type=number]:focus {
   outline: none;
 }
 
+#recentColors {
+	display: flex;
+	flex-flow: row wrap;
+}
+
 .recent-color-object {
-	/* width: 400px; */
 	width: 45px;
 	height: 45px;
 	border-radius: 100%;
@@ -243,6 +247,8 @@ input[type=number]:focus {
 	transition: all 0.2s ease-in-out;
 	margin-bottom: 0.30rem;
 }
+
+
 
 
 
