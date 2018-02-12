@@ -219,7 +219,7 @@ input[type=number]:focus {
   cursor: pointer;
   border: none;
   height: 40px;
-  width: 100px;
+  /* width: 100px; */
   margin: -.50em 0 2em;
 }
 
@@ -241,6 +241,7 @@ input[type=number]:focus {
   transition: all 0.2s ease-in-out;
 	margin-bottom: 0.90rem;
 	margin-right: 10px;
+	cursor: pointer;
 }
 
 
