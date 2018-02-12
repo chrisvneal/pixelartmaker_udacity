@@ -228,6 +228,7 @@ input[type=number]:focus {
 }
 
 #recentColors {
+	width: 250px;
   display: flex;
   flex-flow: row wrap;
 }
@@ -238,7 +239,8 @@ input[type=number]:focus {
   border-radius: 100%;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  margin-bottom: 0.30rem;
+	margin-bottom: 0.90rem;
+	margin-right: 10px;
 }
 
 
