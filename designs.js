@@ -221,4 +221,9 @@ $(function() {
     $colorInput.val(rgb2hex($selectedRecentColor));
   });
 
+  $('#recentColorArea h2').click(function() {
+    //   alert('selected');
+      $(this).next().slideToggle();
+  });
+
 }); //end of $ (jQuery)
