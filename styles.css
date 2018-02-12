@@ -134,7 +134,8 @@ header {
 header h1 {
   font-weight: bolder;
   font-size: 2.8em;
-  font-family: "Love Ya like A Sister", Arial, sans-serif;
+	font-family: "Love Ya like A Sister", Arial, sans-serif;
+	text-shadow: 5px 2px 5px lightgray;
 }
 
 
