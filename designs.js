@@ -99,7 +99,7 @@ $(function() {
 
 // console.log($recentColorLength);
 
-if ($recentColorLength > 0 && $recentColorLength <= 20) {
+if ($recentColorLength > 0 && $recentColorLength <= 10) {
     if ($recentColorLength == 1) {
 $('#recentColorArea h2').html('<i class="material-icons">history</i> <span class="recent-colors-length">' + $recentColorLength +  '</span> Recent Color');
 

@@ -248,7 +248,7 @@ input[type=number]:focus {
   width: 250px;
   display: flex;
   flex-flow: row wrap;
-  max-height: 174px;
+  /* max-height: 174px; */
   overflow: hidden;
 }
 
@@ -267,6 +267,7 @@ input[type=number]:focus {
 .recent-color-object:first-child {
     width: 60px;
   height: 60px;
+  margin-bottom: 2rem;
 }
 
 
