@@ -20,6 +20,7 @@ $(function() {
   let $colorValue = $colorInput.val();
   let mousedown = false;
   let $lastRecentColor;
+  let $recentColorLength;
 
 
   // 1. *******************Functions **********************
@@ -85,6 +86,20 @@ $(function() {
     let $recentColorObject = $('<div class="recent-color-object"></div>').css('background', recentColor);
 
     $('#recentColors').prepend($recentColorObject);
+
+
+
+
+
+
+
+
+    // monitor recent colors length
+    $recentColorLength = $('#recentColors').children().length;
+
+// console.log($recentColorLength);
+
+
 
     // $('#recentColors').prepend($recentColorRow);
   }
@@ -296,6 +311,7 @@ $(function() {
 
     
   });
+
 
 
 
