@@ -124,6 +124,11 @@ aside h3 {
   font-weight: bold;
 }
 
+#colorPickArea .material-icons, #recentColorArea .material-icons {
+    position: relative;
+    top: .20rem;
+}
+
 
 /***************** header styles *****************/
 
