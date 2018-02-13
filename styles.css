@@ -340,15 +340,15 @@ footer li {
   }
   .main-settings-area {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
   }
   .prebuilt-button {
     /* margin-right: 1rem; */
     margin: 0;
   }
 
-  .prebuilt-button:nth-child(odd) {
-    margin-right: 0;
+  .prebuilt-button {
+    margin-right: 1rem;
   }
   header {
     text-align: center;
@@ -365,14 +365,14 @@ footer li {
     width: 50%;
     /* margin: 2.5em auto; */
   }
-  #gridSettingsArea,
+  
   #colorPickArea {
     flex: 1;
   }
 
   #prebuiltGridArea {
       display: flex;
-      flex: 3;
+      flex: 1;
   }
   .form-inputs {
     width: 400px;
@@ -387,14 +387,12 @@ footer li {
 
   .size-button-group {
       display: flex;
-      justify-content: space-between;
+      /* justify-content: space-between; */
       width: 100%;
-      margin-bottom: 2rem;
+      /* margin-bottom: 2rem; */
   }
 
-  #gridSettingsArea, #prebuiltGridArea {
-      margin-right: 2em;
-  }
+ 
   .buttons {
     /* flex-direction: row; */
     /* justify-content: space-around; */
