@@ -142,6 +142,9 @@ $(function() {
   // Change value of color variable when new color is selected
   $colorInput.on('change', function() {
     $colorValue = $colorInput.val();
+
+    // make the paint icon the same color as color value
+    $('.show-at-min, #colorPickArea .hide-at-min i').css('color', $colorValue);
   });
 
 
@@ -289,6 +292,8 @@ $(function() {
         // alert($recentColor);
         $colorInput.val($recentColor);
     $colorValue = $colorInput.val();
+
+    
   });
 
 
