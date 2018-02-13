@@ -24,40 +24,44 @@
 
     <!-- Settings Area -->
     <aside>
-      <!-- Grid sizing area -->
-      <div id="gridSettingsArea">
-        <h2>Choose Grid Size</h2>
-        <form>
-          <div class="form-inputs">
-            <div>
-              <label for="inputHeight">Grid Height</label>
-              <input class="purple-text text-darken-3 browser-default" type="number" id="inputHeight" name="height" min="1" value="20">
-            </div>
-            <div>
-              <label for="inputWidth">Grid Width</label>
-              <input class="purple-text text-darken-3 browser-default" type="number" id="inputWidth" name="width" min="1" value="20">
+      <div class="main-settings-area">
+          <!-- Grid sizing area -->
+          <div id="gridSettingsArea">
+            <h2 class="hide-at-min">Choose Grid Size</h2>
+            <form>
+              <div class="form-inputs">
+                <div>
+                  <label for="inputHeight">Grid Height</label>
+                  <input class="purple-text text-darken-3 browser-default" type="number" id="inputHeight" name="height" min="1" value="20">
+                </div>
+                <div>
+                  <label for="inputWidth">Grid Width</label>
+                  <input class="purple-text text-darken-3 browser-default" type="number" id="inputWidth" name="width" min="1" value="20">
+                </div>
+              </div>
+              <button type="submit" id="createGridButton" class="waves-effect btn btn-large purple darken-2 z-depth-2"><i class="small material-icons">grid_on</i> Create Grid</button>
+            </form>
+          </div>
+    
+          <!-- Preset Grid sizing area -->
+          <div id="prebuiltGridArea">
+            <h3 class="hide-at-min">Preset Grids</h3>
+            <div class="buttons">
+              <div class="size-button-group">
+                  <button data-gridscale="30" class="btn btn-small prebuilt-button lighten-2 waves-effect teal">30 X 30</button>
+                  <button data-gridscale="50" class="btn btn-small prebuilt-button lighten-2 waves-effect teal">50 X 50</button>
+                  <button data-gridscale="75" class="btn btn-small prebuilt-button lighten-2 waves-effect teal">75 X 75</button>
+              </div>
+              <button class="btn btn-small prebuilt-button lighten-1 waves-effect red" id="resetButton">Reset</button>
             </div>
           </div>
-          <button type="submit" id="createGridButton" class="waves-effect btn btn-large purple darken-2 z-depth-2"><i class="small material-icons">grid_on</i> Create Grid</button>
-        </form>
-      </div>
-
-      <!-- Preset Grid sizing area -->
-      <div id="prebuiltGridArea">
-        <h3>Preset Grids</h3>
-        <div class="buttons">
-          <button data-gridscale="30" class="btn btn-small prebuilt-button lighten-2 waves-effect teal">30 X 30</button>
-          <button data-gridscale="50" class="btn btn-small prebuilt-button lighten-2 waves-effect teal">50 X 50</button>
-          <button data-gridscale="75" class="btn btn-small prebuilt-button lighten-2 waves-effect teal">75 X 75</button>
-          <button class="btn btn-small prebuilt-button lighten-1 waves-effect red" id="resetButton">Reset</button>
-        </div>
-      </div>
-
-      <!-- Color Picker area -->
-      <div id="colorPickArea">
-        <h2><i class="material-icons">color_lens</i> Pick A Color</h2>
-        <input type="color" id="colorPicker">
-        <!-- <img src="http://moziru.com/images/mauve-clipart-splatter-4.png" class="splat" alt="paint splat"> -->
+    
+          <!-- Color Picker area -->
+          <div id="colorPickArea">
+            <h2 class="hide-at-min"><i class="material-icons">color_lens</i> Pick A Color</h2>
+            <input type="color" id="colorPicker">
+            <!-- <img src="http://moziru.com/images/mauve-clipart-splatter-4.png" class="splat" alt="paint splat"> -->
+          </div>
       </div>
 
       <div id="recentColorArea">

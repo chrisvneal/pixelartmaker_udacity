@@ -124,9 +124,10 @@ aside h3 {
   font-weight: bold;
 }
 
-#colorPickArea .material-icons, #recentColorArea .material-icons {
-    position: relative;
-    top: .20rem;
+#colorPickArea .material-icons,
+#recentColorArea .material-icons {
+  position: relative;
+  top: .20rem;
 }
 
 
@@ -218,8 +219,8 @@ input[type=number]:focus {
 /* Color picking area styles */
 
 #colorPickArea {
-	position: relative;
-	margin-bottom: 1rem;
+  position: relative;
+  margin-bottom: 1rem;
 }
 
 #colorPicker {
@@ -256,6 +257,7 @@ input[type=number]:focus {
   margin-right: 10px;
   cursor: pointer;
 }
+
 
 /***************** canvas area styles ********/
 
@@ -314,16 +316,33 @@ footer li {
 
 @media screen and (max-width: 1500px) {
   .container {
+    width: 95%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+  }
+
+  .hide-at-min {
+      display: none;
+  }
+  .main-settings-area {
+    display: flex;
+    justify-content: space-between;
+  }
+  .prebuilt-button {
+    /* margin-right: 1rem; */
+    margin: 0;
+  }
+
+  .prebuilt-button:nth-child(odd) {
+    margin-right: 0;
   }
   header {
     text-align: center;
     margin-bottom: 3em;
   }
   #gridSettingsArea form {
-    display: flex;
+    /* display: flex; */
     flex-flow: column wrap;
     /* justify-content: space-between; */
   }
@@ -331,26 +350,53 @@ footer li {
     padding: 30px 0;
     line-height: 0;
     width: 50%;
-    margin: 2.5em auto;
+    /* margin: 2.5em auto; */
+  }
+  #gridSettingsArea,
+  #colorPickArea {
+    flex: 1;
+  }
+
+  #prebuiltGridArea {
+      display: flex;
+      flex: 2;
   }
   .form-inputs {
+    width: 400px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+  }
+  #inputHeight,
+  #inputWidth {
+    width: 80%;
+  }
+
+  .size-button-group {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 2rem;
+  }
+
+  #gridSettingsArea, #prebuiltGridArea {
+      margin-right: 2em;
   }
   .buttons {
     /* flex-direction: row; */
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    align-content: start;
+    flex-wrap: nowrap;
   }
-  .buttons button {
-    /* padding-top: 30px; */
-    /* padding-bottom: 30px; */
-    padding: 2rem;
-  }
+
   .buttons .btn {
     line-height: 0;
   }
   .btn {
     font-size: 1.2rem;
+  }
+  #recentColorArea {
+    height: 114.5px;
+    max-height: 114.5px;
   }
 }
