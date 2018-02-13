@@ -338,6 +338,10 @@ footer li {
       top: .50rem;
   }
 
+  .show-at-min {
+      display: inline-block;
+  }
+
   #colorPickArea .material-icons {
       display: inline;
       top: -1px;
@@ -350,12 +354,15 @@ footer li {
   }
   .prebuilt-button {
     /* margin-right: 1rem; */
-    margin: 0;
+    margin: 0;  
+    margin-right: 1rem;
+    /* padding: 0 1.7em; */    
   }
 
-  .prebuilt-button {
-    margin-right: 1rem;
+  .size-button-group .btn {
+      padding: 0 1.7rem;
   }
+
   header {
     text-align: center;
     margin-bottom: 3em;
