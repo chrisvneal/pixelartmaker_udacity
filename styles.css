@@ -8,7 +8,7 @@ body {
   font-family: Montserrat, Arial, sans-serif;
   margin: 0;
   padding-top: 1.2em;
-  background: red;
+  /* background: red; */
 }
 
 button,
@@ -360,6 +360,11 @@ footer li {
       display: inline-block;
   }
 
+  .recent-colors-length {
+      font-size: 2rem;
+      font-weight: bold;
+  }
+
   .recent-color-object {
       margin-bottom: 0;
   }
@@ -381,9 +386,6 @@ footer li {
     /* padding: 0 1.7em; */    
   }
 
-  #recentColorArea {
-      border: 1px solid red;
-  }
 
   #recentColors {
       width: 100%;
