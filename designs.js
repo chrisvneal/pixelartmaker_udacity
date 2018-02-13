@@ -99,7 +99,24 @@ $(function() {
 
 // console.log($recentColorLength);
 
+if ($recentColorLength > 0 && $recentColorLength <= 20) {
+    if ($recentColorLength == 1) {
+$('#recentColorArea h2').html('<i class="material-icons">history</i> <span class="recent-colors-length">' + $recentColorLength +  '</span> Recent Color');
 
+
+    } else {
+
+        $('#recentColorArea h2').html('<i class="material-icons">history</i> <span class="recent-colors-length">' + $recentColorLength +  '</span> Recent Colors');
+
+        // $('.recent-colors-length').text($recentColorLength);
+    }
+
+} else {
+    // what happens when it tries to exceed 20? Cut off end?
+    // console.log('you have exceeded the length');
+
+    $('#recentColors .recent-color-object:last-child').remove();
+}
 
     // $('#recentColors').prepend($recentColorRow);
   }
