@@ -144,7 +144,7 @@ $(function() {
     $colorValue = $colorInput.val();
 
     // make the paint icon the same color as color value
-    $('.show-at-min, #colorPickArea .hide-at-min i').css('color', $colorValue);
+    $('#colorPickArea .show-at-min, #colorPickArea .hide-at-min i').css('color', $colorValue);
   });
 
 
@@ -291,10 +291,12 @@ $(function() {
         let $recentColor = rgb2hex($(this).css('backgroundColor'));
         // alert($recentColor);
         $colorInput.val($recentColor);
+        $('#colorPickArea .show-at-min').css('color', $recentColor);
     $colorValue = $colorInput.val();
 
     
   });
+
 
 
 
