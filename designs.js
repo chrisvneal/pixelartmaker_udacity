@@ -154,6 +154,11 @@ $('#recentColorArea h2').html('<i class="material-icons">history</i> <span class
       ("0" + parseInt(rgb[3], 10).toString(16)).slice(-2) : '';
   }
 
+
+  // Initialize a grid on start up based on default grid size values
+
+  makeGrid($inputHeight.val(), $inputWidth.val());
+
   // 2. ********** #createGridButton functionality ************
 
   // **********************************************************
