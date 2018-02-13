@@ -333,8 +333,14 @@ footer li {
       display: none;
   }
 
-  .show-at-min {
+  #colorPickArea {
+      flex: 1;
+      top: .50rem;
+  }
+
+  #colorPickArea .material-icons {
       display: inline;
+      top: -1px;
       /* left: 30px; */
       color: #7b1fa2;
   }
@@ -366,9 +372,6 @@ footer li {
     /* margin: 2.5em auto; */
   }
   
-  #colorPickArea {
-    flex: 1;
-  }
 
   #prebuiltGridArea {
       display: flex;
