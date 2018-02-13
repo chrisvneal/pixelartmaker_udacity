@@ -19,7 +19,7 @@ $(function() {
   const $colorInput = $("#colorPicker");
   let $colorValue = $colorInput.val();
   let mousedown = false;
-  let $lastRecentColor = $('#recentColors').children().first().css('backgroundColor');
+  let $lastRecentColor;
 
 
   // 1. *******************Functions **********************
@@ -144,15 +144,75 @@ $(function() {
     $colorValue = $colorInput.val();
   });
 
+
+
+
+
+
+
+
+
+
+
   // When you mouse down on a tile, apply chosen color
   $canvas.on('mousedown', 'td', function(e) {
     mousedown = true;
 
-    // When a tile is clicked, that color will become available as a recent color
-    addRecentColor($colorValue);
 
-    colorElement(e);
+
+    // The most recent color is the color of the first color in the #recentColors section
+    $lastRecentColor = $('#recentColors').children().first().css('backgroundColor');
+
+
+
+
+    // If there are no recent colors...
+    if (!$lastRecentColor) {
+
+        // The most recent color color will be the color selected in the color input
+      $lastRecentColor = $colorValue;
+
+      // ...draw the color on the canvas..
+      colorElement(e);
+
+
+      // ,..add that color to the #recentColors  div
+
+      addRecentColor($colorValue);
+
+    } else {
+
+        // If there is a recent color, convert that rgb code to a hex value
+
+      $lastRecentColor = rgb2hex($lastRecentColor);
+
+
+      // If the color selected matches the mnost recent color, still color tile, no need to add to #recentColors area
+      if ($colorValue === $lastRecentColor) {
+        colorElement(e);
+      } else {
+        colorElement(e);
+        addRecentColor($colorValue);
+
+      }
+    }
   });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   // If you mouse over a tile when the mouse is still down, continue coloring
   $canvas.on('mouseover', 'td', function(e) {
@@ -218,7 +278,7 @@ $(function() {
   $('#recentColorArea').on('click', '.recent-color-object', function() {
 
     let $selectedRecentColor = $(this).css('backgroundColor');
-    
+
     $colorInput.val(rgb2hex($selectedRecentColor));
   });
 }); //end of $ (jQuery)
