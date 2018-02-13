@@ -281,4 +281,16 @@ $(function() {
 
     $colorInput.val(rgb2hex($selectedRecentColor));
   });
+
+
+  $('#recentColors').on('click', '.recent-color-object', function() {
+      
+        let $recentColor = rgb2hex($(this).css('backgroundColor'));
+        // alert($recentColor);
+        $colorInput.val($recentColor);
+    $colorValue = $colorInput.val();
+  });
+
+
+
 }); //end of $ (jQuery)
