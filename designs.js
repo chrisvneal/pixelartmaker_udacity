@@ -359,9 +359,11 @@ $('#recentColorArea h2').html('<span class="recent-colors-length">' + $recentCol
         // alert($recentColor);
         $colorInput.val($recentColor);
         $('#colorPickArea .show-at-min').css('color', $recentColor);
-    $colorValue = $colorInput.val();
+    $colorValue = $colorInput.val();    
+  });
 
-    
+  $('#innerCircleButton').click(function() {
+      $('table').toggleClass('inner-circle');
   });
 
 

@@ -53,7 +53,12 @@ table {
   border-collapse: collapse;
   margin: 0 auto 4em;
   width: 0;
+  transition: border-radius .5s ease-in-out;
   /* border-radius: 40em; */
+}
+
+table.inner-circle {
+    border-radius: 40em;
 }
 
 tr {
@@ -205,9 +210,11 @@ input[type=number]:focus {
   flex-wrap: wrap;
 }
 
-.prebuilt-button {
-  margin-bottom: 2em;
+
+#prebuiltGridArea .btn {
+    margin-bottom: 2rem;
   transition: transform .10s ease-in-out;
+    
 }
 
 
