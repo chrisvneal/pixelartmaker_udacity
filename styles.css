@@ -238,6 +238,7 @@ input[type=number]:focus {
 
 #recentColorArea {
   z-index: 1;
+  position: relative;
 }
 
 .show-at-min {
@@ -259,22 +260,25 @@ input[type=number]:focus {
   height: 30px;
   border-radius: 100%;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  /* transition: all 1s ease-in-out; */
   margin-bottom: 0.90rem;
   margin-right: 10px;
 }
 
 .recent-color-object:first-child {
-    /* width: 60px; */
-  /* height: 60px; */
-  margin-bottom: 2rem;
+    width: 60px;
+  height: 60px;
+  /* margin-bottom: 2rem; */
+  position: absolute;
+  top: 3.5rem;
+  left: -70px;
   
 }
 
 .first-recent-color {
     width: 60px;
     height: 60px;
-    transition: all 2s ease-out;
+    transition: all 5s ease-out;
 }
 
 
@@ -352,7 +356,7 @@ footer li {
   }
 
   aside h2 {
-      margin-bottom: 0.7rem;
+      margin-bottom: 2rem;
   }
 
   .hide-at-min {
@@ -375,6 +379,12 @@ footer li {
 
   .recent-color-object {
       margin-bottom: 0;
+  }
+
+  .recent-color-object:first-child {
+
+    top: -1.7rem;
+    left: 15rem;
   }
 
   #colorPickArea .material-icons {

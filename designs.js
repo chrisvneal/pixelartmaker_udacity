@@ -102,7 +102,7 @@ $(function() {
     // monitor recent colors length
     $recentColorLength = $('#recentColors').children().length;
 
-    if ($recentColorLength > 1) {
+    /* if ($recentColorLength > 1) {
         $('.recent-color-object:first-child').css({
                                                     "width": '60px',
                                                     "height": '60px'
@@ -114,20 +114,29 @@ $(function() {
                     });
                                                             
                                                             
-    }
+    } */
 
     // $('.recent-color-object:first-child').delay(800).addClass('first-recent-color');
 
 // console.log($recentColorLength);
 
-if ($recentColorLength > 0 && $recentColorLength <= 12) {
+
+
+
+
+
+
+
+
+
+if ($recentColorLength > 0 && $recentColorLength <= 18) {
     if ($recentColorLength == 1) {
-$('#recentColorArea h2').html('<i class="material-icons">history</i> <span class="recent-colors-length">' + $recentColorLength +  '</span> Recent Color');
+$('#recentColorArea h2').html('<span class="recent-colors-length">' + $recentColorLength +  '</span> Recent Color');
 
 
     } else {
 
-        $('#recentColorArea h2').html('<i class="material-icons">history</i> <span class="recent-colors-length">' + $recentColorLength +  '</span> Recent Colors');
+        $('#recentColorArea h2').html('<span class="recent-colors-length">' + $recentColorLength +  '</span> Recent Colors');
 
         // $('.recent-colors-length').text($recentColorLength);
     }
