@@ -268,6 +268,13 @@ input[type=number]:focus {
     /* width: 60px; */
   /* height: 60px; */
   margin-bottom: 2rem;
+  
+}
+
+.first-recent-color {
+    width: 60px;
+    height: 60px;
+    transition: all 2s ease-out;
 }
 
 

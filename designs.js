@@ -80,12 +80,17 @@ $(function() {
 
   // Place currently selected color in a 'Recent Colors" div
   function addRecentColor(recentColor) {
+    
 
     // let $recentColorRow = $('<tr class="recent-color"></td>');
 
     let $recentColorObject = $('<div class="recent-color-object"></div>').css('background', recentColor);
 
     $('#recentColors').prepend($recentColorObject);
+
+    
+
+    
 
 
 
@@ -96,6 +101,22 @@ $(function() {
 
     // monitor recent colors length
     $recentColorLength = $('#recentColors').children().length;
+
+    if ($recentColorLength > 1) {
+        $('.recent-color-object:first-child').css({
+                                                    "width": '60px',
+                                                    "height": '60px'
+                                                            });
+
+        $('.recent-color-object:first-child').nextAll().css({
+            "width": '40px',
+            "height": '40px'
+                    });
+                                                            
+                                                            
+    }
+
+    // $('.recent-color-object:first-child').delay(800).addClass('first-recent-color');
 
 // console.log($recentColorLength);
 
