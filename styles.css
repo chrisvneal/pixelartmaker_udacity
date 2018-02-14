@@ -205,8 +205,10 @@ input[type=number]:focus {
   transition: transform .10s ease-in-out;
 }
 
-.prebuilt-button:nth-child(odd) {
-  margin-right: 1em;
+
+#gridSettingsArea .btn-large {
+    padding: 0;
+    width: 200px;
 }
 
 .btn-large i {
@@ -214,6 +216,11 @@ input[type=number]:focus {
   top: 3px;
   left: -2px;
   font-size: 1.2em;
+}
+
+.size-button-group .btn {
+    padding: 0;
+    width: 200px;
 }
 
 
@@ -438,6 +445,7 @@ footer li {
   #prebuiltGridArea {
       display: flex;
       flex: 1;
+      margin-right: 2rem;
   }
   .form-inputs {
     width: 400px;
