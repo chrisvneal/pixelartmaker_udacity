@@ -154,9 +154,8 @@ aside {
 }
 
 #gridSettingsArea,
-#prebuiltGridArea,
-#colorPickArea {
-  margin-bottom: 2.5em;
+#prebuiltGridArea {
+  margin-bottom: 2rem;
 }
 
 
@@ -182,9 +181,14 @@ input[type=number]:focus {
   outline: none;
 }
 
+.form-inputs {
+    margin-bottom: 2rem;
+}
+
 #createGridButton {
   transition: transform .10s ease-in-out;
-  margin: .50em 0 1.5em;
+  /* margin: .50em 0 1.5em; */
+  margin: 0;
 }
 
 #createGridButton:active,
@@ -209,6 +213,7 @@ input[type=number]:focus {
 #gridSettingsArea .btn-large {
     padding: 0;
     width: 200px;
+    margin-bottom: 2rem;
 }
 
 .btn-large i {
