@@ -368,6 +368,11 @@ footer li {
       top: .50rem;
   }
 
+  .size-button-group .btn {
+      padding: 0;
+      width: 200px;
+  }
+
   .show-at-min {
       display: inline-block;
   }
@@ -412,9 +417,6 @@ footer li {
       overflow: initial;
   }
 
-  .size-button-group .btn {
-      padding: 0 1.7rem;
-  }
 
   header {
     text-align: center;
