@@ -294,7 +294,7 @@ input[type=number]:focus {
 
 #canvasArea h2 {
   text-align: center;
-  font-family: "Love Ya Like A Sister", Arial, sans-serif;
+  /* font-family: "Love Ya Like A Sister", Arial, sans-serif; */
 }
 
 .splat {
