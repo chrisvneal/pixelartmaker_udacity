@@ -53,6 +53,7 @@ table {
   border-collapse: collapse;
   margin: 0 auto 4em;
   width: 0;
+  /* border-radius: 40em; */
 }
 
 tr {
@@ -182,7 +183,7 @@ input[type=number]:focus {
 }
 
 .form-inputs {
-    margin-bottom: 2rem;
+    margin-bottom: .50rem;
 }
 
 #createGridButton {
