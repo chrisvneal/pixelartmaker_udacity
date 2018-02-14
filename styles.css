@@ -234,6 +234,13 @@ input[type=number]:focus {
 .size-button-group .btn {
     padding: 0;
     width: 200px;
+    line-height: initial;
+}
+
+.size-button-group i {
+    /* line-height: initial; */
+    position: relative;
+    top: 3px;
 }
 
 
