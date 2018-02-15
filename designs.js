@@ -297,6 +297,13 @@ $('#recentColorArea h2').html('<span class="recent-colors-length">' + $recentCol
     mousedown = false;
   });
 
+  // when the mouse leaves the canvas, pick the mouse up
+  $canvas.mouseleave(function() {
+    //   alert('you left');
+    // e.preventDefault();
+    mousedown = false;
+  });
+
   // 4. ************ 'Prebuilt' button functionality ***************
 
   // ***************************************************************
