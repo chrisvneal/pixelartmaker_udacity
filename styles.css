@@ -51,7 +51,7 @@ td {
 
 table {
   border-collapse: collapse;
-  margin: 0 auto 6rem;
+  margin: 0 auto 5rem;
   width: 0;
   transition: border-radius .5s ease-in-out;
   /* border-radius: 40em; */
