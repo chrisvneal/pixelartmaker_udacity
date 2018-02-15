@@ -246,6 +246,7 @@ input[type=number]:focus {
 
 #innerCircleButton {
     line-height: initial;
+    padding: 0 1rem;
 }
 
 

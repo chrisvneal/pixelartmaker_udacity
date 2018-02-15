@@ -53,7 +53,7 @@ $(function() {
 
     // If either width or height size is higher than 100, alert user and end program
     if ((Number(height)) > 100 || (Number(width)) > 100) {
-      alert('Please choose a number from 100 and lower!');
+      alert('100 is the max size!');
       return;
     }
 
@@ -394,9 +394,9 @@ $('#recentColorArea h2').html('<span class="recent-colors-length">' + $recentCol
     //   alert($('table').hasClass('inner-circle'));
 
       if ($('table').hasClass('inner-circle')) {
-            $innerCircleButton.html('<i class="material-icons">all_out</i> No Circle');
+            $innerCircleButton.html('<i class="material-icons">close</i> No Circle');
       } else {
-        $innerCircleButton.html('<i class="material-icons">all_out</i> Inner Circle');
+        $innerCircleButton.html('<i class="material-icons">center_focus_strong</i> Inner Circle');
             
       }
 
