@@ -17,6 +17,8 @@ $(function() {
 
   // Main grid/canvas area
   const $canvas = $("#pixelCanvas");
+  const $innerCircleButton = $('#innerCircleButton');
+  
 
   // Color controls
   const $colorInput = $("#colorPicker");
@@ -381,12 +383,33 @@ $('#recentColorArea h2').html('<span class="recent-colors-length">' + $recentCol
     $colorValue = $colorInput.val();    
   });
 
+  
+  // Canvas bottom row settings & functions
   $('#innerCircleButton').click(function() {
+      let $originalHtml = $('#innerCircleButton').html();
+
+
       $('table').toggleClass('inner-circle');
+
+    //   alert($('table').hasClass('inner-circle'));
+
+      if ($('table').hasClass('inner-circle')) {
+            $innerCircleButton.html('<i class="material-icons">all_out</i> No Circle');
+      } else {
+        $innerCircleButton.html('<i class="material-icons">all_out</i> Inner Circle');
+            
+      }
+
+
+
+
+
+
+    //   $(this).text('Circle Off');
   });
 
 
-//   $('.canvas-bottom-row').hide();
+//   $('.canvas-bottom-row').hide()
 
 
 
