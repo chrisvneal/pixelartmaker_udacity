@@ -324,14 +324,18 @@ input[type=number]:focus {
   /* font-family: "Love Ya Like A Sister", Arial, sans-serif; */
 }
 
-.splat {
+.canvas-bottom-row.away {
+    display: none;
+}
+
+/* .splat {
   position: absolute;
   opacity: .30;
   z-index: 0;
   width: 200px;
   top: 70px;
   left: 55px;
-}
+} */
 
 
 /***************** footer styles ***************/

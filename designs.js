@@ -13,6 +13,7 @@ $(function() {
   const $inputHeight = $("#inputHeight");
   const $inputWidth = $("#inputWidth");
   const $createGridButton = $("#createGridButton");
+  const $canvasBottomRow = $('.canvas-bottom-row');
 
   // Main grid/canvas area
   const $canvas = $("#pixelCanvas");
@@ -77,6 +78,11 @@ $(function() {
       // 3. Append those rows (including <td>s) to the canvas
       $canvas.append($row);
     }
+
+  
+
+// Reveal the bottom of the canvas that was hidden on window load
+$canvasBottomRow.removeClass('away');
   } // end of makeGrid()
 
 
@@ -188,8 +194,12 @@ $('#recentColorArea h2').html('<span class="recent-colors-length">' + $recentCol
 
 
   // Initialize a grid on start up based on default grid size values
+  
 
   makeGrid($inputHeight.val(), $inputWidth.val());
+  
+
+  
 
   // 2. ********** #createGridButton functionality ************
 
@@ -374,6 +384,9 @@ $('#recentColorArea h2').html('<span class="recent-colors-length">' + $recentCol
   $('#innerCircleButton').click(function() {
       $('table').toggleClass('inner-circle');
   });
+
+
+//   $('.canvas-bottom-row').hide();
 
 
 
