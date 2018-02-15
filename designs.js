@@ -189,7 +189,7 @@ $('#recentColorArea h2').html('<span class="recent-colors-length">' + $recentCol
 
   // Initialize a grid on start up based on default grid size values
 
-//   makeGrid($inputHeight.val(), $inputWidth.val());
+  makeGrid($inputHeight.val(), $inputWidth.val());
 
   // 2. ********** #createGridButton functionality ************
 
