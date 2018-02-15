@@ -1,3 +1,5 @@
+"use strict";
+
 $(function() {
   // ******** Table of Contents ************
   // 1. Functions
