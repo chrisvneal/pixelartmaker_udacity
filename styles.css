@@ -98,6 +98,10 @@ ul {
 
 /* general section styles */
 
+header .material-icons {
+    font-size: 2.4rem;
+}
+
 header,
 aside,
 #canvasArea {
