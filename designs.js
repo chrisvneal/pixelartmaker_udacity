@@ -411,6 +411,14 @@ $('#recentColorArea h2').html('<span class="recent-colors-length">' + $recentCol
 
 //   $('.canvas-bottom-row').hide()
 
+// change cursor using jQuery Awesome Cursor plugin
+$('body table').awesomeCursor('paint-brush', {
+    color: 'purple',
+    size: 30,
+    hotspot:'bottom left',
+    outline: 'white'
+});
+
 
 
 
