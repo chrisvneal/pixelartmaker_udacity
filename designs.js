@@ -75,8 +75,8 @@ $(function() {
       
 
     // Don't allow 0 height; this means no rows!
-    if (height < 1) {
-      alert("Please select a value greater than 0!");
+    if (height < 1 || width < 1) {
+      alert("makeGrid: Please select a value greater than 0!");
       return;
     }
 
@@ -367,7 +367,7 @@ $('#recentColorArea h2').html('<span class="recent-colors-length">' + $recentCol
     $inputHeight.val($scaleByNumber);
     $inputWidth.val($scaleByNumber);
 
-    console.log($scaleByNumber);
+    // console.log($scaleByNumber);
 
 
 // Set current width and height of data-currentheight/currentwidth
@@ -414,6 +414,15 @@ $('#recentColorArea h2').html('<span class="recent-colors-length">' + $recentCol
 
         $(this).val('1');
       }
+    }
+  });
+
+  // error if tab after '0'
+  $('input[type=number]').change(function() {
+    //   console.log('this is  blur');
+    if ($(this).val() < 1) {
+        alert('change function: You must enter a number greater than zero!');
+        // $(this).focus();
     }
   });
 
