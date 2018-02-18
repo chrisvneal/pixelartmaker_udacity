@@ -27,6 +27,13 @@ $(function() {
   let $lastRecentColor;
   let $recentColorLength;
 
+  let $currentHeight;
+  let $currentWidth;
+// console.log($currentHeight);
+// console.log();
+//   console.log("this is corretct");
+
+//   console.log('The current height is ' + $currentHeight + ' and the curent width is ' + $currentWidth);
 
   // 1. *******************Functions **********************
 
@@ -42,8 +49,30 @@ $(function() {
     $('#canvasArea h2').append('<span class="gridSizeString">' + gridSizeString + '</span>');
   } // end of placeGridNumbers()
 
+
+  
+  // Sets the current height/width values on data-currentheight/width and adds those values to inputs
+  function setCurrentHeightAndWidth(newGridHeight, newGridWidth) {
+    $inputHeight.data('currentheight', newGridHeight);
+    $inputWidth.data('currentwidth', newGridWidth);
+
+    $inputHeight.val(newGridHeight);
+    $inputWidth.val(newGridWidth);
+    // $inputWidth.val(newGridWidth);
+
+    $currentHeight = $inputHeight.data('currentheight');
+    $currentWidth = $inputWidth.data('currentwidth');
+  }
+
+
+
+
+
   // makeGrid() creates a grid/table/canvas based on user values
   function makeGrid(height, width) {
+
+    setCurrentHeightAndWidth(height, width);
+      
 
     // Don't allow 0 height; this means no rows!
     if (height < 1) {
@@ -100,6 +129,12 @@ $canvasBottomRow.removeClass('away');
 
     
 
+
+    
+    
+    
+    
+   
     
 
 
@@ -193,6 +228,8 @@ $('#recentColorArea h2').html('<span class="recent-colors-length">' + $recentCol
       ("0" + parseInt(rgb[2], 10).toString(16)).slice(-2) +
       ("0" + parseInt(rgb[3], 10).toString(16)).slice(-2) : '';
   }
+
+ 
 
 
   // Initialize a grid on start up based on default grid size values
@@ -323,10 +360,27 @@ $('#recentColorArea h2').html('<span class="recent-colors-length">' + $recentCol
     e.preventDefault();
 
     // scaleByNumber is the scale depicted on the button
-    let $scaleByNumber = $(this).attr('data-gridscale');
+    let $scaleByNumber = $(this).data('gridscale');
 
     // Set both width and height values to scaleBynumber...
-    $('#inputHeight, #inputWidth').val($scaleByNumber);
+    // $('#inputHeight, #inputWidth').val($scaleByNumber);
+    $inputHeight.val($scaleByNumber);
+    $inputWidth.val($scaleByNumber);
+
+    console.log($scaleByNumber);
+
+
+// Set current width and height of data-currentheight/currentwidth
+    setCurrentHeightAndWidth($scaleByNumber);
+    
+
+      
+
+      
+      
+
+    //   console.log('You just made a grid and its ' + $currentHeight + ' x ' + $currentWidth);
+
 
     makeGrid($scaleByNumber, $scaleByNumber);
   });
@@ -422,6 +476,10 @@ $canvas.awesomeCursor('paint-brush', {
     size: 30,
     hotspot:'bottom left',
     outline: 'white'
+});
+
+$('#resetButton').click(function() {
+    makeGrid($currentHeight, $currentWidth);
 });
 
 
