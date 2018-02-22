@@ -494,6 +494,7 @@ let eraserOn;
 $('#eraserButton').click(function() {
     if (eraserOn === false) {
         eraserOn = true;
+        // TODO: on mouseover of canvas, change pointer to an eraser
     } else {
         eraserOn = false;       
     }
