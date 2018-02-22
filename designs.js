@@ -493,27 +493,62 @@ let eraserOn = false;
 $('#eraserButton').click(function() {
     // console.log(eraserOn);
     if (eraserOn === false) {
-        // console.log('erase is not on');
+
         eraserOn = true;
-        console.log('eraser is on');
+        // console.log('eraser is on');
 
-
+// what happens when the eraser is ON
         $('td').awesomeCursor('eraser', {    
             color: '#f06292',
             size: 30,
             hotspot:'bottom left',
             outline: 'white'
         });
+
+
+        // Change erase button content to paintbrush content
+        $('#eraserButton').removeClass('pink lighten-2').addClass('purple darken-2');
+        $('#eraserButton').html(' <i class="material-icons">brush</i> Brush');
+
+
+
+
+
+
+
+
+
         
     } else {
         eraserOn = false;
-        console.log('eraser is off');
+        // console.log('eraser is off');
+
+
+
+
+
+        // What happens when the eraser is off
         $('td').awesomeCursor('paint-brush', {    
             color: '#7b1fa2',
             size: 30,
             hotspot:'bottom left',
             outline: 'white'
-        });       
+        });
+
+
+        // Change paintbrush button content to eraser content
+        $('#eraserButton').removeClass('purple darken-2').addClass('pink lighten-2');
+        $('#eraserButton').html('  <span class="eraser"></span> Eraser');
+
+        
+        
+        
+
+
+
+
+
+
     }    
 }); 
 
