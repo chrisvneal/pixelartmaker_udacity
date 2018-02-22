@@ -477,15 +477,35 @@ $('#recentColorArea h2').html('<span class="recent-colors-length">' + $recentCol
 
 
 
-// jquery Awesome Cursor
+// ********* jquery Awesome Cursor *********
+
 // change cursor to "paintbrush" using jQuery Awesome Cursor plugin
-$canvas.awesomeCursor('paint-brush', {
-    
+$canvas.awesomeCursor('paint-brush', {    
     color: '#7b1fa2',
     size: 30,
     hotspot:'bottom left',
     outline: 'white'
 });
+
+// change cursor to "eraser" using jQuery Awesome Cursor plugin when 'eraser tool' clicked
+
+let eraserOn;
+
+$('#eraserButton').click(function() {
+    if (eraserOn === false) {
+        eraserOn = true;
+    } else {
+        eraserOn = false;       
+    }
+});
+
+
+
+
+
+
+// Reset the grid, leaving size in place
+
 
 $('#resetButton').click(function() {
     makeGrid($currentHeight, $currentWidth);
