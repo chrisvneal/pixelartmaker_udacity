@@ -347,6 +347,17 @@ input[type=number]:focus {
   left: 55px;
 } */
 
+.eraser {
+    width: 18px;
+    height: 18px;
+    background: white;
+    display: inline-block;
+    position: relative;
+    top: 4px;
+    left: -4px;
+    border-radius: 50px;
+}
+
 
 /***************** footer styles ***************/
 
