@@ -29,6 +29,9 @@ $(function() {
 
   let $currentHeight;
   let $currentWidth;
+let eraserOn = false;
+let $colorBeforeErasing;
+  
 // console.log($currentHeight);
 // console.log();
 //   console.log("this is corretct");
@@ -279,9 +282,17 @@ $('#recentColorArea h2').html('<span class="recent-colors-length">' + $recentCol
   $canvas.on('mousedown', 'td', function(e) {
     mousedown = true;
 
+    // alert($colorValue);
 
 
-    // The most recent color is the color of the first color in the #recentColors section
+
+    
+
+        if (mousedown && eraserOn) {
+            $colorValue = '#ffffff';
+            colorElement(e);
+        } else {
+            // The most recent color is the color of the first color in the #recentColors section
     $lastRecentColor = $('#recentColors').children().first().css('backgroundColor');
 
 
@@ -317,6 +328,10 @@ $('#recentColorArea h2').html('<span class="recent-colors-length">' + $recentCol
 
       }
     }
+        }
+
+
+
   });
 
 
@@ -488,7 +503,6 @@ $canvas.awesomeCursor('paint-brush', {
 
 // change cursor to "eraser" using jQuery Awesome Cursor plugin when 'eraser tool' clicked
 
-let eraserOn = false;
 
 $('#eraserButton').click(function() {
     // console.log(eraserOn);
@@ -496,6 +510,9 @@ $('#eraserButton').click(function() {
 
         eraserOn = true;
         // console.log('eraser is on');
+
+        $colorBeforeErasing = $colorValue;
+        // alert('the color before you erased is ' + $colorBeforeErasing);
 
 // what happens when the eraser is ON
         $('td').awesomeCursor('eraser', {    
@@ -523,6 +540,8 @@ $('#eraserButton').click(function() {
         eraserOn = false;
         // console.log('eraser is off');
 
+        // change orig color back
+        $colorValue = $colorBeforeErasing;
 
 
 
