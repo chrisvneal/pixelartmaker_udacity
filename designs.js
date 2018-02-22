@@ -479,34 +479,46 @@ $('#recentColorArea h2').html('<span class="recent-colors-length">' + $recentCol
 
 // ********* jquery Awesome Cursor *********
 
-// change cursor to "paintbrush" using jQuery Awesome Cursor plugin
 $canvas.awesomeCursor('paint-brush', {    
     color: '#7b1fa2',
     size: 30,
     hotspot:'bottom left',
     outline: 'white'
-});
+});   
 
 // change cursor to "eraser" using jQuery Awesome Cursor plugin when 'eraser tool' clicked
 
-let eraserOn;
+let eraserOn = false;
 
 $('#eraserButton').click(function() {
+    // console.log(eraserOn);
     if (eraserOn === false) {
+        // console.log('erase is not on');
         eraserOn = true;
-        // TODO: on mouseover of canvas, change pointer to an eraser
+        console.log('eraser is on');
+
+
+        $('td').awesomeCursor('eraser', {    
+            color: '#f06292',
+            size: 30,
+            hotspot:'bottom left',
+            outline: 'white'
+        });
+        
     } else {
-        eraserOn = false;       
-    }
-});
-
-
-
-
+        eraserOn = false;
+        console.log('eraser is off');
+        $('td').awesomeCursor('paint-brush', {    
+            color: '#7b1fa2',
+            size: 30,
+            hotspot:'bottom left',
+            outline: 'white'
+        });       
+    }    
+}); 
 
 
 // Reset the grid, leaving size in place
-
 
 $('#resetButton').click(function() {
     makeGrid($currentHeight, $currentWidth);
