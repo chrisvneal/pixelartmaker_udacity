@@ -13,7 +13,7 @@ $(function() {
   const $inputHeight = $("#inputHeight");
   const $inputWidth = $("#inputWidth");
   const $createGridButton = $("#createGridButton");
-  const $canvasBottomRow = $('.canvas-bottom-row');
+  const $canvasTopRow = $('.canvas-top-row');
 
   // Main grid/canvas area
   const $canvas = $("#pixelCanvas");
@@ -116,7 +116,7 @@ let $colorBeforeErasing;
   
 
 // Reveal the bottom of the canvas that was hidden on window load
-$canvasBottomRow.removeClass('away');
+$canvasTopRow.removeClass('away');
   } // end of makeGrid()
 
 
@@ -559,7 +559,7 @@ $('#eraserButton').html(' <i class="material-icons">brush</i> Brush');
   });
 
 
-//   $('.canvas-bottom-row').hide()
+//   $('.canvas-top-row').hide()
 
 
 

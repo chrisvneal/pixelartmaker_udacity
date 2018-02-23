@@ -51,7 +51,7 @@ td {
 
 table {
   border-collapse: collapse;
-  margin: 0 auto 7.7rem;
+  margin: 3rem auto 0;
   width: 0;
   transition: border-radius .5s ease-in-out;
   /* border-radius: 40em; */
@@ -268,7 +268,7 @@ input[type=number]:focus {
 }
 
 
-.canvas-bottom-row i {
+.canvas-top-row i {
     /* line-height: initial; */
     position: relative;
     top: 3px;
@@ -352,7 +352,7 @@ input[type=number]:focus {
 
 #canvasArea {
   grid-column: aside-end / canvas-end;
-  margin-bottom: 2em;
+  margin-top: 2em;
 }
 
 #canvasArea h2 {
@@ -360,7 +360,7 @@ input[type=number]:focus {
   /* font-family: "Love Ya Like A Sister", Arial, sans-serif; */
 }
 
-.canvas-bottom-row.away {
+.canvas-top-row.away {
     display: none;
 }
 
@@ -530,6 +530,10 @@ footer li {
       /* justify-content: space-between; */
       width: 100%;
       /* margin-bottom: 2rem; */
+  }
+
+  #canvasArea {
+    padding: 0;
   }
 
  
