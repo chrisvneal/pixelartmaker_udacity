@@ -495,10 +495,6 @@ footer li {
   }
 
 
-  header {
-    text-align: center;
-    margin-bottom: 3em;
-  }
   #gridSettingsArea form {
     /* display: flex; */
     flex-flow: column wrap;
