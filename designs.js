@@ -232,7 +232,55 @@ $('#recentColorArea h2').html('<span class="recent-colors-length">' + $recentCol
       ("0" + parseInt(rgb[3], 10).toString(16)).slice(-2) : '';
   }
 
- 
+  function turnEraserOn() {
+    eraserOn = true;
+console.log('eraser is on, this should be an eraser');
+
+$colorBeforeErasing = $colorValue;
+// alert('the color before you erased is ' + $colorBeforeErasing);
+
+// what happens when the eraser is ON
+$('td').awesomeCursor('eraser', {    
+    color: '#f06292',
+    size: 30,
+    hotspot:'bottom left',
+    outline: 'white'
+});
+
+
+// Change erase button content to paintbrush content
+$('#eraserButton').removeClass('pink lighten-2').addClass('purple darken-2');
+$('#eraserButton').html(' <i class="material-icons">brush</i> Brush');
+}
+//end
+
+  function turnEraserOff() {
+    eraserOn = false;
+    // console.log('eraser is off, this should change to paintbrush');
+
+    if ($colorBeforeErasing) {
+        $colorValue = $colorBeforeErasing;
+    }
+    // change orig color back
+    
+
+
+
+
+    // What happens when the eraser is off
+    $('td').awesomeCursor('paint-brush', {    
+        color: '#7b1fa2',
+        size: 30,
+        hotspot:'bottom left',
+        outline: 'white'
+    });
+
+
+    // Change paintbrush button content to eraser content
+    $('#eraserButton').removeClass('purple darken-2').addClass('pink lighten-2');
+    $('#eraserButton').html('  <span class="eraser"></span> Eraser');
+}
+
 
 
   // Initialize a grid on start up based on default grid size values
@@ -254,6 +302,7 @@ $('#recentColorArea h2').html('<span class="recent-colors-length">' + $recentCol
     let $widthValue = $inputWidth.val();
 
     makeGrid($heightValue, $widthValue);
+    turnEraserOff();
   });
 
   // 3. ************ Coloring functionality ***************
@@ -281,14 +330,16 @@ $('#recentColorArea h2').html('<span class="recent-colors-length">' + $recentCol
   // When you mouse down on a tile, apply chosen color
   $canvas.on('mousedown', 'td', function(e) {
     mousedown = true;
+    
 
-    // alert($colorValue);
+    // alert(eraserOn);
 
 
 
     
 
         if (mousedown && eraserOn) {
+            console.log('eraser is on and the mouse is down, should be erasing');
             $colorValue = '#ffffff';
             colorElement(e);
         } else {
@@ -313,6 +364,7 @@ $('#recentColorArea h2').html('<span class="recent-colors-length">' + $recentCol
       addRecentColor($colorValue);
 
     } else {
+        console.log('eraser is off and the mouse is down, should be drawing');
 
         // If there is a recent color, convert that rgb code to a hex value
 
@@ -373,6 +425,26 @@ $('#recentColorArea h2').html('<span class="recent-colors-length">' + $recentCol
   // ***************************************************************
   $('[data-gridscale]').click(function(e) {
     e.preventDefault();
+    // eraserOn = false;
+    // console.log('eraserOn: ' + eraserOn);
+
+    // swapEraserAndPencil();
+
+
+
+
+
+
+
+
+
+
+        turnEraserOff();
+        
+        
+
+
+
 
     // scaleByNumber is the scale depicted on the button
     let $scaleByNumber = $(this).data('gridscale');
@@ -505,31 +577,20 @@ $canvas.awesomeCursor('paint-brush', {
 
 
 $('#eraserButton').click(function() {
-    // console.log(eraserOn);
+
+
+
+
+       // console.log('eraserOn: ' + eraserOn);
     if (eraserOn === false) {
 
-        eraserOn = true;
-        // console.log('eraser is on');
+        
 
-        $colorBeforeErasing = $colorValue;
-        // alert('the color before you erased is ' + $colorBeforeErasing);
-
-// what happens when the eraser is ON
-        $('td').awesomeCursor('eraser', {    
-            color: '#f06292',
-            size: 30,
-            hotspot:'bottom left',
-            outline: 'white'
-        });
-
-
-        // Change erase button content to paintbrush content
-        $('#eraserButton').removeClass('pink lighten-2').addClass('purple darken-2');
-        $('#eraserButton').html(' <i class="material-icons">brush</i> Brush');
+        
 
 
 
-
+turnEraserOn();
 
 
 
@@ -537,44 +598,30 @@ $('#eraserButton').click(function() {
 
         
     } else {
-        eraserOn = false;
-        // console.log('eraser is off');
-
-        // change orig color back
-        $colorValue = $colorBeforeErasing;
 
 
+        turnEraserOff();
 
-
-        // What happens when the eraser is off
-        $('td').awesomeCursor('paint-brush', {    
-            color: '#7b1fa2',
-            size: 30,
-            hotspot:'bottom left',
-            outline: 'white'
-        });
-
-
-        // Change paintbrush button content to eraser content
-        $('#eraserButton').removeClass('purple darken-2').addClass('pink lighten-2');
-        $('#eraserButton').html('  <span class="eraser"></span> Eraser');
 
         
-        
-        
+
+    }  
+
+    
+
+    
 
 
 
 
-
-
-    }    
+      
 }); 
 
 
 // Reset the grid, leaving size in place
 
-$('#resetButton').click(function() {
+$('#resetButton').click(function(e) {
+    e.preventDefault();
     makeGrid($currentHeight, $currentWidth);
 });
 
