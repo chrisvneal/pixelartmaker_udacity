@@ -18,7 +18,7 @@ $(function() {
   // Main grid/canvas area
   const $canvas = $("#pixelCanvas");
   const $innerCircleButton = $('#innerCircleButton');
-  
+
 
   // Color controls
   const $colorInput = $("#colorPicker");
@@ -29,14 +29,14 @@ $(function() {
 
   let $currentHeight;
   let $currentWidth;
-let eraserOn = false;
-let $colorBeforeErasing;
-  
-// console.log($currentHeight);
-// console.log();
-//   console.log("this is corretct");
+  let eraserOn = false;
+  let $colorBeforeErasing;
 
-//   console.log('The current height is ' + $currentHeight + ' and the curent width is ' + $currentWidth);
+  // console.log($currentHeight);
+  // console.log();
+  //   console.log("this is corretct");
+
+  //   console.log('The current height is ' + $currentHeight + ' and the curent width is ' + $currentWidth);
 
   // 1. *******************Functions **********************
 
@@ -53,7 +53,7 @@ let $colorBeforeErasing;
   } // end of placeGridNumbers()
 
 
-  
+
   // Sets the current height/width values on data-currentheight/width and adds those values to inputs
   function setCurrentHeightAndWidth(newGridHeight, newGridWidth) {
     $inputHeight.data('currentheight', newGridHeight);
@@ -75,7 +75,7 @@ let $colorBeforeErasing;
   function makeGrid(height, width) {
 
     setCurrentHeightAndWidth(height, width);
-      
+
 
     // Don't allow 0 height; this means no rows!
     if (height < 1 || width < 1) {
@@ -113,16 +113,16 @@ let $colorBeforeErasing;
       $canvas.append($row);
     }
 
-  
 
-// Reveal the bottom of the canvas that was hidden on window load
-$canvasTopRow.removeClass('away');
+
+    // Reveal the bottom of the canvas that was hidden on window load
+    $canvasTopRow.removeClass('away');
   } // end of makeGrid()
 
 
   // Place currently selected color in a 'Recent Colors" div
   function addRecentColor(recentColor) {
-    
+
 
     // let $recentColorRow = $('<tr class="recent-color"></td>');
 
@@ -130,15 +130,15 @@ $canvasTopRow.removeClass('away');
 
     $('#recentColors').prepend($recentColorObject);
 
-    
 
 
-    
-    
-    
-    
-   
-    
+
+
+
+
+
+
+
 
 
 
@@ -166,7 +166,7 @@ $canvasTopRow.removeClass('away');
 
     // $('.recent-color-object:first-child').delay(800).addClass('first-recent-color');
 
-// console.log($recentColorLength);
+    // console.log($recentColorLength);
 
 
 
@@ -177,24 +177,24 @@ $canvasTopRow.removeClass('away');
 
 
 
-if ($recentColorLength > 0 && $recentColorLength <= 18) {
-    if ($recentColorLength == 1) {
-$('#recentColorArea h2').html('<span class="recent-colors-length">' + $recentColorLength +  '</span> Recent Color');
+    if ($recentColorLength > 0 && $recentColorLength <= 18) {
+      if ($recentColorLength == 1) {
+        $('#recentColorArea h2').html('<span class="recent-colors-length">' + $recentColorLength + '</span> Recent Color');
 
 
-    } else {
+      } else {
 
-        $('#recentColorArea h2').html('<span class="recent-colors-length">' + $recentColorLength +  '</span> Recent Colors');
+        $('#recentColorArea h2').html('<span class="recent-colors-length">' + $recentColorLength + '</span> Recent Colors');
 
         // $('.recent-colors-length').text($recentColorLength);
+      }
+
+    } else {
+      // what happens when it tries to exceed 20? Cut off end?
+      // console.log('you have exceeded the length');
+
+      $('#recentColors .recent-color-object:last-child').remove();
     }
-
-} else {
-    // what happens when it tries to exceed 20? Cut off end?
-    // console.log('you have exceeded the length');
-
-    $('#recentColors .recent-color-object:last-child').remove();
-}
 
     // $('#recentColors').prepend($recentColorRow);
   }
@@ -234,62 +234,62 @@ $('#recentColorArea h2').html('<span class="recent-colors-length">' + $recentCol
 
   function turnEraserOn() {
     eraserOn = true;
-console.log('eraser is on, this should be an eraser');
+    console.log('eraser is on, this should be an eraser');
 
-$colorBeforeErasing = $colorValue;
-// alert('the color before you erased is ' + $colorBeforeErasing);
+    $colorBeforeErasing = $colorValue;
+    // alert('the color before you erased is ' + $colorBeforeErasing);
 
-// what happens when the eraser is ON
-$('td').awesomeCursor('eraser', {    
-    color: '#f06292',
-    size: 30,
-    hotspot:'bottom left',
-    outline: 'white'
-});
+    // what happens when the eraser is ON
+    $('td').awesomeCursor('eraser', {
+      color: '#f06292',
+      size: 30,
+      hotspot: 'bottom left',
+      outline: 'white'
+    });
 
 
-// Change erase button content to paintbrush content
-$('#eraserButton').removeClass('pink lighten-2').addClass('purple darken-2');
-$('#eraserButton').html(' <i class="material-icons">brush</i> Brush');
-}
-//end
+    // Change erase button content to paintbrush content
+    $('#eraserButton').removeClass('pink lighten-2').addClass('purple darken-2');
+    $('#eraserButton').html(' <i class="material-icons">brush</i> Brush');
+  }
+  //end
 
   function turnEraserOff() {
     eraserOn = false;
     // console.log('eraser is off, this should change to paintbrush');
 
     if ($colorBeforeErasing) {
-        $colorValue = $colorBeforeErasing;
+      $colorValue = $colorBeforeErasing;
     }
     // change orig color back
-    
+
 
 
 
 
     // What happens when the eraser is off
-    $('td').awesomeCursor('paint-brush', {    
-        color: '#7b1fa2',
-        size: 30,
-        hotspot:'bottom left',
-        outline: 'white'
+    $('td').awesomeCursor('paint-brush', {
+      color: '#7b1fa2',
+      size: 30,
+      hotspot: 'bottom left',
+      outline: 'white'
     });
 
 
     // Change paintbrush button content to eraser content
     $('#eraserButton').removeClass('purple darken-2').addClass('pink lighten-2');
     $('#eraserButton').html('  <span class="eraser"></span> Eraser');
-}
+  }
 
 
 
   // Initialize a grid on start up based on default grid size values
-  
+
 
   makeGrid($inputHeight.val(), $inputWidth.val());
-  
 
-  
+
+
 
   // 2. ********** #createGridButton functionality ************
 
@@ -330,57 +330,57 @@ $('#eraserButton').html(' <i class="material-icons">brush</i> Brush');
   // When you mouse down on a tile, apply chosen color
   $canvas.on('mousedown', 'td', function(e) {
     mousedown = true;
-    
+
 
     // alert(eraserOn);
 
 
 
-    
-
-        if (mousedown && eraserOn) {
-            console.log('eraser is on and the mouse is down, should be erasing');
-            $colorValue = '#ffffff';
-            colorElement(e);
-        } else {
-            // The most recent color is the color of the first color in the #recentColors section
-    $lastRecentColor = $('#recentColors').children().first().css('backgroundColor');
 
 
+    if (mousedown && eraserOn) {
+      console.log('eraser is on and the mouse is down, should be erasing');
+      $colorValue = '#ffffff';
+      colorElement(e);
+    } else {
+      // The most recent color is the color of the first color in the #recentColors section
+      $lastRecentColor = $('#recentColors').children().first().css('backgroundColor');
 
 
-    // If there are no recent colors...
-    if (!$lastRecentColor) {
+
+
+      // If there are no recent colors...
+      if (!$lastRecentColor) {
 
         // The most recent color color will be the color selected in the color input
-      $lastRecentColor = $colorValue;
+        $lastRecentColor = $colorValue;
 
-      // ...draw the color on the canvas..
-      colorElement(e);
+        // ...draw the color on the canvas..
+        colorElement(e);
 
 
-      // ,..add that color to the #recentColors  div
+        // ,..add that color to the #recentColors  div
 
-      addRecentColor($colorValue);
+        addRecentColor($colorValue);
 
-    } else {
+      } else {
         console.log('eraser is off and the mouse is down, should be drawing');
 
         // If there is a recent color, convert that rgb code to a hex value
 
-      $lastRecentColor = rgb2hex($lastRecentColor);
+        $lastRecentColor = rgb2hex($lastRecentColor);
 
 
-      // If the color selected matches the mnost recent color, still color tile, no need to add to #recentColors area
-      if ($colorValue === $lastRecentColor) {
-        colorElement(e);
-      } else {
-        colorElement(e);
-        addRecentColor($colorValue);
+        // If the color selected matches the mnost recent color, still color tile, no need to add to #recentColors area
+        if ($colorValue === $lastRecentColor) {
+          colorElement(e);
+        } else {
+          colorElement(e);
+          addRecentColor($colorValue);
 
+        }
       }
     }
-        }
 
 
 
@@ -439,9 +439,9 @@ $('#eraserButton').html(' <i class="material-icons">brush</i> Brush');
 
 
 
-        turnEraserOff();
-        
-        
+    turnEraserOff();
+
+
 
 
 
@@ -457,14 +457,14 @@ $('#eraserButton').html(' <i class="material-icons">brush</i> Brush');
     // console.log($scaleByNumber);
 
 
-// Set current width and height of data-currentheight/currentwidth
+    // Set current width and height of data-currentheight/currentwidth
     setCurrentHeightAndWidth($scaleByNumber);
-    
 
-      
 
-      
-      
+
+
+
+
 
     //   console.log('You just made a grid and its ' + $currentHeight + ' x ' + $currentWidth);
 
@@ -508,8 +508,8 @@ $('#eraserButton').html(' <i class="material-icons">brush</i> Brush');
   $('input[type=number]').change(function() {
     //   console.log('this is  blur');
     if ($(this).val() < 1) {
-        alert('You must enter a number greater than zero!');
-        // $(this).focus();
+      alert('You must enter a number greater than zero!');
+      // $(this).focus();
     }
   });
 
@@ -524,106 +524,86 @@ $('#eraserButton').html(' <i class="material-icons">brush</i> Brush');
   });
 
 
+   // Reset the grid, leaving size in place
+   $('#resetButton').click(function(e) {
+    e.preventDefault();
+    makeGrid($currentHeight, $currentWidth);
+  });
+
+  // ********* Recent color object functionality *********
+
   $('#recentColors').on('click', '.recent-color-object', function() {
-      
-        let $recentColor = rgb2hex($(this).css('backgroundColor'));
-        // alert($recentColor);
-        $colorInput.val($recentColor);
-        $('#colorPickArea .show-at-min').css('color', $recentColor);
-    $colorValue = $colorInput.val();    
+    // make recent color the color of selected recent color object
+    let $recentColor = rgb2hex($(this).css('backgroundColor'));    
+
+    // make color value same as selected recent color
+    $colorInput.val($recentColor);
+
+    // change current color to recent color
+    $colorValue = $colorInput.val();
+
+    // make paint icon same color as current color
+    $('#colorPickArea .show-at-min, #colorPickArea .hide-at-min i').css('color', $colorValue);
   });
 
   
-  // Canvas bottom row settings & functions
+  
+  
+  
+  
+  
+  
+  
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // ********* Canvas top row settings & functions *********
+
+  // "Inner circle" buttons adds border-radius to table, making a circle of its box-shadow in the background
   $('#innerCircleButton').click(function() {
-      let $originalHtml = $('#innerCircleButton').html();
+    let $originalHtml = $('#innerCircleButton').html();
 
+    $('table').toggleClass('inner-circle');
 
-      $('table').toggleClass('inner-circle');
+    if ($('table').hasClass('inner-circle')) {      
+      $innerCircleButton.html('<i class="material-icons">close</i> No Circle');
+    } else {
+      $innerCircleButton.html('<i class="material-icons">center_focus_strong</i> Inner Circle');
+    }
+  });
 
-    //   alert($('table').hasClass('inner-circle'));
-
-      if ($('table').hasClass('inner-circle')) {
-            $innerCircleButton.html('<i class="material-icons">close</i> No Circle');
-      } else {
-        $innerCircleButton.html('<i class="material-icons">center_focus_strong</i> Inner Circle');
-            
-      }
-
-
-
-
-
-
-    //   $(this).text('Circle Off');
+  // swap "paint brush" for "eraser" using jQuery Awesome Cursor plugin when "eraser tool" is clicked
+  $('#eraserButton').click(function() {
+    eraserOn == false ? turnEraserOn() : turnEraserOff();
   });
 
 
-//   $('.canvas-top-row').hide()
+  // ********* jquery Awesome Cursor functionality *********
 
-
-
-
-// ********* jquery Awesome Cursor *********
-
-$canvas.awesomeCursor('paint-brush', {    
+  // Initialize "paint brush" cursor on start up
+  $canvas.awesomeCursor('paint-brush', {
     color: '#7b1fa2',
     size: 30,
-    hotspot:'bottom left',
+    hotspot: 'bottom left',
     outline: 'white'
-});   
-
-// change cursor to "eraser" using jQuery Awesome Cursor plugin when 'eraser tool' clicked
-
-
-$('#eraserButton').click(function() {
-
-
-
-
-       // console.log('eraserOn: ' + eraserOn);
-    if (eraserOn === false) {
-
-        
-
-        
-
-
-
-turnEraserOn();
-
-
-
-
-
-        
-    } else {
-
-
-        turnEraserOff();
-
-
-        
-
-    }  
-
-    
-
-    
-
-
-
-
-      
-}); 
-
-
-// Reset the grid, leaving size in place
-
-$('#resetButton').click(function(e) {
-    e.preventDefault();
-    makeGrid($currentHeight, $currentWidth);
-});
+  });
 
 
 
