@@ -234,7 +234,7 @@ $(function() {
 
   function turnEraserOn() {
     eraserOn = true;
-    console.log('eraser is on, this should be an eraser');
+    // console.log('eraser is on, this should be an eraser');
 
     $colorBeforeErasing = $colorValue;
     // alert('the color before you erased is ' + $colorBeforeErasing);
@@ -339,7 +339,7 @@ $(function() {
 
 
     if (mousedown && eraserOn) {
-      console.log('eraser is on and the mouse is down, should be erasing');
+      // console.log('eraser is on and the mouse is down, should be erasing');
       $colorValue = '#ffffff';
       colorElement(e);
     } else {
@@ -364,7 +364,7 @@ $(function() {
         addRecentColor($colorValue);
 
       } else {
-        console.log('eraser is off and the mouse is down, should be drawing');
+        // console.log('eraser is off and the mouse is down, should be drawing');
 
         // If there is a recent color, convert that rgb code to a hex value
 
