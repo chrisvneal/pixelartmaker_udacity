@@ -105,9 +105,7 @@ ul {
 
 /* general section styles */
 
-header .material-icons {
-  font-size: 2.4rem;
-}
+
 
 header,
 aside,
@@ -142,17 +140,33 @@ aside h3 {
   font-weight: bold;
 }
 
-#colorPickArea .material-icons,
-#recentColorArea .material-icons {
-  position: relative;
-  top: .20rem;
-}
-
 
 /***************** header styles *****************/
 
 header {
   grid-column: aside-start / canvas-end;
+}
+
+header h1 {
+  font-weight: bolder;
+  font-size: 2.8em;
+  font-family: "Love Ya like A Sister", var(--base-font-family);
+  text-shadow: 5px 2px 5px lightgray;
+  width: 50%;
+}
+
+header .material-icons {
+  font-size: 2.4rem;
+}
+
+/* sign up and login icon styles */
+
+a .signup-icon,
+a .login-icon {
+  font-size: 25px;
+  position: relative;
+  top: 5px;
+  margin-right: 5px;
 }
 
 .signin-links {
@@ -177,25 +191,6 @@ header {
   transition: all .2s ease-in-out;
 }
 
-header h1 {
-  font-weight: bolder;
-  font-size: 2.8em;
-  font-family: "Love Ya like A Sister", var(--base-font-family);
-  text-shadow: 5px 2px 5px lightgray;
-  width: 50%;
-}
-
-
-/* sign up and login icon styles */
-
-a .signup-icon,
-a .login-icon {
-  font-size: 25px;
-  position: relative;
-  top: 5px;
-  margin-right: 5px;
-}
-
 
 /***************** aside styles ******************/
 
@@ -209,10 +204,13 @@ aside {
   margin-bottom: 2rem;
 }
 
-
 /* Grid sizing area styles */
 
-#gridSettingsArea label {
+.form-inputs {
+  margin-bottom: .50rem;
+}
+
+.form-inputs label {
   display: block;
   margin-bottom: .80rem;
   font-size: 1.4em;
@@ -232,10 +230,6 @@ input[type=number]:focus {
   outline: none;
 }
 
-.form-inputs {
-  margin-bottom: .50rem;
-}
-
 #createGridButton {
   transition: transform .10s ease-in-out;
   margin: 0;
@@ -244,6 +238,12 @@ input[type=number]:focus {
 #createGridButton:active,
 .prebuilt-button:active {
   transform: translateY(2px);
+}
+
+#gridSettingsArea .btn-large {
+  padding: 0;
+  width: 200px;
+  margin-bottom: 2rem;
 }
 
 
@@ -257,12 +257,6 @@ input[type=number]:focus {
 #prebuiltGridArea .btn {
   margin-bottom: 2rem;
   transition: transform .10s ease-in-out;
-}
-
-#gridSettingsArea .btn-large {
-  padding: 0;
-  width: 200px;
-  margin-bottom: 2rem;
 }
 
 .btn-large i {
@@ -280,19 +274,18 @@ input[type=number]:focus {
   line-height: initial;
 }
 
-.canvas-top-row i {
-  /* line-height: initial; */
+
+/* Color picker area styles */
+
+.show-at-min {
+  display: none;
+}
+
+#colorPickArea .material-icons,
+#recentColorArea .material-icons {
   position: relative;
-  top: 3px;
+  top: .20rem;
 }
-
-#innerCircleButton {
-  line-height: initial;
-  padding: 0 1rem;
-}
-
-
-/* Color picking area styles */
 
 #colorPickArea {
   position: relative;
@@ -311,20 +304,18 @@ input[type=number]:focus {
   outline: none;
 }
 
+
+/* recent color area styles */
+
 #recentColorArea {
   z-index: 1;
   position: relative;
-}
-
-.show-at-min {
-  display: none;
 }
 
 #recentColors {
   width: 250px;
   display: flex;
   flex-flow: row wrap;
-  /* max-height: 174px; */
   overflow: hidden;
 }
 
@@ -345,22 +336,8 @@ input[type=number]:focus {
   left: -70px;
 }
 
-.first-recent-color {
-  width: 60px;
-  height: 60px;
-  transition: all 5s ease-out;
-}
 
-
-
-
-
-
-
-
-
-
-/***************** canvas area styles ********/
+/* canvas area styles */
 
 #canvasArea {
   grid-column: aside-end / canvas-end;
@@ -375,6 +352,26 @@ input[type=number]:focus {
   display: none;
 }
 
+.canvas-top-row i {
+  position: relative;
+  top: 3px;
+}
+
+#innerCircleButton,
+#eraserButton {
+  line-height: initial;
+  padding: 0 1rem;
+  margin: 0 .40rem;
+}
+
+#innerCircleButton {
+  min-width: 192.17px;
+}
+
+#eraserButton {
+  min-width: 130.31px;
+}
+
 .eraser {
   width: 18px;
   height: 18px;
@@ -385,6 +382,7 @@ input[type=number]:focus {
   left: -4px;
   border-radius: 50px;
 }
+
 
 /***************** footer styles ***************/
 
@@ -412,20 +410,6 @@ footer a:hover {
 footer li {
   display: inline-block;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /******************* Media query styles *******************/
