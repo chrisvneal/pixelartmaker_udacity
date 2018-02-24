@@ -2,6 +2,7 @@
   --main-color: #7b1fa2;
   --base-font-family: Arial, sans-serif;
   --main-font: Montserrat;
+  --button-transition: transform .10s ease-in-out;
 }
 
 
@@ -136,6 +137,13 @@ aside h3 {
 }
 
 
+/* button styles */
+
+.btn:active {
+  transform: translateY(2px);
+}
+
+
 /***************** header styles *****************/
 
 header {
@@ -227,33 +235,23 @@ input[type=number]:focus {
   outline: none;
 }
 
-#createGridButton {
-  transition: transform .10s ease-in-out;
-  margin: 0;
-}
-
-#createGridButton:active,
-.prebuilt-button:active {
-  transform: translateY(2px);
-}
-
 #gridSettingsArea .btn-large {
   padding: 0;
   width: 200px;
+  transition: var(--button-transition);
+  margin: 0;
+}
+
+#gridSettingsArea .btn-large,
+#prebuiltGridArea .btn {
   margin-bottom: 2rem;
 }
 
 
 /* Prebuilt Grid Area styles */
 
-#prebuiltGridArea .buttons {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 #prebuiltGridArea .btn {
-  margin-bottom: 2rem;
-  transition: transform .10s ease-in-out;
+  transition: var(--button-transition);
 }
 
 .btn-large i {
@@ -459,13 +457,6 @@ footer li {
   .size-button-group {
     display: flex;
     width: 100%;
-  }
-  .buttons {
-    flex-wrap: nowrap;
-    width: 100%;
-  }
-  .buttons .btn {
-    line-height: 0;
   }
   /* color picker area */
   .hide-at-min {
