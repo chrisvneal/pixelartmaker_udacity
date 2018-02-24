@@ -287,13 +287,11 @@ input[type=number]:focus {
   margin-bottom: 1rem;
 }
 
-#colorPicker {
-  cursor: pointer;
-  border: none;
+ #colorPicker {
   height: 40px;
   width: 100px;
   margin: -.50em 0 2em;
-}
+} 
 
 #colorPicker:focus {
   outline: none;
