@@ -336,7 +336,7 @@ input[type=number]:focus {
 
 #canvasArea {
   grid-column: aside-end / canvas-end;
-  margin-top: 2em;
+  margin: 2em 0 4.5em;
 }
 
 #canvasArea h2 {
