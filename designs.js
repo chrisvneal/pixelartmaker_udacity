@@ -216,11 +216,7 @@ $(function() {
   // resetCanvas() function
   function resetCanvas(e) {
     e.preventDefault();
-
-    // Erase canvas content
-    $('#pixelCanvas, #canvasArea h2').children().remove();
-
-    setInitialGridValue();
+    makeGrid($currentHeight, $currentWidth);
   }
 
   // convert rgb to hex
@@ -513,29 +509,15 @@ $(function() {
     }
   });
 
+
+
+
+
+
+
   $('#resetButton').click(resetCanvas);
 
-  
 
-
-
-
-
-
-
-
-   // Reset the grid, leaving size in place
-   $('#resetButton').click(function(e) {
-    e.preventDefault();
-    makeGrid($currentHeight, $currentWidth);
-  });
-
-
-
-
-
-
-  
 
 
 
@@ -546,17 +528,14 @@ $(function() {
 
   $('#recentColors').on('click', '.recent-color-object', function() {
     // make current color the color of selected recent color object
-    $colorValue = rgb2hex($(this).css('backgroundColor')); 
+    $colorValue = rgb2hex($(this).css('backgroundColor'));
 
     // make color value same as selected recent color
-    $colorInput.val($colorValue);     
+    $colorInput.val($colorValue);
 
     // make paint icon same color as current color
     $('#colorPickArea .show-at-min, #colorPickArea .hide-at-min i').css('color', $colorValue);
   });
-
-
-
 
 
   // ********* Canvas top row settings & functions *********
@@ -567,7 +546,7 @@ $(function() {
 
     $('table').toggleClass('inner-circle');
 
-    if ($('table').hasClass('inner-circle')) {      
+    if ($('table').hasClass('inner-circle')) {
       $innerCircleButton.html('<i class="material-icons">close</i> No Circle');
     } else {
       $innerCircleButton.html('<i class="material-icons">center_focus_strong</i> Inner Circle');
