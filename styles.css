@@ -181,10 +181,13 @@ header h1 {
   width: 50%;
 }
 
-a .login-icon {
+/* sign up and login icon styles */
+
+a .signup-icon, a .login-icon {
   font-size: 25px;
   position: relative;
   top: 5px;
+  margin-right: 5px;
 }
 
 
