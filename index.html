@@ -23,49 +23,51 @@
       <h1 class="left">Pixel Art Maker <i class="material-icons brush_logo">brush</i></h1>
       <ul class="right signin-links">
         <li><a href="#"><i class="material-icons signup-icon">account_circle</i>  Sign up</a></li>
-        <li><a href="#"> <i class="material-icons login-icon">face</i>  Login</a></li>
+        <li>
+          <a href="#"> <i class="material-icons login-icon">face</i> Login</a>
+        </li>
       </ul>
     </header>
 
     <!-- Settings Area -->
     <aside>
       <div class="main-settings-area">
-          <!-- Grid sizing area -->
-          <div id="gridSettingsArea" class="hide-at-min">
-            <h2 class="hide-at-min">Choose Grid Size</h2>
-            <form>
-              <div class="form-inputs">
-                <div>
-                  <label for="inputHeight">Grid Height</label>
-                  <input class="purple-text text-darken-3 browser-default" type="number" id="inputHeight" name="height" min="1" data-currentheight="25" value="25">
-                </div>
-                <div>
-                  <label for="inputWidth">Grid Width</label>
-                  <input class="purple-text text-darken-3 browser-default" type="number" id="inputWidth" name="width" min="1" data-currentwidth="25" value="25">
-                </div>
+        <!-- Grid sizing area -->
+        <div id="gridSettingsArea" class="hide-at-min">
+          <h2 class="hide-at-min">Choose Grid Size</h2>
+          <form>
+            <div class="form-inputs">
+              <div>
+                <label for="inputHeight">Grid Height</label>
+                <input class="purple-text text-darken-3 browser-default" type="number" id="inputHeight" name="height" min="1" data-currentheight="25" value="25">
               </div>
-              <button type="submit" id="createGridButton" class="waves-effect btn btn-large purple darken-2 z-depth-2"><i class="small material-icons">grid_on</i> Create Grid</button>
-            </form>
-          </div>
+              <div>
+                <label for="inputWidth">Grid Width</label>
+                <input class="purple-text text-darken-3 browser-default" type="number" id="inputWidth" name="width" min="1" data-currentwidth="25" value="25">
+              </div>
+            </div>
+            <button type="submit" id="createGridButton" class="waves-effect btn btn-large purple darken-2 z-depth-2"><i class="small material-icons">grid_on</i> Create Grid</button>
+          </form>
+        </div>
 
-          <!-- Preset Grid sizing area -->
-          <div id="prebuiltGridArea">
-            <h3 class="hide-at-min">Preset Grids</h3>
-              <div class="size-button-group">
-                  <button data-gridscale="50" class="btn btn-small lighten-2 waves-effect teal">50 X 50</button>
-                  <button data-gridscale="70" class="btn btn-small lighten-2 waves-effect teal">70 X 70</button>
-                  <button data-gridscale="100" class="btn btn-small lighten-2 waves-effect teal">100 X 100</button>
-                  <button class="btn btn-small lighten-1 waves-effect red" id="resetButton">Reset</button>                  
-              </div>
+        <!-- Preset Grid sizing area -->
+        <div id="prebuiltGridArea">
+          <h3 class="hide-at-min">Preset Grids</h3>
+          <div class="size-button-group">
+            <button data-gridscale="50" class="btn btn-small lighten-2 waves-effect teal">50 X 50</button>
+            <button data-gridscale="70" class="btn btn-small lighten-2 waves-effect teal">70 X 70</button>
+            <button data-gridscale="100" class="btn btn-small lighten-2 waves-effect teal">100 X 100</button>
+            <button class="btn btn-small lighten-1 waves-effect red" id="resetButton">Reset</button>
           </div>
-    
-          <!-- Color Picker area -->
-          <div id="colorPickArea">
-                <i class="material-icons show-at-min">color_lens</i>
-            <h2 class="hide-at-min"><i class="material-icons">color_lens</i> Pick A Color</h2>
-            <input type="color" id="colorPicker">
-            <!-- <img src="http://moziru.com/images/mauve-clipart-splatter-4.png" class="splat" alt="paint splat"> -->
-          </div>
+        </div>
+
+        <!-- Color Picker area -->
+        <div id="colorPickArea">
+          <i class="material-icons show-at-min">color_lens</i>
+          <h2 class="hide-at-min"><i class="material-icons">color_lens</i> Pick A Color</h2>
+          <input type="color" id="colorPicker">
+          <!-- <img src="http://moziru.com/images/mauve-clipart-splatter-4.png" class="splat" alt="paint splat"> -->
+        </div>
       </div>
 
       <div id="recentColorArea">
@@ -80,12 +82,12 @@
       <h2>Design Canvas</h2>
       <section class="canvas-top-row away">
         <button class="btn btn-small waves-effect pink lighten-2" id="eraserButton"> <span class="eraser"></span> Eraser</button>
-    <button class="btn btn-small waves-effect purple darken-2" id="innerCircleButton"> <i class="material-icons">center_focus_strong</i> Inner Circle</button>
-</section>
+        <button class="btn btn-small waves-effect purple darken-2" id="innerCircleButton"> <i class="material-icons">center_focus_strong</i> Inner Circle</button>
+      </section>
       <table id="pixelCanvas" class="z-depth-4"></table>
-      
+
     </div>
-    
+
 
     <!-- Footer area -->
     <footer>
