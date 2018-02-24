@@ -87,7 +87,7 @@ ul {
   width: 80%;
   max-width: 1460px;
   /* max-width: none; */
-  min-width: 820px;
+  min-width: 1010px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: [aside-start] 1fr [aside-end] 1fr [canvas-start] 1fr [midcanvas-start] 1fr [midcanvas-end] 1fr [canvas-end];
