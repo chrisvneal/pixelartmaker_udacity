@@ -122,104 +122,42 @@ $(function() {
 
   // Place currently selected color in a 'Recent Colors" div
   function addRecentColor(recentColor) {
-
-
-    // let $recentColorRow = $('<tr class="recent-color"></td>');
+    // Create a recent color object and color it with the currently selected AND used color
 
     let $recentColorObject = $('<div class="recent-color-object"></div>').css('background', recentColor);
 
     $('#recentColors').prepend($recentColorObject);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     // monitor recent colors length
     $recentColorLength = $('#recentColors').children().length;
 
-    /* if ($recentColorLength > 1) {
-        $('.recent-color-object:first-child').css({
-                                                    "width": '60px',
-                                                    "height": '60px'
-                                                            });
-
-        $('.recent-color-object:first-child').nextAll().css({
-            "width": '40px',
-            "height": '40px'
-                    });
-                                                            
-                                                            
-    } */
-
-    // $('.recent-color-object:first-child').delay(800).addClass('first-recent-color');
-
-    // console.log($recentColorLength);
-
-
-
-
-
-
-
-
-
-
+    // If the recent color count is betwen 0 and 19, display the number next to 'Recent Colors' heading
     if ($recentColorLength > 0 && $recentColorLength <= 18) {
       if ($recentColorLength == 1) {
         $('#recentColorArea h2').html('<span class="recent-colors-length">' + $recentColorLength + '</span> Recent Color');
 
-
       } else {
-
         $('#recentColorArea h2').html('<span class="recent-colors-length">' + $recentColorLength + '</span> Recent Colors');
-
-        // $('.recent-colors-length').text($recentColorLength);
       }
 
     } else {
-      // what happens when it tries to exceed 20? Cut off end?
-      // console.log('you have exceeded the length');
-
+      // If count attempts to go past 18, start cutting off the last child
       $('#recentColors .recent-color-object:last-child').remove();
     }
-
-    // $('#recentColors').prepend($recentColorRow);
   }
 
-  // colorElement() function places the color in the element
+  // Color the selected tile with the current color
   function colorElement(element) {
-
     $(element.target).css("background", $colorValue);
-  } // end of colorElement()
+  } 
 
-  // Reset initial grid values
-  function setInitialGridValue() {
-
-    let $initialGridValue = $('#inputWidth').attr('value');
-
-    $('#inputHeight, #inputWidth').val($initialGridValue);
-  }
-
-  // resetCanvas() function
+  // Refresh canvas, stick to the grid sizes
   function resetCanvas(e) {
     e.preventDefault();
     makeGrid($currentHeight, $currentWidth);
   }
 
-  // convert rgb to hex
+  // convert rgb color code to hex code
   function rgb2hex(rgb) {
     rgb = rgb.match(/^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i);
     return (rgb && rgb.length === 4) ? "#" +
@@ -230,12 +168,11 @@ $(function() {
 
   function turnEraserOn() {
     eraserOn = true;
-    // console.log('eraser is on, this should be an eraser');
 
+    // Grab the last color selected before using the eraser  tool
     $colorBeforeErasing = $colorValue;
-    // alert('the color before you erased is ' + $colorBeforeErasing);
 
-    // what happens when the eraser is ON
+    // Change cursor to eraser
     $('td').awesomeCursor('eraser', {
       color: '#f06292',
       size: 30,
@@ -243,34 +180,26 @@ $(function() {
       outline: 'white'
     });
 
-
     // Change erase button content to paintbrush content
     $('#eraserButton').removeClass('pink lighten-2').addClass('purple darken-2');
     $('#eraserButton').html(' <i class="material-icons">brush</i> Brush');
   }
-  //end
 
   function turnEraserOff() {
     eraserOn = false;
-    // console.log('eraser is off, this should change to paintbrush');
 
+    // If there was a color selected before using eraser tool, enable that color again for the paint brush tool
     if ($colorBeforeErasing) {
       $colorValue = $colorBeforeErasing;
     }
-    // change orig color back
 
-
-
-
-
-    // What happens when the eraser is off
+    // Change cursor back to the paint brush
     $('td').awesomeCursor('paint-brush', {
       color: '#7b1fa2',
       size: 30,
       hotspot: 'bottom left',
       outline: 'white'
     });
-
 
     // Change paintbrush button content to eraser content
     $('#eraserButton').removeClass('purple darken-2').addClass('pink lighten-2');
@@ -279,124 +208,56 @@ $(function() {
 
 
 
-  // Initialize a grid on start up based on default grid size values
-
-
+  // #### Initialize a grid on start up based on default grid size values
   makeGrid($inputHeightField.val(), $inputWidthField.val());
 
 
-
-
-  // 2. ********** #createGridButton functionality ************
-
-  // **********************************************************
-
-  $createGridButton.click(function(e) {
-    e.preventDefault();
-
-    let $heightValue = $inputHeightField.val();
-    let $widthValue = $inputWidthField.val();
-
-    makeGrid($heightValue, $widthValue);
-    turnEraserOff();
-  });
-
-  // 3. ************ Coloring functionality ***************
-
-  // ******************************************************
-
-  // Change value of color variable when new color is selected
+  // #### Change current color to new, selected color
   $colorInput.on('change', function() {
     $colorValue = $colorInput.val();
 
-    // make the paint icon the same color as color value
+    // make paint icon same color as color value
     $('#colorPickArea .show-at-min, #colorPickArea .hide-at-min i').css('color', $colorValue);
   });
 
-
-
-
-
-
-
-
-
-
+  // ********* Canvas operations & functionality ***********************************************************
 
   // When you mouse down on a tile, apply chosen color
   $canvas.on('mousedown', 'td', function(e) {
     mousedown = true;
 
-
-    // alert(eraserOn);
-
-
-
-
-
+    // If the mouse is down when the eraser is 'ON', color tiles #fffff (white)
     if (mousedown && eraserOn) {
-      // console.log('eraser is on and the mouse is down, should be erasing');
       $colorValue = '#ffffff';
       colorElement(e);
     } else {
-      // The most recent color is the color of the first color in the #recentColors section
+      // The most recent color is the first color in the #recentColors section
       $lastRecentColor = $('#recentColors').children().first().css('backgroundColor');
-
-
-
 
       // If there are no recent colors...
       if (!$lastRecentColor) {
 
-        // The most recent color color will be the color selected in the color input
+        // The most recent color will be the value of the color input field
         $lastRecentColor = $colorValue;
 
-        // ...draw the color on the canvas..
+        // ...draw the color on the canvas and add it to the #recentColors div
         colorElement(e);
-
-
-        // ,..add that color to the #recentColors  div
-
         addRecentColor($colorValue);
 
       } else {
-        // console.log('eraser is off and the mouse is down, should be drawing');
-
         // If there is a recent color, convert that rgb code to a hex value
-
         $lastRecentColor = rgb2hex($lastRecentColor);
 
-
-        // If the color selected matches the mnost recent color, still color tile, no need to add to #recentColors area
+        // If the color selected matches the most recent color, still color tile, no need to add to #recentColors area
         if ($colorValue === $lastRecentColor) {
           colorElement(e);
         } else {
           colorElement(e);
           addRecentColor($colorValue);
-
         }
       }
     }
-
-
-
   });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   // If you mouse over a tile when the mouse is still down, continue coloring
   $canvas.on('mouseover', 'td', function(e) {
@@ -411,95 +272,53 @@ $(function() {
 
   // when the mouse leaves the canvas, pick the mouse up
   $canvas.mouseleave(function() {
-    //   alert('you left');
-    // e.preventDefault();
     mousedown = false;
   });
 
-  // 4. ************ 'Prebuilt' button functionality ***************
+  // ********* Grid size/input settings functionality ****************************************************
 
-  // ***************************************************************
-  $('[data-gridscale]').click(function(e) {
-    e.preventDefault();
-    // eraserOn = false;
-    // console.log('eraserOn: ' + eraserOn);
-
-    // swapEraserAndPencil();
-
-
-
-
-
-
-
-
-
-
-    turnEraserOff();
-
-
-
-
-
-
-    // scaleByNumber is the scale depicted on the button
-    let $scaleByNumber = $(this).data('gridscale');
-
-    // Set both width and height values to scaleBynumber...
-    // $('#inputHeight, #inputWidth').val($scaleByNumber);
-    $inputHeightField.val($scaleByNumber);
-    $inputWidthField.val($scaleByNumber);
-
-    // console.log($scaleByNumber);
-
-
-    // Set current width and height of data-currentheight/currentwidth
-    setCurrentHeightAndWidth($scaleByNumber);
-
-
-
-
-
-
-
-    //   console.log('You just made a grid and its ' + $currentHeight + ' x ' + $currentWidth);
-
-
-    makeGrid($scaleByNumber, $scaleByNumber);
-  });
-
-  // 5. ******* 'Enter key' functionality in grid settings area****
-
-  // 'Enter key' functionality on number input fields
+  // #### 'Enter key' functionality on number input fields
   $('#inputHeight, #inputWidth').keypress(function(e) {
     if (e.keyCode === 13) {
       e.preventDefault();
 
-      let $heightValue = $inputHeightField.val();
-      let $widthValue = $inputWidthField.val();
-
-      // Make input values same as button text
-      $inputHeightField.val($heightValue);
-      $inputWidthField.val($widthValue);
-
-      makeGrid($heightValue, $widthValue);
+      makeGrid($inputHeightField.val(), $inputWidthField.val());
+      turnEraserOff();
     }
   });
 
+  // #### 'Create grid' button functionality
+  $createGridButton.click(function(e) {
+    e.preventDefault()
 
+    makeGrid($inputHeightField.val(), $inputWidthField.val());
+    turnEraserOff();
+  });
 
+  // #### 'Prebuilt grid size' button functionality
+  $('[data-gridscale]').click(function(e) {
+    e.preventDefault();
 
+    turnEraserOff();
 
+    // scaleByNumber is the scale depicted on the button
+    let $scaleByNumber = $(this).data('gridscale');
 
+    // Set both width and height input field values to scaleBynumber...
+    $inputHeightField.val($scaleByNumber);
+    $inputWidthField.val($scaleByNumber);
 
+    // Set current width and height of data-currentheight/currentwidth
+    setCurrentHeightAndWidth($scaleByNumber);
 
+    makeGrid($scaleByNumber, $scaleByNumber);
+  });
 
   $('#resetButton').click(resetCanvas);
 
-
   // ********* Grid size/input validations ***************************************************************
 
-  // If 0 is the first key pressed, alert user about selecting a higher number
+  // #### If 0 is the first key pressed, alert user about selecting a higher number
   $('input[type=number]').keydown(function(e) {
     if (e.keyCode === 48) {
 
@@ -513,7 +332,7 @@ $(function() {
   });
 
 
-  // Error if the value is less than 1, when losing number input focus
+  // #### Error if the value is less than 1, when losing number input focus
   $('input[type=number]').change(function() {
     if ($(this).val() < 1) {
       alert('You must enter a number greater than zero!');
