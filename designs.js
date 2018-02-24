@@ -2,12 +2,17 @@
 
 $(function() {
   // ******** Table of Contents ************
+  // 0. Variables
   // 1. Functions
-  // 2. #createGridButton functionality
-  // 3. Coloring functionality
-  // 4. 'Prebuilt' button functionality
-  // 5. 'Enter key' button functionality
+  // 2. Canvas operations & functionality
+  // 3. Grid size/input settings functionality
+  // 4. Grid size/input validations
+  // 5. Recent color object functionality
+  // 6. Canvas top row settings & functions
+  // 7. jquery Awesome Cursor functionality
   // ***************************************
+
+  // 0. ********* Variables ***********************************************************
 
   // Form inputs
   const $inputHeightField = $("#inputHeight");
@@ -18,7 +23,6 @@ $(function() {
   // Main grid/canvas area
   const $canvas = $("#pixelCanvas");
   const $innerCircleButton = $('#innerCircleButton');
-
 
   // Color controls
   const $colorInput = $("#colorPicker");
@@ -32,50 +36,32 @@ $(function() {
   let eraserOn = false;
   let $colorBeforeErasing;
 
-  // console.log($currentHeight);
-  // console.log();
-  //   console.log("this is corretct");
-
-  //   console.log('The current height is ' + $currentHeight + ' and the curent width is ' + $currentWidth);
-
-  // 1. *******************Functions **********************
-
-  // ******************************************************
+  // 1. ********* Functions ***********************************************************
 
   // Create a string from the grid values and display it next to canvas header
   function placeGridNumbers(height, width) {
-
     let gridSizeString = height + " x " + width;
 
     $('#canvasArea h2').children().remove();
 
     $('#canvasArea h2').append('<span class="gridSizeString">' + gridSizeString + '</span>');
-  } // end of placeGridNumbers()
+  }
 
-
-
-  // Sets the current height/width values on data-currentheight/width and adds those values to inputs
+  // Sets the current height/width values on data-currentheight/width and adds those values to input fields
   function setCurrentHeightAndWidth(newGridHeight, newGridWidth) {
     $inputHeightField.data('currentheight', newGridHeight);
     $inputWidthField.data('currentwidth', newGridWidth);
 
     $inputHeightField.val(newGridHeight);
     $inputWidthField.val(newGridWidth);
-    // $inputWidthField.val(newGridWidth);
 
     $currentHeight = $inputHeightField.data('currentheight');
     $currentWidth = $inputWidthField.data('currentwidth');
   }
 
-
-
-
-
   // makeGrid() creates a grid/table/canvas based on user values
   function makeGrid(height, width) {
-
     setCurrentHeightAndWidth(height, width);
-
 
     // Don't allow 0 height; this means no rows!
     if (height < 1 || width < 1) {
@@ -103,7 +89,7 @@ $(function() {
 
       // 1. Create a row element (<tr>) until 'height' is met
       $row = $('<tr></tr>');
-
+      
       // 2. make the necessary amount of columns (<tds>) & append them to each row      
       for (let j = 0; j < width; j++) {
         $row.append('<td></td>');
@@ -113,12 +99,9 @@ $(function() {
       $canvas.append($row);
     }
 
-
-
     // Reveal the bottom of the canvas that was hidden on window load
     $canvasTopRow.removeClass('away');
   } // end of makeGrid()
-
 
   // Place currently selected color in a 'Recent Colors" div
   function addRecentColor(recentColor) {
@@ -149,7 +132,7 @@ $(function() {
   // Color the selected tile with the current color
   function colorElement(element) {
     $(element.target).css("background", $colorValue);
-  } 
+  }
 
   // Refresh canvas, stick to the grid sizes
   function resetCanvas(e) {
@@ -206,8 +189,6 @@ $(function() {
     $('#eraserButton').html('  <span class="eraser"></span> Eraser');
   }
 
-
-
   // #### Initialize a grid on start up based on default grid size values
   makeGrid($inputHeightField.val(), $inputWidthField.val());
 
@@ -220,7 +201,7 @@ $(function() {
     $('#colorPickArea .show-at-min, #colorPickArea .hide-at-min i').css('color', $colorValue);
   });
 
-  // ********* Canvas operations & functionality ***********************************************************
+  // 2. ********* Canvas operations & functionality ***********************************************************
 
   // When you mouse down on a tile, apply chosen color
   $canvas.on('mousedown', 'td', function(e) {
@@ -275,7 +256,7 @@ $(function() {
     mousedown = false;
   });
 
-  // ********* Grid size/input settings functionality ****************************************************
+  // 3. ********* Grid size/input settings functionality ****************************************************
 
   // #### 'Enter key' functionality on number input fields
   $('#inputHeight, #inputWidth').keypress(function(e) {
@@ -316,7 +297,7 @@ $(function() {
 
   $('#resetButton').click(resetCanvas);
 
-  // ********* Grid size/input validations ***************************************************************
+  // 4. ********* Grid size/input validations ***************************************************************
 
   // #### If 0 is the first key pressed, alert user about selecting a higher number
   $('input[type=number]').keydown(function(e) {
@@ -331,7 +312,6 @@ $(function() {
     }
   });
 
-
   // #### Error if the value is less than 1, when losing number input focus
   $('input[type=number]').change(function() {
     if ($(this).val() < 1) {
@@ -339,7 +319,7 @@ $(function() {
     }
   });
 
-  // ********* Recent color object functionality *********************************************************
+  // 5. ********* Recent color object functionality *********************************************************
 
   $('#recentColors').on('click', '.recent-color-object', function() {
     // make current color the color of selected recent color object
@@ -352,7 +332,7 @@ $(function() {
     $('#colorPickArea .show-at-min, #colorPickArea .hide-at-min i').css('color', $colorValue);
   });
 
-  // ********* Canvas top row settings & functions *******************************************************
+  // 6. ********* Canvas top row settings & functions *******************************************************
 
   // "Inner circle" buttons adds border-radius to table, making a circle of its box-shadow in the background
   $('#innerCircleButton').click(function() {
@@ -372,7 +352,7 @@ $(function() {
     eraserOn == false ? turnEraserOn() : turnEraserOff();
   });
 
-  // ********* jquery Awesome Cursor functionality *******************************************************
+  // 7. ********* jquery Awesome Cursor functionality *******************************************************
 
   // Initialize "paint brush" cursor on start up
   $canvas.awesomeCursor('paint-brush', {
@@ -381,11 +361,4 @@ $(function() {
     hotspot: 'bottom left',
     outline: 'white'
   });
-
-  // ********************* The end. xoxo
-
-
-
-
-
 }); //end of $ (jQuery)
