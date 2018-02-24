@@ -181,6 +181,12 @@ header h1 {
   width: 50%;
 }
 
+a .login-icon {
+  font-size: 25px;
+  position: relative;
+  top: 5px;
+}
+
 
 /***************** aside styles ******************/
 
