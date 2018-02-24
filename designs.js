@@ -470,7 +470,7 @@ $(function() {
 
   // 5. ******* 'Enter key' functionality in grid settings area****
 
-  // ***************************************************************
+  // 'Enter key' functionality on number input fields
   $('#inputHeight, #inputWidth').keypress(function(e) {
     if (e.keyCode === 13) {
       e.preventDefault();
@@ -478,7 +478,7 @@ $(function() {
       let $heightValue = $inputHeight.val();
       let $widthValue = $inputWidth.val();
 
-      // Make the input values same as on button
+      // Make input values same as button text
       $inputHeight.val($heightValue);
       $inputWidth.val($widthValue);
 
@@ -486,9 +486,21 @@ $(function() {
     }
   });
 
+
+
+
+
+
+
+
+
+  $('#resetButton').click(resetCanvas);
+
+
+  // ********* Grid size/input validations ***************************************************************
+
   // If 0 is the first key pressed, alert user about selecting a higher number
   $('input[type=number]').keydown(function(e) {
-
     if (e.keyCode === 48) {
 
       if (this.value < 1) {
@@ -500,31 +512,15 @@ $(function() {
     }
   });
 
-  // error if tab after '0'
+
+  // Error if the value is less than 1, when losing number input focus
   $('input[type=number]').change(function() {
-    //   console.log('this is  blur');
     if ($(this).val() < 1) {
       alert('You must enter a number greater than zero!');
-      // $(this).focus();
     }
   });
 
-
-
-
-
-
-
-  $('#resetButton').click(resetCanvas);
-
-
-
-
-
-
-
-
-  // ********* Recent color object functionality *********
+  // ********* Recent color object functionality *********************************************************
 
   $('#recentColors').on('click', '.recent-color-object', function() {
     // make current color the color of selected recent color object
@@ -537,8 +533,7 @@ $(function() {
     $('#colorPickArea .show-at-min, #colorPickArea .hide-at-min i').css('color', $colorValue);
   });
 
-
-  // ********* Canvas top row settings & functions *********
+  // ********* Canvas top row settings & functions *******************************************************
 
   // "Inner circle" buttons adds border-radius to table, making a circle of its box-shadow in the background
   $('#innerCircleButton').click(function() {
@@ -558,8 +553,7 @@ $(function() {
     eraserOn == false ? turnEraserOn() : turnEraserOff();
   });
 
-
-  // ********* jquery Awesome Cursor functionality *********
+  // ********* jquery Awesome Cursor functionality *******************************************************
 
   // Initialize "paint brush" cursor on start up
   $canvas.awesomeCursor('paint-brush', {
@@ -568,6 +562,8 @@ $(function() {
     hotspot: 'bottom left',
     outline: 'white'
   });
+
+  // ********************* The end. xoxo
 
 
 
