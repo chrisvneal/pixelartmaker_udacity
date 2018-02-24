@@ -515,13 +515,13 @@ $(function() {
 
   $('#resetButton').click(resetCanvas);
 
-  // Click on recent colors and change value of color picker
-  $('#recentColorArea').on('click', '.recent-color-object', function() {
+  
 
-    let $selectedRecentColor = $(this).css('backgroundColor');
 
-    $colorInput.val(rgb2hex($selectedRecentColor));
-  });
+
+
+
+
 
 
    // Reset the grid, leaving size in place
@@ -530,45 +530,30 @@ $(function() {
     makeGrid($currentHeight, $currentWidth);
   });
 
+
+
+
+
+
+  
+
+
+
+
+
+
   // ********* Recent color object functionality *********
 
   $('#recentColors').on('click', '.recent-color-object', function() {
-    // make recent color the color of selected recent color object
-    let $recentColor = rgb2hex($(this).css('backgroundColor'));    
+    // make current color the color of selected recent color object
+    $colorValue = rgb2hex($(this).css('backgroundColor')); 
 
     // make color value same as selected recent color
-    $colorInput.val($recentColor);
-
-    // change current color to recent color
-    $colorValue = $colorInput.val();
+    $colorInput.val($colorValue);     
 
     // make paint icon same color as current color
     $('#colorPickArea .show-at-min, #colorPickArea .hide-at-min i').css('color', $colorValue);
   });
-
-  
-  
-  
-  
-  
-  
-  
-  
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
