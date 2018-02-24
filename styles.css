@@ -435,8 +435,7 @@ footer li {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-  }
-
+  }  
   aside {
       padding: 0;
       margin: 0;
@@ -543,6 +542,7 @@ footer li {
 
   #canvasArea {
     padding: 0;
+    margin-bottom: 6rem;
   }
 
  
