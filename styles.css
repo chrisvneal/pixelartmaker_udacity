@@ -93,7 +93,7 @@ ul {
 .container {
   width: 80%;
   max-width: 1460px;
-  min-width: 1016px;
+  min-width: 1070px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: [aside-start] 1fr [aside-end] 1fr [canvas-start] 1fr [midcanvas-start] 1fr [midcanvas-end] 1fr [canvas-end];
