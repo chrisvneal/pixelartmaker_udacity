@@ -10,8 +10,8 @@ $(function() {
   // ***************************************
 
   // Form inputs
-  const $inputHeight = $("#inputHeight");
-  const $inputWidth = $("#inputWidth");
+  const $inputHeightField = $("#inputHeight");
+  const $inputWidthField = $("#inputWidth");
   const $createGridButton = $("#createGridButton");
   const $canvasTopRow = $('.canvas-top-row');
 
@@ -56,15 +56,15 @@ $(function() {
 
   // Sets the current height/width values on data-currentheight/width and adds those values to inputs
   function setCurrentHeightAndWidth(newGridHeight, newGridWidth) {
-    $inputHeight.data('currentheight', newGridHeight);
-    $inputWidth.data('currentwidth', newGridWidth);
+    $inputHeightField.data('currentheight', newGridHeight);
+    $inputWidthField.data('currentwidth', newGridWidth);
 
-    $inputHeight.val(newGridHeight);
-    $inputWidth.val(newGridWidth);
-    // $inputWidth.val(newGridWidth);
+    $inputHeightField.val(newGridHeight);
+    $inputWidthField.val(newGridWidth);
+    // $inputWidthField.val(newGridWidth);
 
-    $currentHeight = $inputHeight.data('currentheight');
-    $currentWidth = $inputWidth.data('currentwidth');
+    $currentHeight = $inputHeightField.data('currentheight');
+    $currentWidth = $inputWidthField.data('currentwidth');
   }
 
 
@@ -282,7 +282,7 @@ $(function() {
   // Initialize a grid on start up based on default grid size values
 
 
-  makeGrid($inputHeight.val(), $inputWidth.val());
+  makeGrid($inputHeightField.val(), $inputWidthField.val());
 
 
 
@@ -294,8 +294,8 @@ $(function() {
   $createGridButton.click(function(e) {
     e.preventDefault();
 
-    let $heightValue = $inputHeight.val();
-    let $widthValue = $inputWidth.val();
+    let $heightValue = $inputHeightField.val();
+    let $widthValue = $inputWidthField.val();
 
     makeGrid($heightValue, $widthValue);
     turnEraserOff();
@@ -447,8 +447,8 @@ $(function() {
 
     // Set both width and height values to scaleBynumber...
     // $('#inputHeight, #inputWidth').val($scaleByNumber);
-    $inputHeight.val($scaleByNumber);
-    $inputWidth.val($scaleByNumber);
+    $inputHeightField.val($scaleByNumber);
+    $inputWidthField.val($scaleByNumber);
 
     // console.log($scaleByNumber);
 
@@ -475,12 +475,12 @@ $(function() {
     if (e.keyCode === 13) {
       e.preventDefault();
 
-      let $heightValue = $inputHeight.val();
-      let $widthValue = $inputWidth.val();
+      let $heightValue = $inputHeightField.val();
+      let $widthValue = $inputWidthField.val();
 
       // Make input values same as button text
-      $inputHeight.val($heightValue);
-      $inputWidth.val($widthValue);
+      $inputHeightField.val($heightValue);
+      $inputWidthField.val($widthValue);
 
       makeGrid($heightValue, $widthValue);
     }
