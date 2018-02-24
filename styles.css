@@ -4,6 +4,7 @@
   --main-font: Montserrat;
 }
 
+
 /***************** Global styles *****************/
 
 * {
@@ -98,6 +99,7 @@ ul {
   grid-column-gap: 10px;
 }
 
+
 /* general section styles */
 
 header,
@@ -152,6 +154,7 @@ header .material-icons {
   font-size: 2.4rem;
 }
 
+
 /* sign up and login icon styles */
 
 .signin-links {
@@ -197,6 +200,7 @@ aside {
   margin-bottom: 2rem;
 }
 
+
 /* Grid sizing area styles */
 
 .form-inputs {
@@ -239,6 +243,7 @@ input[type=number]:focus {
   margin-bottom: 2rem;
 }
 
+
 /* Prebuilt Grid Area styles */
 
 #prebuiltGridArea .buttons {
@@ -265,6 +270,7 @@ input[type=number]:focus {
   width: 200px;
   line-height: initial;
 }
+
 
 /* Color picker area styles */
 
@@ -294,6 +300,7 @@ input[type=number]:focus {
 #colorPicker:focus {
   outline: none;
 }
+
 
 /* recent color area styles */
 
@@ -325,6 +332,7 @@ input[type=number]:focus {
   top: 3.5rem;
   left: -70px;
 }
+
 
 /* canvas area styles */
 
@@ -410,6 +418,9 @@ footer li {
     flex-direction: column;
     flex-wrap: wrap;
   }
+  .btn {
+    font-size: 1.2rem;
+  }
   aside {
     padding: 0;
     margin: 0;
@@ -417,6 +428,46 @@ footer li {
   aside h2 {
     margin-bottom: 2rem;
   }
+  .main-settings-area {
+    display: flex;
+  }
+  /* grid-sizing area */
+  #gridSettingsArea form {
+    flex-flow: column wrap;
+  }
+  .form-inputs {
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #inputHeight,
+  #inputWidth {
+    width: 80%;
+  }
+  #createGridButton {
+    padding: 30px 0;
+    line-height: 0;
+    width: 50%;
+  }
+  /* prebuilt grid area  */
+  #prebuiltGridArea {
+    display: flex;
+    flex: 1;
+    margin-right: 2rem;
+  }
+  .size-button-group {
+    display: flex;
+    width: 100%;
+  }
+  .buttons {
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+  .buttons .btn {
+    line-height: 0;
+  }
+  /* color picker area */
   .hide-at-min {
     display: none;
   }
@@ -432,6 +483,16 @@ footer li {
     top: -1px;
     color: var(--main-color);
   }
+  /* recent colors area */
+  #recentColorArea {
+    height: 101.5px;
+    max-height: 114.5px;
+  }
+  #recentColors {
+    width: 100%;
+    height: auto;
+    overflow: initial;
+  }
   .recent-colors-length {
     font-size: 2rem;
     font-weight: bold;
@@ -443,58 +504,9 @@ footer li {
     top: -1.7rem;
     left: 15rem;
   }
-  .main-settings-area {
-    display: flex;
-  }
-  #recentColors {
-    width: 100%;
-    height: auto;
-    overflow: initial;
-  }
-  #gridSettingsArea form {
-    flex-flow: column wrap;
-  }
-  #createGridButton {
-    padding: 30px 0;
-    line-height: 0;
-    width: 50%;
-  }
-  #prebuiltGridArea {
-    display: flex;
-    flex: 1;
-    margin-right: 2rem;
-  }
-  .form-inputs {
-    width: 400px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  #inputHeight,
-  #inputWidth {
-    width: 80%;
-  }
-  .size-button-group {
-    display: flex;
-    width: 100%;
-  }
+  /* canvas area */
   #canvasArea {
     padding: 0;
     margin-bottom: 6rem;
-  }
-  .buttons {
-    align-content: start;
-    flex-wrap: nowrap;
-    width: 100%;
-  }
-  .buttons .btn {
-    line-height: 0;
-  }
-  .btn {
-    font-size: 1.2rem;
-  }
-  #recentColorArea {
-    height: 101.5px;
-    max-height: 114.5px;
   }
 }
