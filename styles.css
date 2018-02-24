@@ -4,7 +4,6 @@
   --main-font: Montserrat;
 }
 
-
 /***************** Global styles *****************/
 
 * {
@@ -14,7 +13,8 @@
 body {
   font-family: var(--main-font), var(--base-font-family);
   margin: 0;
-  padding-top: 1.2em;
+  margin: 5px;
+  padding-top: calc(1.2em - 5px);
 }
 
 button,
@@ -60,7 +60,6 @@ table {
   margin: 3rem auto 0;
   width: 0;
   transition: border-radius .5s ease-in-out;
-  /* border-radius: 40em; */
 }
 
 table.inner-circle {
@@ -73,7 +72,6 @@ tr {
 
 td {
   width: 20px;
-  /* cursor: crosshair; */
 }
 
 p {
@@ -92,20 +90,15 @@ ul {
 .container {
   width: 80%;
   max-width: 1460px;
-  /* max-width: none; */
   min-width: 1010px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: [aside-start] 1fr [aside-end] 1fr [canvas-start] 1fr [midcanvas-start] 1fr [midcanvas-end] 1fr [canvas-end];
   grid-template-rows: 60px repeat(11, minmax(100px, auto));
   grid-column-gap: 10px;
-  margin: 0 auto;
 }
 
-
 /* general section styles */
-
-
 
 header,
 aside,
@@ -161,19 +154,19 @@ header .material-icons {
 
 /* sign up and login icon styles */
 
+.signin-links {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  top: 12px;
+}
+
 a .signup-icon,
 a .login-icon {
   font-size: 25px;
   position: relative;
   top: 5px;
   margin-right: 5px;
-}
-
-.signin-links {
-  padding: 0;
-  margin: 0;
-  position: relative;
-  top: 12px;
 }
 
 .signin-links li {
@@ -246,7 +239,6 @@ input[type=number]:focus {
   margin-bottom: 2rem;
 }
 
-
 /* Prebuilt Grid Area styles */
 
 #prebuiltGridArea .buttons {
@@ -273,7 +265,6 @@ input[type=number]:focus {
   width: 200px;
   line-height: initial;
 }
-
 
 /* Color picker area styles */
 
@@ -303,7 +294,6 @@ input[type=number]:focus {
 #colorPicker:focus {
   outline: none;
 }
-
 
 /* recent color area styles */
 
@@ -335,7 +325,6 @@ input[type=number]:focus {
   top: 3.5rem;
   left: -70px;
 }
-
 
 /* canvas area styles */
 
@@ -460,7 +449,6 @@ footer li {
   #recentColors {
     width: 100%;
     height: auto;
-    /* max-height: 60px; */
     overflow: initial;
   }
   #gridSettingsArea form {
