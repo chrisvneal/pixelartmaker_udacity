@@ -3,6 +3,7 @@
   --base-font-family: Arial, sans-serif;
   --main-font: Montserrat;
   --button-transition: transform .10s ease-in-out;
+  --colorinput-textcolor: #83838a;
 }
 
 
@@ -289,9 +290,15 @@ input[type=number]:focus {
 
  #colorPicker {
   height: 40px;
-  width: 100px;
-  margin: -.50em 0 2em;
+  width: 150px;
+  margin: -.50em 0 2em;  
 } 
+
+.colorpicker-text {
+  color: var(--colorinput-textcolor);
+  font-size: 1.5rem;
+  text-align: center;
+}
 
 #colorPicker:focus {
   outline: none;
