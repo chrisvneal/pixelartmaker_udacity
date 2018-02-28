@@ -69,12 +69,9 @@ table.inner-circle {
   border-radius: 40em;
 }
 
-tr {
-  height: 20px;
-}
-
 td {
   width: 20px;
+  height: 20px;
 }
 
 p {
