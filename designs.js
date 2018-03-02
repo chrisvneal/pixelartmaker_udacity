@@ -194,7 +194,7 @@ $(function() {
 
 
   // #### Change current color to new, selected color
-  $colorInput.on('change', function() {
+  $colorInput.on('input', function() {
     $colorValue = $colorInput.val();
 
     // make paint icon same color as color value
