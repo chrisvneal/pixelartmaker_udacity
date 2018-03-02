@@ -28,14 +28,15 @@ $(function() {
   // Color controls
   const $colorInput = $("#colorPicker");
   let $colorValue = $colorInput.val();
-  let mousedown = false;
   let $lastRecentColor;
   let $recentColorLength;
+  let $colorBeforeErasing;
 
   let $currentHeight;
   let $currentWidth;
+  let mousedown = false;
   let eraserOn = false;
-  let $colorBeforeErasing;
+
 
   // 1. ********* Functions ***********************************************************
 
@@ -90,7 +91,7 @@ $(function() {
 
       // 1. Create a row element (<tr>) until 'height' is met
       $row = $('<tr></tr>');
-      
+
       // 2. make the necessary amount of columns (<tds>) & append them to each row      
       for (let j = 0; j < width; j++) {
         $row.append('<td></td>');
