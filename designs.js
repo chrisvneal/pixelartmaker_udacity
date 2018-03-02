@@ -23,6 +23,7 @@ $(function() {
   // Main grid/canvas area
   const $canvas = $("#pixelCanvas");
   const $innerCircleButton = $('#innerCircleButton');
+  const $eraserButton = $('#eraserButton');
 
   // Color controls
   const $colorInput = $("#colorPicker");
@@ -164,8 +165,8 @@ $(function() {
     });
 
     // Change erase button content to paintbrush content
-    $('#eraserButton').removeClass('pink lighten-2').addClass('purple darken-2');
-    $('#eraserButton').html(' <i class="material-icons">brush</i> Brush');
+    $eraserButton.removeClass('pink lighten-2').addClass('purple darken-2');
+    $eraserButton.html(' <i class="material-icons">brush</i> Brush');
   }
 
   function turnEraserOff() {
@@ -185,8 +186,8 @@ $(function() {
     });
 
     // Change paintbrush button content to eraser content
-    $('#eraserButton').removeClass('purple darken-2').addClass('pink lighten-2');
-    $('#eraserButton').html('  <span class="eraser"></span> Eraser');
+    $eraserButton.removeClass('purple darken-2').addClass('pink lighten-2');
+    $eraserButton.html('  <span class="eraser"></span> Eraser');
   }
 
   // #### Initialize a grid on start up based on default grid size values
@@ -348,7 +349,7 @@ $(function() {
   });
 
   // swap "paint brush" for "eraser" using jQuery Awesome Cursor plugin when "eraser tool" is clicked
-  $('#eraserButton').click(function() {
+  $eraserButton.click(function() {
     eraserOn == false ? turnEraserOn() : turnEraserOff();
   });
 
