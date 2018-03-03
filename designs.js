@@ -199,6 +199,7 @@ $(function() {
 
   // Add class to animate hex color code
   $('.color-code').text($colorValue).addClass('bounceInLeft').css('color', $colorValue);
+  $('#canvasArea h2').css('color', $colorValue);
 
   // #### Change current color to new, selected color
   $colorInput.on('input', function() {
@@ -207,6 +208,7 @@ $(function() {
     // make paint icon same color as color value
     $('#colorPickArea .show-at-min, #colorPickArea .hide-at-min i').css('color', $colorValue);
     $('.color-code').text($colorValue).css('color', $colorValue);
+    $('#canvasArea h2').css('color', $colorValue);
   });
 
   // 2. ********* Canvas operations & functionality ***********************************************************
