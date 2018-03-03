@@ -489,13 +489,8 @@ footer li {
     top: -1px;
     color: var(--main-color);
   }
-
   #colorPicker {
     margin-bottom: 1em;
-  }
-
-  .color-code {
-    left: 8px;
   }
   /* recent colors area */
   #recentColorArea {
