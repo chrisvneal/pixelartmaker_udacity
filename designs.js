@@ -197,6 +197,8 @@ $(function() {
   // #### Initialize a grid on start up based on default grid size values
   makeGrid($inputHeightField.val(), $inputWidthField.val());
 
+  // Add class to animate hex color code
+  $('.color-code').text($colorValue).addClass('bounceInLeft').css('color', $colorValue);
 
   // #### Change current color to new, selected color
   $colorInput.on('input', function() {
@@ -204,6 +206,7 @@ $(function() {
 
     // make paint icon same color as color value
     $('#colorPickArea .show-at-min, #colorPickArea .hide-at-min i').css('color', $colorValue);
+    $('.color-code').text($colorValue).css('color', $colorValue);
   });
 
   // 2. ********* Canvas operations & functionality ***********************************************************
@@ -366,8 +369,4 @@ $(function() {
     hotspot: 'bottom left',
     outline: 'white'
   });
-
-
-
-
 }); //end of $ (jQuery)

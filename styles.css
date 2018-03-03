@@ -285,11 +285,11 @@ input[type=number]:focus {
   margin-bottom: 1rem;
 }
 
- #colorPicker {
+#colorPicker {
   height: 40px;
   width: 150px;
-  margin: -.50em 0 2em;  
-} 
+  margin: -.50em 0 2em;
+}
 
 .colorpicker-text {
   color: var(--colorinput-textcolor);
@@ -299,6 +299,15 @@ input[type=number]:focus {
 
 #colorPicker:focus {
   outline: none;
+}
+
+.color-code {
+  display: inline-block;
+  position: relative;
+  top: -6px;
+  margin-left: .85em;
+  font-size: 1.5em;
+  letter-spacing: 1px;
 }
 
 
