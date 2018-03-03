@@ -200,15 +200,20 @@ $(function() {
   // Add class to animate hex color code
   $('.color-code').text($colorValue).addClass('bounceInLeft').css('color', $colorValue);
   $('#canvasArea h2').css('color', $colorValue);
+  $canvas.css('border-color', $colorValue);
 
   // #### Change current color to new, selected color
   $colorInput.on('input', function() {
     $colorValue = $colorInput.val();
 
-    // make paint icon same color as color value
+    // Change color code text to current color code
     $('.color-code').text($colorValue);
-    $('#colorPickArea .show-at-min, #colorPickArea .hide-at-min i, .color-code, #canvasArea h2').css('color', $colorValue); 
-    $canvas.css('border', '2px solid ' + $colorValue);   
+
+    // Change the current color of some elements to currently selected paint brush color
+    $('#colorPickArea .show-at-min, #colorPickArea .hide-at-min i, .color-code, #canvasArea h2').css('color', $colorValue);
+
+    // Change table border color to current paint brush color
+    $canvas.css('border', '2px solid ' + $colorValue);
   });
 
   // 2. ********* Canvas operations & functionality ***********************************************************

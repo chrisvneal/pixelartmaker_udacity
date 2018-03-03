@@ -59,6 +59,10 @@ td {
 }
 
 table {
+  border-width: 2px;
+}
+
+table {
   border-collapse: collapse;
   margin: 3rem auto 0;
   width: auto;
