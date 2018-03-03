@@ -206,9 +206,9 @@ $(function() {
     $colorValue = $colorInput.val();
 
     // make paint icon same color as color value
-    $('#colorPickArea .show-at-min, #colorPickArea .hide-at-min i').css('color', $colorValue);
-    $('.color-code').text($colorValue).css('color', $colorValue);
-    $('#canvasArea h2').css('color', $colorValue);
+    $('.color-code').text($colorValue);
+    $('#colorPickArea .show-at-min, #colorPickArea .hide-at-min i, .color-code, #canvasArea h2').css('color', $colorValue); 
+    $canvas.css('border', '2px solid ' + $colorValue);   
   });
 
   // 2. ********* Canvas operations & functionality ***********************************************************
