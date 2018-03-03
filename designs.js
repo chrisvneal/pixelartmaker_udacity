@@ -102,16 +102,19 @@ $(function() {
     }
 
     // Reveal the bottom of the canvas that was hidden on window load
-    $canvasTopRow.removeClass('away');
+    $canvasTopRow.removeClass('away').addClass('fadeIn');
+
+    $canvas.addClass('fadeIn');
   } // end of makeGrid()
 
   // Place currently selected color in a 'Recent Colors" div
   function addRecentColor(recentColor) {
     // Create a recent color object and color it with the currently selected AND used color
 
-    let $recentColorObject = $('<div class="recent-color-object"></div>').css('background', recentColor);
+    let $recentColorObject = $('<div class="recent-color-object animated"></div>').css('background', recentColor);
 
     $('#recentColors').prepend($recentColorObject);
+    $recentColorObject.addClass('fadeIn');
 
     // monitor recent colors length
     $recentColorLength = $('#recentColors').children().length;
@@ -363,4 +366,8 @@ $(function() {
     hotspot: 'bottom left',
     outline: 'white'
   });
+
+
+
+
 }); //end of $ (jQuery)
