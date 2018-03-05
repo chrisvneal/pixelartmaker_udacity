@@ -1,16 +1,22 @@
 # Pixel Art Maker Project
+This project was created as a final project for the [Udacity | Grow With Google Scholarship Challenge](https://www.udacity.com/grow-with-google).
 
-## Table of Contents
+## Technologies Used
+Basic front end technologies were used as I am still learning the fundamentals of 
 
-* [Instructions](#instructions)
-* [Contributing](#contributing)
+* HTML5
 
-## Instructions
+* CSS3
+  * CSS Grid Layout & Flexbox modules
+  * CSS Animations & Transforms
 
-To get started, open `designs.js` and start building out the app's functionality.
+* JavaScript & jQuery
 
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
+* Media Queries
 
-## Contributing
+* CSS Framework: [Materialize.css](http://next.materializecss.com/)
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+* Responsive/mobile web design
+
+## Forking & Contributing
+This project may be forked by anyone, but I am not accepting any pull requests at the moment. Feel free to create an issue and ask me anything, though. Thank you!
