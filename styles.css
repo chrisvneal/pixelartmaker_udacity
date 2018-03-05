@@ -493,10 +493,10 @@ footer li {
     margin-bottom: 1em;
   }
 
-  .color-code {
+  /* .color-code {
     top: -15px;
     left: 30px;
-  }
+  } */
 
   /* recent colors area */
   #recentColorArea {
@@ -523,5 +523,12 @@ footer li {
   #canvasArea {
     padding: 0;
     margin-bottom: 6rem;
+  }
+}
+
+@media screen and (max-width: 1245px) {
+  .color-code {
+    top: -10px;
+    left: 25px;
   }
 }
