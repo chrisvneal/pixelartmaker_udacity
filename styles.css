@@ -493,6 +493,11 @@ footer li {
     margin-bottom: 1em;
   }
 
+  .color-code {
+    top: -15px;
+    left: 30px;
+  }
+
   /* recent colors area */
   #recentColorArea {
     height: 101.5px;
