@@ -1,5 +1,5 @@
 # Pixel Art Maker Project
-This project was created as a final project for the [Udacity | Grow With Google Scholarship Challenge](https://www.udacity.com/grow-with-google).
+This project was created as a final project for the [Udacity | Grow With Google Scholarship Challenge](https://www.udacity.com/grow-with-google). The name was recently changed to **udacity_pixel-artmaker**
 
 ## Technologies Used
 Basic front end technologies were used as I am still learning the fundamentals of 
